@@ -108,7 +108,11 @@ public class BaseEnemy : MonoBehaviour {
 		nextMoveTime = Time.time+firePauseTime;
 		
 		foreach(Transform muzzlePos in muzzlePosition){
-			Instantiate(projectile, muzzlePos.position, muzzlePos.rotation);
+			GameObject visibleProj = (GameObject)Instantiate(projectile, muzzlePos.position, muzzlePos.rotation);
+			EnemyBullet bullet = visibleProj.GetComponent<EnemyBullet>();
+			bullet.ModifyLifeTime(2f);
+			bullet.ModifyDamage(5f);
+			bullet.ModifySpeed(10f);
 		}
 	}
 	
@@ -133,5 +137,6 @@ public class BaseEnemy : MonoBehaviour {
 	
 	public void Die(){
 		Destroy(gameObject);
+		Destroy(renderer.material);
 	}
 }

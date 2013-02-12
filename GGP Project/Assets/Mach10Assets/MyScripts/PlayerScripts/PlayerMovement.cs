@@ -26,27 +26,23 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update(){
+		// For WASD and ARROW controls
 		moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 		moveDirection *= playerSpeed * Time.deltaTime;
 		trans.Translate(moveDirection);
 		
 		// Clamps player position to screen boundaries
-		ClampPosition();
+		ClampPositionToViewPort();
+		
+		// Rotate the player Z axis slightly when moving left or right
+		RotatePlayer();
 		
 		// Reset the euler angles whenever not rotating
 		if(!isRotating){
 			trans.localEulerAngles = new Vector3(0, 0, 0);
 		}
 		
-		// For WASD and ARROW controls
-		if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)){
-			isDodgingLeft = false;
-			RotatePlayerRight();
-		} else if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)){
-			isDodgingRight = false;
-			RotatePlayerLeft();
-		}
-		
+		// For dodging controls
 		if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
 			if(coolDown > 0 && keyCounter == 1){
 				isDodgingLeft = true;
@@ -71,12 +67,20 @@ public class PlayerMovement : MonoBehaviour {
 			keyCounter = 0;
 		}
 		
+		float distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
+        float left = cam.ViewportToWorldPoint(new Vector3(0.1f, 0, distance)).x;
+        float right = cam.ViewportToWorldPoint(new Vector3(0.9f, 0, distance)).x;
+		
 		if(isDodgingLeft && curDodgeTime > 0){
-			curDodgeTime -= 2*Time.deltaTime;
-			Dodge(180*Time.deltaTime, -8f);
+			if(!Input.GetKey(KeyCode.A)){
+				curDodgeTime -= 2*Time.deltaTime;
+				Dodge(180*Time.deltaTime, left);
+			}
 		} else if(isDodgingRight && curDodgeTime > 0){
-			curDodgeTime -= 2*Time.deltaTime;
-			Dodge(-180*Time.deltaTime, 8f);
+			if(!Input.GetKey(KeyCode.D)){
+				curDodgeTime -= 2*Time.deltaTime;
+				Dodge(-180*Time.deltaTime, right);
+			}
 		} else {
 			isDodgingLeft = false;
 			isDodgingRight = false;
@@ -84,22 +88,9 @@ public class PlayerMovement : MonoBehaviour {
 			curDodgeTime += 0.5f*Time.deltaTime;
 			ClampDodgeTime();
 		}
-		
-		// For dodging controls
-		/*if(Input.GetMouseButton(0) && curDodgeTime>0){
-			curDodgeTime -= 2*Time.deltaTime;
-			Dodge(180*Time.deltaTime, -8f);
-		} else if(Input.GetMouseButton(1) && curDodgeTime>0){
-			curDodgeTime -= 2*Time.deltaTime;
-			Dodge(-180*Time.deltaTime, 8f);
-		} else {
-			isRotating = false;
-			curDodgeTime += 0.5f*Time.deltaTime;
-			ClampDodgeTime();
-		}*/
 	}
 	
-	void ClampPosition(){
+	void ClampPositionToViewPort(){
 		float distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
 		
         float left = cam.ViewportToWorldPoint(new Vector3(0.1f, 0, distance)).x;
@@ -118,14 +109,16 @@ public class PlayerMovement : MonoBehaviour {
 		curDodgeTime = Mathf.Clamp(curDodgeTime, minDodgeTime, maxDodgeTime);
 	}
 	
-	void RotatePlayerRight(){
-		isRotating = true;
-		trans.localEulerAngles = new Vector3(0, 0, -playerRotation);
-	}
-	
-	void RotatePlayerLeft(){
-		isRotating = true;
-		trans.localEulerAngles = new Vector3(0, 0, playerRotation);
+	void RotatePlayer(){
+		if(Input.GetAxisRaw("Horizontal") > 0){
+			isRotating = true;
+			isDodgingLeft = false;
+			trans.localEulerAngles = new Vector3(0, 0, -playerRotation);
+		} else if(Input.GetAxisRaw("Horizontal") < 0){
+			isRotating = true;
+			isDodgingRight = false;
+			trans.localEulerAngles = new Vector3(0, 0, playerRotation);
+		}
 	}
 	
 	void Dodge(float angle, float pos){
@@ -133,6 +126,6 @@ public class PlayerMovement : MonoBehaviour {
 		trans.Rotate(new Vector3(0, 0, angle),Space.World);
 		float curPosX = trans.position.x;
 		float curPosZ = trans.position.z;
-		trans.localPosition = new Vector3(Mathf.Lerp(curPosX, pos, 2*Time.deltaTime), playerFixedHeight, curPosZ);
+		trans.localPosition = new Vector3(Mathf.Lerp(curPosX, pos, 1*Time.deltaTime), playerFixedHeight, curPosZ);
 	}
 }

@@ -28,6 +28,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
+  - 114: {fileID: 11400006}
   m_Layer: 8
   m_Name: WeaponManager
   m_TagString: Untagged
@@ -158,7 +159,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -.267959356}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -359,7 +360,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 128265a83996ca54d9aeeffac3136256, type: 3}
   m_Name: 
-  type: 3
+  type: 0
   range: 100
   bulletPrefab: {fileID: 5400000, guid: 6142a94ab373bc14fac20d17af1c7347, type: 2}
   rocketPrefab: {fileID: 5400000, guid: 494835daa8c698d48a103a0bfc8abfa5, type: 2}
@@ -377,6 +378,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f870a27f35a59149839276b46fc9c7f, type: 3}
   m_Name: 
   curHealth: 0
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c73e4de50e3508146a97a1e8039a2f0b, type: 3}
+  m_Name: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

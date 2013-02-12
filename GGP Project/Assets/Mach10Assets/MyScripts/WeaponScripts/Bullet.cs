@@ -2,61 +2,63 @@ using UnityEngine;
 using System.Collections;
 
 public class Bullet : MonoBehaviour {
-	private Rigidbody rigid;
+	private Transform trans;
 	public GameObject explosion;
-	public float bulletSpeed = 50f;
-	public float bulletDistance = 100f;
+	private float bulletSpeed = 50f;
 	private float lifeTime = 0.0f;
-	//private float spawnTime = 0.0f;
 	private float damage = 0.0f;
 	private float collisionRadius = 1.0f;
+	public GameObject target;
+	public bool isHoming = false;
+	private float damp = 6.0f;
 
 	// Use this for initialization
 	void Start(){
-		rigid = rigidbody;
-		//spawnTime = Time.time;
+		trans = transform;
 		Invoke("Kill", lifeTime);
 	}
 	
 	// Update is called once per frame
 	void Update(){
+		target = FindNearestEnemey();
 		Collider[] hits = Physics.OverlapSphere(collider.transform.position, collisionRadius);
 		foreach(Collider c in hits){
 			c.collider.gameObject.SendMessageUpwards("TakeEnemyDamage", damage, SendMessageOptions.DontRequireReceiver);
 		}
-		rigid.velocity += transform.TransformDirection(Vector3.forward * bulletSpeed);
-		bulletDistance -= bulletSpeed * Time.deltaTime;
+		if(isHoming){
+			if(target){
+				trans.Translate(Vector3.forward*bulletSpeed*Time.deltaTime);
+				Quaternion rotate = Quaternion.LookRotation(target.transform.position - trans.position);
+				trans.rotation = Quaternion.Slerp(trans.rotation, rotate, Time.deltaTime * damp);
+			} else {
+				trans.Translate(Vector3.forward*bulletSpeed*Time.deltaTime);
+			}
+		} else {
+			trans.Translate(Vector3.forward*bulletSpeed*Time.deltaTime);
+		}
 	}
 	
 	void OnTriggerEnter(Collider hit){
 		if(hit.tag == "Enemy"){
-			// Call to destroy projectile
 			Kill();
 		}
 		if(hit.tag == "Ground"){
-			Kill();
-		}
-	}	
-	
-	void OnTriggerStay(Collider hit){
-		if(hit.tag == "Enemy"){
-			// Call to destroy projectile
 			Kill();
 		}
 	}
 	
 	void Kill(){
 		if(explosion != null){
-			Instantiate(explosion, transform.position, transform.rotation);
+			Instantiate(explosion, trans.position, trans.rotation);
 		}
 		// Stop emitting particles in any children
 		ParticleEmitter emitter = GetComponentInChildren<ParticleEmitter>();
-		if (emitter){
+		if(emitter){
 			emitter.emit = false;
 		}
 
 		// Detach children - We do this to detach the trail rendererer which should be set up to auto destruct
-		transform.DetachChildren();
+		trans.DetachChildren();
 		
 		// Destroy the projectile
 		Destroy(gameObject);
@@ -66,7 +68,28 @@ public class Bullet : MonoBehaviour {
 		damage = amount;
 	}
 	
+	public void ModifySpeed(float amount){
+		bulletSpeed = amount;
+	}
+	
 	public void ModifyLifeTime(float amount){
 		lifeTime = amount;
+	}
+	
+	GameObject FindNearestEnemey(){
+		GameObject[] enemyList;
+		enemyList = GameObject.FindGameObjectsWithTag("Enemy");
+		GameObject closest = null;
+		float distance = Mathf.Infinity;
+		
+		foreach(GameObject enemyCheck in enemyList){
+			Vector3 diff = (enemyCheck.transform.position - trans.position);
+			float curDist = diff.sqrMagnitude;
+			if(curDist < distance){
+				closest = enemyCheck;
+				distance = curDist;
+			}
+		}
+		return closest;
 	}
 }

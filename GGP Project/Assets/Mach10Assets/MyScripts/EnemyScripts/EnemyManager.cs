@@ -25,6 +25,15 @@ public class EnemyManager : MonoBehaviour {
 		}
 	}
 	
+	void RemoveEnemy(GameObject enemy){
+		for(int i=0; i<enemies.Count; i++){
+			if(enemies[i] == enemy){
+				enemies.RemoveAt(i);
+				break;
+			}
+		}
+	}
+	
 	void ClearEnemies(){
 		enemies.Clear();
 	}

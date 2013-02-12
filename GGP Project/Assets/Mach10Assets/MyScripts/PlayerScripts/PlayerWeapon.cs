@@ -87,6 +87,15 @@ public class PlayerWeapon : MonoBehaviour {
 	}
 	
 	void FireHomingMissile(){
+		ModifyFireRate(0.8f);
+		if(Time.time - fireRate > nextFireTime) {
+			nextFireTime = Time.time - Time.deltaTime;
+		}
+		
+		while(nextFireTime < Time.time){
+			CreateProjectile();
+			nextFireTime += fireRate;
+		}
 	}
 	
 	void FireShotGun(){
@@ -128,20 +137,29 @@ public class PlayerWeapon : MonoBehaviour {
 			Rigidbody visibleBullet = (Rigidbody)Instantiate(bulletPrefab, muzzlePos.position, muzzlePos.rotation * coneRandomRotation);
 			bullet = visibleBullet.GetComponent<Bullet>();
 			bullet.ModifyDamage(5f);
+			bullet.ModifySpeed(80f);
 			bullet.ModifyLifeTime(0.3f);
-			//RaycastForward();
 			break;
 		case BulletType.ROCKET:
 			coneAngle = 2.0f;
-			// Spawn visual bullet 
 			coneRandomRotation = 
 				Quaternion.Euler(Random.Range(-coneAngle, coneAngle), Random.Range(-coneAngle, coneAngle), 0);
-			// Create a new projectile, use the same position and rotation as the Rocket Launcher.
 			Rigidbody rocket = (Rigidbody)Instantiate(rocketPrefab, muzzlePos.position, muzzlePos.rotation * coneRandomRotation);
 			bullet = rocket.GetComponent<Bullet>();
 			bullet.ModifyDamage(5f);
+			bullet.ModifySpeed(50f);
 			bullet.ModifyLifeTime(0.5f);
-			//RaycastForward();
+			break;
+		case BulletType.HOMINGMISSILE:
+			coneAngle = 2.0f;
+			coneRandomRotation = 
+				Quaternion.Euler(Random.Range(-coneAngle, coneAngle), Random.Range(-coneAngle, coneAngle), 0);
+			rocket = (Rigidbody)Instantiate(rocketPrefab, muzzlePos.position, muzzlePos.rotation * coneRandomRotation);
+			bullet = rocket.GetComponent<Bullet>();
+			bullet.ModifyDamage(5f);
+			bullet.ModifySpeed(15f);
+			bullet.ModifyLifeTime(2f);
+			bullet.isHoming = true;
 			break;
 		case BulletType.SHOTGUN:
 			coneAngle = 8.0f;
@@ -150,8 +168,8 @@ public class PlayerWeapon : MonoBehaviour {
 			Rigidbody pellet = (Rigidbody)Instantiate(bulletPrefab, muzzlePos.position, muzzlePos.rotation * coneRandomRotation);
 			bullet = pellet.GetComponent<Bullet>();
 			bullet.ModifyDamage(10f);
+			bullet.ModifySpeed(80f);
 			bullet.ModifyLifeTime(0.3f);
-			//RaycastForward();
 			break;
 		case BulletType.BOMB:
 			coneAngle = 5.0f;
@@ -160,50 +178,11 @@ public class PlayerWeapon : MonoBehaviour {
 			Rigidbody bomb = (Rigidbody)Instantiate(bombPrefab, bombPos.position, bombPos.rotation * coneRandomRotation);
 			bullet = bomb.GetComponent<Bullet>();
 			bullet.ModifyDamage(20f);
+			bullet.ModifySpeed(-5f);
 			bullet.ModifyLifeTime(3f);
-			//RaycastDown();
 			break;
 		}
 	}
-	
-	/*void RaycastForward(){
-		Vector3 direction = transform.TransformDirection(Vector3.forward);
-	  	RaycastHit hit;
-		// Bit shift the index of the layer 8 to get a bit mask
-		LayerMask layermaskPlayer = 1<<8;
-	  	// This would cast rays only against colliders in layer 8
-	  	// But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
-		layermaskPlayer = ~layermaskPlayer;
-		
-	  	// Does the ray intersect any objects excluding the player and fort layer
-	  	if(Physics.Raycast(transform.position, direction, out hit, range, layermaskPlayer)){
-			bullet.bulletDistance = hit.distance;
-			Debug.DrawRay(transform.position, direction * hit.distance, Color.blue);
-	  	} else {
-			bullet.bulletDistance = 100f;
-	    	Debug.DrawRay(transform.position, direction * range, Color.green);
-	  	}
-	}
-	
-	void RaycastDown(){
-		Vector3 direction = transform.TransformDirection(Vector3.down);
-		RaycastHit hit;
-		// Bit shift the index of the layer 8 to get a bit mask
-		LayerMask layermaskPlayer = 8;
-		LayerMask layermaskGround = 10;
-	  	// This would cast rays only against colliders in layer 8
-	  	// But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
-		LayerMask layermaskFinal = ~((1<<layermaskPlayer)|1<<layermaskGround);
-		
-	  	// Does the ray intersect any objects excluding the player and fort layer
-	  	if(Physics.Raycast(transform.position, direction, out hit, range, layermaskFinal)){
-			bullet.bulletDistance = hit.distance;
-			Debug.DrawRay(transform.position, direction * hit.distance, Color.blue);
-	  	} else {
-			bullet.bulletDistance = 100f;
-	    	Debug.DrawRay(transform.position, direction * range, Color.green);
-	  	}
-	}*/
 	
 	IEnumerator Wait(){
 		roundsPerBurst = 3;

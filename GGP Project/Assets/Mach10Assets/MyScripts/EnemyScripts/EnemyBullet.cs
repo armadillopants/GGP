@@ -3,12 +3,10 @@ using System.Collections;
 
 public class EnemyBullet : MonoBehaviour {
 	public GameObject explosion;
-	public float speed = 10f;
-	public float range = 10f;
-	public float lifeTime = 0.0f;
+	private float speed = 0f;
+	private float lifeTime = 0.0f;
 	private float collisionRadius = 0.5f;
-	private float damage = 5f;
-	private float distance;
+	private float damage = 0f;
 	
 	void Start(){
 		Invoke("Kill", lifeTime);
@@ -20,8 +18,13 @@ public class EnemyBullet : MonoBehaviour {
 		foreach(Collider c in hits){
 			c.collider.gameObject.SendMessageUpwards("TakePlayerDamage", damage, SendMessageOptions.DontRequireReceiver);
 		}
-		transform.Translate(Vector3.forward * Time.deltaTime * speed);
-		distance -= speed * Time.deltaTime;
+		transform.Translate(Vector3.forward*speed*Time.deltaTime);
+	}
+	
+	void OnTriggerEnter(Collider hit){
+		if(hit.tag == "Player"){
+			Kill();
+		}
 	}
 	
 	void Kill(){
@@ -30,7 +33,7 @@ public class EnemyBullet : MonoBehaviour {
 		}
 		// Stop emitting particles in any children
 		ParticleEmitter emitter = GetComponentInChildren<ParticleEmitter>();
-		if (emitter){
+		if(emitter){
 			emitter.emit = false;
 		}
 
@@ -43,6 +46,10 @@ public class EnemyBullet : MonoBehaviour {
 	
 	public void ModifyDamage(float amount){
 		damage = amount;
+	}
+	
+	public void ModifySpeed(float amount){
+		speed = amount;
 	}
 	
 	public void ModifyLifeTime(float amount){
