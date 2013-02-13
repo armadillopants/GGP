@@ -46,11 +46,10 @@
   <ItemGroup>
      <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingBackground.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\BaseEnemy.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\EnemyBullet.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\EnemyManager.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\GroundTurret.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\Kamikaze.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\Health.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerMovement.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerWeapon.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\TextEditor.cs" />

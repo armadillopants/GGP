@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bomb
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 13.296895, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -82,8 +82,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13caa8d0c5cd5794ea3c9d64e08169a4, type: 3}
   m_Name: 
   explosion: {fileID: 100004, guid: 169b10ce10f4327cb9f40f6b117ed8d7, type: 2}
-  bulletSpeed: -.200000003
-  bulletDistance: 100
+  target: {fileID: 0}
+  isHoming: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

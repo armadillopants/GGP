@@ -5,9 +5,10 @@ public class Explosion : MonoBehaviour {
 	public float explosionRadius = 5.0f;
 	public float explosionDamage = 10.0f;
 	public float explosionTimeout = 1.0f;
+	private Health health;
 
 	// Use this for initialization
-	void Start(){
+	void Start(){	
 		Vector3 explosionPos = transform.position;
 		
 		// Apply damage to close by objects first
@@ -21,8 +22,11 @@ public class Explosion : MonoBehaviour {
 			double damage = 1.0 - Mathf.Clamp01(distance/explosionRadius);
 			damage *= explosionDamage;
 			
+			health = hit.GetComponent<Health>();
 			// Apply damage
-			hit.SendMessageUpwards("TakeEnemyDamage", damage, SendMessageOptions.DontRequireReceiver);
+			if(hit.tag == "Enemy" || hit.tag == "GroundEnemy"){
+				health.TakeDamage((float)damage);
+			}
 		}
 		// Stop emitting particles
 		if(particleEmitter){

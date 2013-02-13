@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerHealth : MonoBehaviour {
+public class Health : MonoBehaviour {
 	private float startHealth = 100.0f;
 	public float curHealth = 0.0f;
 
@@ -16,18 +16,19 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	
 	public void ModifyHealth(float amount){
-		curHealth = amount;
+		startHealth = amount;
 	}
 	
-	private void TakePlayerDamage(float damage){
+	public void TakeDamage(float damage){
 		curHealth -= damage;
 		if(curHealth <= 0){
 			Die();
 		}
 	}
 	
-	void Die(){
+	public void Die(){
 		Destroy(gameObject);
+		//Destroy(renderer.material);
 	}
 	
 	void OnGUI(){

@@ -7,8 +7,6 @@ public class BaseEnemy : MonoBehaviour {
 		GROUNDTURRET,
 	}
 	public EnemyType type;
-	public float curHealth;
-	private float startHealth;
 	private float enemySpeed;
 	private Transform target;
 	private Transform trans;
@@ -24,6 +22,7 @@ public class BaseEnemy : MonoBehaviour {
 	public float firePauseTime = 0.25f;
 	public Transform[] muzzlePosition;
 	public Transform turretBall;
+	private Health health;
 	
 	private float nextFireTime;
 	private float nextMoveTime;
@@ -31,8 +30,8 @@ public class BaseEnemy : MonoBehaviour {
 	// Use this for initialization
 	public virtual void Start(){
 		trans = transform;
-		curHealth = startHealth;
 		target = GameObject.Find("Player").transform;
+		health = GetComponent<Health>();
 		cam = Camera.mainCamera;
 		curLookTime = maxLookTime;
 	}
@@ -67,7 +66,7 @@ public class BaseEnemy : MonoBehaviour {
 				float down = cam.ViewportToWorldPoint(new Vector3(0, 0.1f, distance)).z;
 				Vector3 pos = new Vector3(0, enemyAirFixedHeight, down);
 				if(trans.position.z <= pos.z){
-					Die();
+					health.Die();
 				}
 			}
 		}
@@ -88,28 +87,30 @@ public class BaseEnemy : MonoBehaviour {
 			}
 			Vector3 pos = new Vector3(0, enemyGroundFixedHeight, down);
 			if(trans.position.z <= pos.z + 0.5f){
-				Die();
+				health.Die();
 			}
 		}
 	}
 	
-	void OnCollisionEnter(Collision collision){
-		if(collision.gameObject.tag == "Player"){
+	void OnTriggerEnter(Collider hit){
+		if(hit.tag == "Player"){
 			if(type == EnemyType.KAMIKAZE){
-				collision.collider.gameObject.SendMessageUpwards("TakePlayerDamage", 20f, SendMessageOptions.DontRequireReceiver);
-				Die();
+				Health health = target.GetComponent<Health>();
+				health.TakeDamage(20f);
+				this.health.Die();
 			}
 		}
 	}
 	
 	
 	void FireProjectile(){
+		Physics.IgnoreLayerCollision(12, 11, true);
 		nextFireTime = Time.time+reloadTime;
 		nextMoveTime = Time.time+firePauseTime;
 		
 		foreach(Transform muzzlePos in muzzlePosition){
 			GameObject visibleProj = (GameObject)Instantiate(projectile, muzzlePos.position, muzzlePos.rotation);
-			EnemyBullet bullet = visibleProj.GetComponent<EnemyBullet>();
+			Bullet bullet = visibleProj.GetComponent<Bullet>();
 			bullet.ModifyLifeTime(2f);
 			bullet.ModifyDamage(5f);
 			bullet.ModifySpeed(10f);
@@ -122,21 +123,5 @@ public class BaseEnemy : MonoBehaviour {
 	
 	public void ModifySpeed(float amount){
 		enemySpeed = amount;
-	}
-	
-	public void ModifyHealth(float amount){
-		startHealth = amount;
-	}
-	
-	private void TakeEnemyDamage(float damage){
-		curHealth -= damage;
-		if(curHealth <= 0){
-			Die();
-		}
-	}
-	
-	public void Die(){
-		Destroy(gameObject);
-		Destroy(renderer.material);
 	}
 }

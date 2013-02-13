@@ -8,7 +8,8 @@ public class Kamikaze : BaseEnemy {
 	// Use this for initialization
 	public override void Start(){
 		type = BaseEnemy.EnemyType.KAMIKAZE;
-		ModifyHealth(healthAmount);
+		Health health = GetComponent<Health>();
+		health.ModifyHealth(healthAmount);
 		ModifySpeed(speedAmount);
 		base.Start();
 	}

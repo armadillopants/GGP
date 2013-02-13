@@ -72,6 +72,7 @@ public class PlayerWeapon : MonoBehaviour {
 			CreateProjectile();
 			nextFireTime += fireRate;
 		}
+		Physics.IgnoreLayerCollision(8, 9, true);
 	}
 	
 	void FireRocket(){
@@ -84,10 +85,12 @@ public class PlayerWeapon : MonoBehaviour {
 			CreateProjectile();
 			nextFireTime += fireRate;
 		}
+		
+		Physics.IgnoreLayerCollision(8, 9, true);
 	}
 	
 	void FireHomingMissile(){
-		ModifyFireRate(0.8f);
+		ModifyFireRate(0.3f);
 		if(Time.time - fireRate > nextFireTime) {
 			nextFireTime = Time.time - Time.deltaTime;
 		}
@@ -96,6 +99,7 @@ public class PlayerWeapon : MonoBehaviour {
 			CreateProjectile();
 			nextFireTime += fireRate;
 		}
+		Physics.IgnoreLayerCollision(8, 9, true);
 	}
 	
 	void FireShotGun(){
@@ -113,6 +117,7 @@ public class PlayerWeapon : MonoBehaviour {
 			}
 			nextFireTime = Time.time + fireRate;
 		}
+		Physics.IgnoreLayerCollision(8, 9, true);
 	}
 	
 	void DropBomb(){
@@ -125,6 +130,7 @@ public class PlayerWeapon : MonoBehaviour {
 			StartCoroutine("Wait");
 			nextFireTime += fireRate;
 		}
+		Physics.IgnoreLayerCollision(8, 9, true);
 	}
 	
 	void CreateProjectile(){
