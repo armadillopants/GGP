@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 54: {fileID: 5400000}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Kamikaze
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -94,13 +94,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb7de508ecbf94b43895c4f5d3221307, type: 3}
   m_Name: 
-  type: 0
-  projectile: {fileID: 0}
-  curLookTime: 0
-  reloadTime: 1
-  turnSpeed: 5
-  firePauseTime: .25
-  muzzlePosition: []
   turretBall: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:

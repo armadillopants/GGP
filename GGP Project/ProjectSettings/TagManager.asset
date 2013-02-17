@@ -6,6 +6,8 @@ TagManager:
   - GroundEnemy
   - Enemy
   - Ground
+  - TurretBall
+  - Bullet
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

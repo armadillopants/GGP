@@ -16,12 +16,15 @@ public class PlayerMovement : MonoBehaviour {
 	private float maxDodgeTime = 3f;
 	public bool isDodgingLeft;
 	public bool isDodgingRight;
+	private Health health;
 
 	// Use this for initialization
 	void Start(){
 		trans = transform;
 		cam = Camera.mainCamera;
 		curDodgeTime = maxDodgeTime;
+		health = GetComponent<Health>();
+		health.ModifyHealth(100f);
 	}
 	
 	// Update is called once per frame
@@ -127,5 +130,9 @@ public class PlayerMovement : MonoBehaviour {
 		float curPosX = trans.position.x;
 		float curPosZ = trans.position.z;
 		trans.localPosition = new Vector3(Mathf.Lerp(curPosX, pos, 1*Time.deltaTime), playerFixedHeight, curPosZ);
+	}
+	
+	void OnGUI(){
+		GUILayout.Label("Health: " + health.curHealth);
 	}
 }
