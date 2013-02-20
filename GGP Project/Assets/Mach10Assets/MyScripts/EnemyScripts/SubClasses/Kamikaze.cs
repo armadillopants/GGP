@@ -4,7 +4,6 @@ using System.Collections;
 public class Kamikaze : BaseEnemy {
 	
 	public override void Start(){
-		health = GetComponent<Health>();
 		health.ModifyHealth(20f);
 		ModifySpeed(30f);
 		ModifyHeight(15f);

@@ -5,7 +5,6 @@ public class GovSentry : BaseEnemy {
 
 	// Use this for initialization
 	public override void Start(){
-		health = GetComponent<Health>();
 		health.ModifyHealth(10f);
 		ModifySpeed(5f);
 		ModifyHeight(15f);

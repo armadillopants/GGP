@@ -1,6 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Mach10Assets\MyScripts\Global\Health.cs">
+    <Files>
+      <File FileName="Assets\Mach10Assets\MyScripts\Global\Health.cs" Line="27" Column="39" />
+      <File FileName="Assets\Mach10Assets\MyScripts\PlayerScripts\Lives.cs" Line="6" Column="26" />
+      <File FileName="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerMovement.cs" Line="141" Column="31" />
+      <File FileName="Assets\Mach10Assets\MyScripts\UI\DisplayPlayerUI.cs" Line="12" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -54,8 +54,13 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Bullet.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Health.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Weapon.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\Lives.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerMovement.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\TextEditor.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\UI\DisplayPlayerUI.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\UI\GameOver.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\UI\MainMenu.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\UI\PauseMenu.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\Explosion.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\Bomb.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\GunbotProjectile.cs" />

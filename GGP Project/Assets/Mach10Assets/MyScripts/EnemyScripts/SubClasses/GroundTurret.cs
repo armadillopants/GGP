@@ -5,7 +5,6 @@ public class GroundTurret : BaseEnemy {
 
 	// Use this for initialization
 	public override void Start(){
-		health = GetComponent<Health>();
 		health.ModifyHealth(20f);
 		ModifySpeed(10f);
 		ModifyHeight(2f);

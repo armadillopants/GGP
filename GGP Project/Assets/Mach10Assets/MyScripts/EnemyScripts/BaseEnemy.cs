@@ -17,6 +17,10 @@ public class BaseEnemy : MonoBehaviour {
 	protected float distance;
 	protected float top;
 	protected float down;
+	
+	void Awake(){
+		health = GetComponent<Health>();
+	}
 
 	// Use this for initialization
 	public virtual void Start(){
