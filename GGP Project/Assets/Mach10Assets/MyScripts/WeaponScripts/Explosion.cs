@@ -22,9 +22,9 @@ public class Explosion : MonoBehaviour {
 			double damage = 1.0 - Mathf.Clamp01(distance/explosionRadius);
 			damage *= explosionDamage;
 			
-			health = hit.GetComponent<Health>();
 			// Apply damage
 			if(hit.tag == "Enemy" || hit.tag == "GroundEnemy"){
+				health = hit.transform.parent.GetComponent<Health>();
 				health.TakeDamage((float)damage);
 			}
 		}

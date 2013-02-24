@@ -14,94 +14,99 @@ public class PlayerMovement : MonoBehaviour {
 	public float curDodgeTime = 0f;
 	private float minDodgeTime = 0f;
 	private float maxDodgeTime = 3f;
+	private bool canControl;
 	public bool isDodgingLeft;
 	public bool isDodgingRight;
 	private bool clampPosition = false;
+	private float distance;
+	private float down;
+	private float left;
+	private float right;
+	private float top;
 
 	// Use this for initialization
 	void Start(){
+		canControl = true;
 		trans = transform;
 		cam = Camera.mainCamera;
 		curDodgeTime = maxDodgeTime;
 		clampPosition = true;
+		distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
+		top = cam.ViewportToWorldPoint(new Vector3(0, 0.9f, distance)).z;
+		down = cam.ViewportToWorldPoint(new Vector3(0, 0.1f, distance)).z;
+		left = cam.ViewportToWorldPoint(new Vector3(0.1f, 0, distance)).x;
+        right = cam.ViewportToWorldPoint(new Vector3(0.9f, 0, distance)).x;
 	}
 	
 	// Update is called once per frame
 	void Update(){
-		// For WASD and ARROW controls
-		moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
-		moveDirection *= playerSpeed * Time.deltaTime;
-		trans.Translate(moveDirection);
-		
 		// Clamps player position to screen boundaries
 		if(clampPosition){
 			ClampPositionToViewPort();
+		} else {
+			FlyOnScreen();
 		}
-		
-		// Rotate the player Z axis slightly when moving left or right
-		RotatePlayer();
 		
 		// Reset the euler angles whenever not rotating
 		if(!isRotating){
 			trans.localEulerAngles = new Vector3(0, 0, 0);
 		}
 		
-		// For dodging controls
-		if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
-			if(coolDown > 0 && keyCounter == 1){
-				isDodgingLeft = true;
+		if(canControl){
+			// For WASD and ARROW controls
+			moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+			moveDirection *= playerSpeed * Time.deltaTime;
+			trans.Translate(moveDirection);
+			
+			// Rotate the player Z axis slightly when moving left or right
+			RotatePlayer();
+			
+			// For dodging controls
+			if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
+				if(coolDown > 0 && keyCounter == 1){
+					isDodgingLeft = true;
+				} else {
+					coolDown = 0.5f;
+					keyCounter++;
+				}
+			}
+			if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
+				if(coolDown > 0 && keyCounter == 1){
+					isDodgingRight = true;
+				} else {
+					coolDown = 0.5f;
+					keyCounter++;
+				}
+			}
+			
+			if(coolDown > 0){
+				coolDown -= 1*Time.deltaTime;
 			} else {
-				coolDown = 0.5f;
-				keyCounter++;
+				coolDown = 0;
+				keyCounter = 0;
 			}
-		}
-		if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
-			if(coolDown > 0 && keyCounter == 1){
-				isDodgingRight = true;
+			
+			if(isDodgingLeft && curDodgeTime > 0){
+				if(!Input.GetKey(KeyCode.A)){
+					curDodgeTime -= 2*Time.deltaTime;
+					Dodge(180*Time.deltaTime, left);
+				}
+			} else if(isDodgingRight && curDodgeTime > 0){
+				if(!Input.GetKey(KeyCode.D)){
+					curDodgeTime -= 2*Time.deltaTime;
+					Dodge(-180*Time.deltaTime, right);
+				}
 			} else {
-				coolDown = 0.5f;
-				keyCounter++;
+				isDodgingLeft = false;
+				isDodgingRight = false;
+				isRotating = false;
+				curDodgeTime += 0.5f*Time.deltaTime;
+				ClampDodgeTime();
 			}
-		}
-		
-		if(coolDown > 0){
-			coolDown -= 1*Time.deltaTime;
-		} else {
-			coolDown = 0;
-			keyCounter = 0;
-		}
-		
-		float distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
-        float left = cam.ViewportToWorldPoint(new Vector3(0.1f, 0, distance)).x;
-        float right = cam.ViewportToWorldPoint(new Vector3(0.9f, 0, distance)).x;
-		
-		if(isDodgingLeft && curDodgeTime > 0){
-			if(!Input.GetKey(KeyCode.A)){
-				curDodgeTime -= 2*Time.deltaTime;
-				Dodge(180*Time.deltaTime, left);
-			}
-		} else if(isDodgingRight && curDodgeTime > 0){
-			if(!Input.GetKey(KeyCode.D)){
-				curDodgeTime -= 2*Time.deltaTime;
-				Dodge(-180*Time.deltaTime, right);
-			}
-		} else {
-			isDodgingLeft = false;
-			isDodgingRight = false;
-			isRotating = false;
-			curDodgeTime += 0.5f*Time.deltaTime;
-			ClampDodgeTime();
 		}
 	}
 	
 	void ClampPositionToViewPort(){
-		float distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
-		
-        float left = cam.ViewportToWorldPoint(new Vector3(0.1f, 0, distance)).x;
-        float right = cam.ViewportToWorldPoint(new Vector3(0.9f, 0, distance)).x;
-        float top = cam.ViewportToWorldPoint(new Vector3(0, 0.9f, distance)).z;
-        float down = cam.ViewportToWorldPoint(new Vector3(0, 0.1f, distance)).z;
- 
         Vector3 pos = trans.position;
 		pos = new Vector3(Mathf.Clamp(trans.position.x, left, right), playerFixedHeight, Mathf.Clamp(trans.position.z, down, top));
         
@@ -110,7 +115,18 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	public void ResetPlayerPos(){
-		trans.position = new Vector3(0, playerFixedHeight, -15);
+		trans.position = new Vector3(trans.position.x, playerFixedHeight, trans.position.z-15);
+	}
+	
+	void FlyOnScreen(){
+		canControl = false;
+		Vector3 startPoint = new Vector3(trans.position.x, playerFixedHeight, trans.position.z);
+		Vector3 endPoint = new Vector3(trans.position.x, playerFixedHeight, down);
+		trans.position = Vector3.MoveTowards(startPoint, endPoint, (playerSpeed/2)*Time.deltaTime);
+		if(trans.position.z >= down){
+			clampPosition = true;
+			canControl = true;
+		}
 	}
 	
 	void ClampDodgeTime(){

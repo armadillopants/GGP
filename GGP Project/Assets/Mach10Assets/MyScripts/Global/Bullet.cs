@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider hit){
 		if(hit.tag == "Enemy"){
-			health = hit.GetComponent<Health>();
+			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
 			Kill();
 		}
@@ -49,7 +49,7 @@ public class Bullet : MonoBehaviour {
 			Kill();
 		}
 		if(hit.tag == "GroundEnemy"){
-			health = hit.GetComponent<Health>();
+			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
 			Kill();
 		}

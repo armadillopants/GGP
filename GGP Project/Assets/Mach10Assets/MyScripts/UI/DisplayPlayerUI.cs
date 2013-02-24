@@ -11,7 +11,7 @@ public class DisplayPlayerUI : MonoBehaviour {
 		health = player.GetComponent<Health>();
 		health.ModifyHealth(100f);
 		lives = player.GetComponent<Lives>();
-		lives.ModifyLives(3);
+		lives.ModifyLives(3f);
 	}
 	
 	void OnGUI(){

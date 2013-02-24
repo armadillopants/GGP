@@ -46,14 +46,6 @@ public class BaseEnemy : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerEnter(Collider hit){
-		if(hit.tag == "Player"){
-			Health playerHealth = target.GetComponentInChildren<Health>();
-			playerHealth.TakeDamage(20f);
-			health.Die();
-		}
-	}
-	
 	public void ClampLookTime(){
 		curLookTime = Mathf.Clamp(curLookTime, minLookTime, maxLookTime);
 	}

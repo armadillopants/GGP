@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13caa8d0c5cd5794ea3c9d64e08169a4, type: 3}
   m_Name: 
   explosion: {fileID: 0}
-  bulletSpeed: 15
+  bulletSpeed: 20
   lifeTime: 3
   damage: 5
   target: {fileID: 0}

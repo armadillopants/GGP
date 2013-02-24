@@ -2,19 +2,23 @@ using UnityEngine;
 using System.Collections;
 
 public class Lives : MonoBehaviour {
-	private int startLives = 0;
-	public int curLives = 0;
+	private float startLives = 0;
+	public float curLives = 0;
 	
-	public void ModifyLives(int amount){
+	public void ModifyLives(float amount){
 		startLives = amount;
 		curLives = startLives;
 	}
 	
-	public void TakeLives(int howMany){
+	public void TakeLives(float howMany){
 		curLives = Mathf.Max(0, curLives-howMany);
 		if(curLives == 0){
 			EndGame();
 		}
+	}
+	
+	public void AddLives(float howMany){
+		curLives = Mathf.Min(Mathf.Infinity, curLives+howMany);
 	}
 	
 	public void EndGame(){

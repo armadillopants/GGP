@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4e7389f115184bb4a85da695b636b6fd
+guid: cc197b96a8eca404099f1f35277b96e9
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -10,7 +10,28 @@ ModelImporter:
     100008: pasted__group3
     100010: pasted__group3 1
     100012: //RootNode
-    100014: polySurface4
+    100014: polySurface10
+    100016: polySurface11
+    100018: polySurface12
+    100020: polySurface13
+    100022: polySurface14
+    100024: polySurface15
+    100026: polySurface4
+    100028: polySurface5
+    100030: polySurface6
+    100032: polySurface7
+    100034: polySurface8
+    100036: polySurface9
+    100038: transform1
+    100040: transform10
+    100042: transform2
+    100044: transform3
+    100046: transform4
+    100048: transform5
+    100050: transform6
+    100052: transform7
+    100054: transform8
+    100056: transform9
     400000: group
     400002: group2
     400004: group4
@@ -18,11 +39,32 @@ ModelImporter:
     400008: pasted__group3
     400010: pasted__group3 1
     400012: //RootNode
-    400014: polySurface4
-    2300000: polySurface4
-    3300000: polySurface4
-    4300000: polySurface4
-    6400000: polySurface4
+    400014: polySurface10
+    400016: polySurface11
+    400018: polySurface12
+    400020: polySurface13
+    400022: polySurface14
+    400024: polySurface15
+    400026: polySurface4
+    400028: polySurface5
+    400030: polySurface6
+    400032: polySurface7
+    400034: polySurface8
+    400036: polySurface9
+    400038: transform1
+    400040: transform10
+    400042: transform2
+    400044: transform3
+    400046: transform4
+    400048: transform5
+    400050: transform6
+    400052: transform7
+    400054: transform8
+    400056: transform9
+    2300000: polySurface15
+    3300000: polySurface15
+    4300000: polySurface15
+    6400000: polySurface15
     9500000: //RootNode
   materials:
     importMaterials: 1

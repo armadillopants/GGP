@@ -4,14 +4,14 @@ using System.Collections;
 public class Bomb : Weapon {
 
 	// Use this for initialization
-	public override void Start () {
+	public override void Start(){
 		ModifyFireRate(2f);
 		ModifyConeAngle(5f);
 		ModifyRoundsPerBurst(3);
 	}
 	
 	public override void Update(){
-		if(Input.GetKey(KeyCode.LeftShift)){
+		if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl)){
 			FireProjectile();
 		}
 	}
@@ -25,6 +25,7 @@ public class Bomb : Weapon {
 			StartCoroutine("Wait");
 			nextFireTime += fireRate;
 		}
+		Physics.IgnoreLayerCollision(8, 9, true);
 	}
 	
 	private IEnumerator Wait(){
