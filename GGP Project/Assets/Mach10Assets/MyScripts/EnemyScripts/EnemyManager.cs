@@ -10,9 +10,11 @@ public class EnemyManager : MonoBehaviour {
 	private int totalRanks;
 	private int currentRank = 0;
 	private float secondsPassed = 0f;
+	private LevelWin levelWin;
 
 	// Use this for initialization
 	void Start(){
+		levelWin = GameObject.Find("LevelWin").GetComponent<LevelWin>();
 		totalRanks = enemies.Count;
 		enemiesSpawnedPerLevel = Random.Range(20, 60);
 	}
@@ -24,13 +26,17 @@ public class EnemyManager : MonoBehaviour {
 		} else {
 			SpawnRanks();
 		}
+		maxEnemiesOnScreen = Mathf.Max(0, maxEnemiesOnScreen);
+		if(enemiesSpawned >= enemiesSpawnedPerLevel && maxEnemiesOnScreen <= 0){
+			levelWin.LevelWon();
+		}
 		secondsPassed += 1.5f*Time.deltaTime;
 	}
 	
 	void SpawnEnemies(){
 		if(secondsPassed > 5f){
-			if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen <= 6){
-				for(int i=0; i<enemies.Count; i++){
+			for(int i=0; i<enemies.Count; i++){
+				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen <= 6){
 					Instantiate(enemies[Random.Range(0, enemies.Count)], 
 								new Vector3(Random.Range(-10, 10), enemies[i].transform.position.y, enemies[i].transform.position.z), 
 								enemies[i].transform.rotation);
@@ -57,13 +63,13 @@ public class EnemyManager : MonoBehaviour {
 		enemiesSpawnedPerLevel = amount;
 	}
 	
-	void AddEnemy(GameObject enemy){
+	public void AddEnemy(GameObject enemy){
 		for(int i=0; i<enemies.Count; i++){
 			enemies.Add(enemy);
 		}
 	}
 	
-	void RemoveEnemy(GameObject enemy){
+	public void RemoveEnemy(GameObject enemy){
 		for(int i=0; i<enemies.Count; i++){
 			if(enemies[i] == enemy){
 				enemies.RemoveAt(i);
@@ -72,7 +78,11 @@ public class EnemyManager : MonoBehaviour {
 		}
 	}
 	
-	void ClearEnemies(){
+	public void ClearEnemies(){
+		GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Manager");
+		foreach(GameObject enemy in enemyList){
+			Destroy(enemy);
+		}
 		enemies.Clear();
 	}
 }

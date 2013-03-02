@@ -12,13 +12,13 @@ public class PlayerSwoop : MonoBehaviour {
 	private Vector3 moveDirection;
 
 	// Use this for initialization
-	void Start () {
+	void Start(){
 		trans = transform;
 		totalWayPoints = wayPoints.Length;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update(){
 		LookAtTarget();
 	}
 	
@@ -28,7 +28,7 @@ public class PlayerSwoop : MonoBehaviour {
 		} else {
 			target = wayPoints[curWaypoint].position;
 			moveDirection = (target - trans.position);
-			trans.rotation = Quaternion.Slerp(trans.rotation, Quaternion.LookRotation(moveDirection), 5*Time.deltaTime);
+			trans.rotation = Quaternion.Slerp(trans.rotation, Quaternion.LookRotation(moveDirection), 4*Time.deltaTime);
 			if(moveDirection.sqrMagnitude < 1){
 				curWaypoint++;
 			}

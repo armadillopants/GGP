@@ -4,18 +4,29 @@ using System.Collections;
 public class DisplayPlayerUI : MonoBehaviour {
 	private Health health;
 	private Lives lives;
+	private GameObject player;
+	private EnemyManager manager;
 
 	// Use this for initialization
 	void Start () {
-		GameObject player = GameObject.Find("Player");
+		player = GameObject.Find("Player");
 		health = player.GetComponent<Health>();
 		health.ModifyHealth(100f);
 		lives = player.GetComponent<Lives>();
 		lives.ModifyLives(3f);
+		manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
+	}
+	
+	void Update(){
+		if(lives.getLives() <= 0){
+			manager.ClearEnemies();
+		}
 	}
 	
 	void OnGUI(){
-		GUILayout.Label("Health: " + health.curHealth);
-		GUILayout.Label("Lives: " + lives.curLives);
+		if(player){
+			GUILayout.Label("Health: " + health.getHealth());
+			GUILayout.Label("Lives: " + lives.getLives());
+		}
 	}
 }

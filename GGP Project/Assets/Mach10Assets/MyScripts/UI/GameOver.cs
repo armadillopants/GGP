@@ -16,7 +16,7 @@ public class GameOver : MonoBehaviour {
 		if(gameOver){
 			GUIStyle style = new GUIStyle();
 			style.fontSize = 60;
-			GUIContent content = new GUIContent("GAMEOVER");
+			GUIContent content = new GUIContent("GAME OVER");
 			Vector2 size = style.CalcSize(content);
 			GUI.Label(new Rect(Screen.width / 2 - size.x / 2,
 								Screen.height / 3,

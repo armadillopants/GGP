@@ -20,10 +20,10 @@ public class Kamikaze : BaseEnemy {
 	   			trans.rotation = Quaternion.Slerp(trans.rotation,
 	    			Quaternion.LookRotation(target.position-trans.position), 1);
 			}
-		}
-		if(curLookTime <= 0){
-			// Move towards the player
-	    	trans.position += trans.forward * getSpeed() * Time.deltaTime;
+			if(curLookTime <= 0){
+				// Move towards the player
+		    	trans.position += trans.forward * getSpeed() * Time.deltaTime;
+			}
 		}
 		base.EnemyAttack();
 	}

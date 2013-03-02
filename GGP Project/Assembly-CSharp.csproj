@@ -59,13 +59,17 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerMovement.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerSwoop.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\TextEditor.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\UI\CameraMover.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\DisplayPlayerUI.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\DrawGizmos.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\GameOver.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\UI\LevelWin.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\MainMenu.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\MenuSwoop.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\PauseMenu.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\Explosion.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUpMover.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUps.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\Bomb.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\GunbotProjectile.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\HomingMissile.cs" />

@@ -6,7 +6,7 @@ public class GunbotProjectile : Weapon {
 	// Use this for initialization
 	public override void Start(){
 		ModifyFireRate(3f);
-		ModifyConeAngle(2f);
+		ModifyConeAngle(1f);
 	}
 	
 	// Update is called once per frame

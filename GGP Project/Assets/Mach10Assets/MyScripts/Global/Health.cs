@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Health : MonoBehaviour {
 	private float maxHealth = 0.0f;
-	public float curHealth = 0.0f;
+	private float curHealth = 0.0f;
 	private bool isPlayer = false;
 	private PlayerMovement mover;
 	private Lives lives;
@@ -38,6 +38,8 @@ public class Health : MonoBehaviour {
 				mover.ResetPlayerPos();
 				ModifyHealth(100f);
 			} else {
+				PowerUps powerUp = GameObject.FindGameObjectWithTag("Enemy").GetComponent<PowerUps>();
+				powerUp.DropPowerUp();
 				Die();
 			}
 		}
@@ -45,6 +47,10 @@ public class Health : MonoBehaviour {
 	
 	public void AddHealth(float howMuch){
 		curHealth = Mathf.Min(maxHealth, curHealth+howMuch);
+	}
+	
+	public float getHealth(){
+		return curHealth;
 	}
 	
 	public void Die(){

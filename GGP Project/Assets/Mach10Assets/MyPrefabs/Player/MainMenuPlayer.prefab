@@ -79,7 +79,6 @@ GameObject:
   - 4: {fileID: 400024}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 64: {fileID: 6400000}
   m_Layer: 0
   m_Name: CollisionData
   m_TagString: Untagged
@@ -95,6 +94,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400020}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: MainMenuPlayer
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 9.7763443}
+  m_LocalPosition: {x: 0, y: 1.6412003, z: -20.8703804}
   m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children:
   - {fileID: 400024}
@@ -456,19 +456,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
   m_Mesh: {fileID: 4300000, guid: cc197b96a8eca404099f1f35277b96e9, type: 3}
---- !u!64 &6400000
-MeshCollider:
+--- !u!114 &11400000
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100022}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 100024}
   m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: cc197b96a8eca404099f1f35277b96e9, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bb4109058dddc479c00da57d6280ed, type: 3}
+  m_Name: 
+  wayPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  curWaypoint: 0
+  totalWayPoints: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

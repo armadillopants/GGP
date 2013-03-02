@@ -9,6 +9,8 @@ TagManager:
   - TurretBall
   - Bullet
   - Target
+  - Manager
+  - PowerUp
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

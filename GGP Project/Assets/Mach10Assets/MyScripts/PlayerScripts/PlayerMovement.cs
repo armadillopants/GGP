@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour {
 			// For dodging controls
 			if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
 				if(coolDown > 0 && keyCounter == 1){
-					isDodgingLeft = true;
+					//isDodgingLeft = true;
 				} else {
 					coolDown = 0.5f;
 					keyCounter++;
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour {
 			}
 			if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
 				if(coolDown > 0 && keyCounter == 1){
-					isDodgingRight = true;
+					//isDodgingRight = true;
 				} else {
 					coolDown = 0.5f;
 					keyCounter++;
