@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class WeaponManager : MonoBehaviour {
 	public Weapon[] weapons;
@@ -26,7 +24,7 @@ public class WeaponManager : MonoBehaviour {
 	public Weapon getWeapon(){
 		return curWeapon;
 	}
-	
+
 	public void SortPowerUps(){
 		curWeapon = weapons[Random.Range(1, weapons.Length)];
 		curWeapon.enabled = true;

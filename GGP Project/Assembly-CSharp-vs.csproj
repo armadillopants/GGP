@@ -55,9 +55,11 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\CollisionHandler.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Health.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Weapon.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\BoostsManager.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\Lives.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerMovement.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerSwoop.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\ShieldAnim.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\TextEditor.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\CameraMover.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\DisplayPlayerUI.cs" />
@@ -67,9 +69,13 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\MainMenu.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\MenuSwoop.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\PauseMenu.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\Boosts\Boosts.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\Boosts\BoostsMover.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\DropChance.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\Explosion.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUpMover.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUps.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\Mover.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUps\PowerUpMover.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUps\PowerUps.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\Bomb.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\GunbotProjectile.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\HomingMissile.cs" />
@@ -83,6 +89,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Mach10Assets\MyShaders\Shield.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\NFAA.shader" />

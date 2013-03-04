@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Bullet : MonoBehaviour {
 	private Transform trans;
@@ -51,6 +50,17 @@ public class Bullet : MonoBehaviour {
 		if(hit.tag == "GroundEnemy"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
+			Kill();
+		}
+		if(hit.tag == "Shield"){
+			health = hit.transform.GetComponent<Health>();
+			health.TakeDamage(damage);
+			if(health.getHealth() > 0){
+				hit.renderer.enabled = true;
+				hit.collider.enabled = true;
+			} else {
+				hit.collider.enabled = false;
+			}
 			Kill();
 		}
 	}

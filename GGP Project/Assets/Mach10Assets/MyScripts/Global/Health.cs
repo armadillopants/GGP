@@ -1,11 +1,11 @@
 using UnityEngine;
-using System.Collections;
 //using System.Xml;
 
 public class Health : MonoBehaviour {
 	private float maxHealth = 0.0f;
 	private float curHealth = 0.0f;
 	private bool isPlayer = false;
+	private bool isShield = false;
 	private PlayerMovement mover;
 	private Lives lives;
 	private GameObject player;
@@ -19,6 +19,9 @@ public class Health : MonoBehaviour {
 		player = GameObject.Find("Player");
 		if(gameObject.tag == "Player"){
 			isPlayer = true;
+		}
+		if(gameObject.tag == "Shield"){
+			isShield = true;
 		}
 		lives = player.GetComponent<Lives>();
 		mover = player.GetComponent<PlayerMovement>();
@@ -37,9 +40,13 @@ public class Health : MonoBehaviour {
 				mover.setClampPos(false);
 				mover.ResetPlayerPos();
 				ModifyHealth(100f);
+			} else if(isShield){
+				curHealth = 0f;
 			} else {
 				PowerUps powerUp = GameObject.FindGameObjectWithTag("Enemy").GetComponent<PowerUps>();
 				powerUp.DropPowerUp();
+				Boosts boost = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Boosts>();
+				boost.DropPowerUp();
 				Die();
 			}
 		}

@@ -36,6 +36,8 @@ public class Weapon : MonoBehaviour {
 		}
 		Physics.IgnoreLayerCollision(8, 9, true);
 		Physics.IgnoreLayerCollision(12, 11, true);
+		Physics.IgnoreLayerCollision(9, 11, true);
+		Physics.IgnoreLayerCollision(9, 13, true);
 	}
 	
 	public virtual void CreateProjectile(){

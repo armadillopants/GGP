@@ -9,7 +9,7 @@ public class CameraMover : MonoBehaviour {
 		if(target){
 			Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, target.position, 3*Time.deltaTime);
 			Vector3 moveDirection = target.position - Camera.main.transform.position;
-			if(moveDirection.sqrMagnitude < 0.001f){
+			if(moveDirection.sqrMagnitude < 0.0001f){
 				Camera.main.transform.position = target.position;
 			}
 		}

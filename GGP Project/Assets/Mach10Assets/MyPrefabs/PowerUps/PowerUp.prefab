@@ -11,8 +11,8 @@ GameObject:
   - 33: {fileID: 3300000}
   - 65: {fileID: 6500000}
   - 23: {fileID: 2300000}
-  - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: PowerUp
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e76d62cd9cb154c8722139ac1c757a, type: 3}
+  m_Script: {fileID: 11500000, guid: 956bbc52b7e95224a9e0250f559c6833, type: 3}
   m_Name: 
 --- !u!1001 &100100000
 Prefab:

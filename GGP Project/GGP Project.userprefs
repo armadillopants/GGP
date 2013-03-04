@@ -1,11 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Mach10Assets\MyScripts\Global\Health.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Mach10Assets\MyScripts\PlayerScripts\BoostsManager.cs">
     <Files>
-      <File FileName="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUps.cs" Line="6" Column="31" />
-      <File FileName="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUpMover.cs" Line="20" Column="24" />
-      <File FileName="Assets\Mach10Assets\MyScripts\WeaponScripts\WeaponManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Mach10Assets\MyScripts\Global\Health.cs" Line="42" Column="27" />
+      <File FileName="Assets\Mach10Assets\MyScripts\PlayerScripts\BoostsManager.cs" Line="13" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

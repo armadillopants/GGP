@@ -124,7 +124,7 @@ MonoBehaviour:
   explosion: {fileID: 0}
   bulletSpeed: 10
   lifeTime: 2
-  damage: 5
+  damage: 10
   target: {fileID: 0}
   isHoming: 0
 --- !u!135 &13500000
