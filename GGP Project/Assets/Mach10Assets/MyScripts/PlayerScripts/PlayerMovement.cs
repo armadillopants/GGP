@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 	private Transform trans;
@@ -8,16 +7,20 @@ public class PlayerMovement : MonoBehaviour {
 	public float playerSpeed = 10.0f;
 	private float playerFixedHeight = 15f;
 	private float playerRotation = 20f;
+	
 	public float coolDown = 0.5f;
 	public int keyCounter = 1;
-	public bool isRotating = false;
+	
 	public float curDodgeTime = 0f;
 	private float minDodgeTime = 0f;
 	private float maxDodgeTime = 3f;
+	
 	private bool canControl;
+	public bool isRotating = false;
 	public bool isDodgingLeft;
 	public bool isDodgingRight;
 	private bool clampPosition = false;
+	
 	private float distance;
 	private float down;
 	private float left;

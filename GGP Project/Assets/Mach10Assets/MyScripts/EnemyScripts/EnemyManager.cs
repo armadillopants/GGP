@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class EnemyManager : MonoBehaviour {
@@ -16,7 +15,7 @@ public class EnemyManager : MonoBehaviour {
 	void Start(){
 		levelWin = GameObject.Find("LevelWin").GetComponent<LevelWin>();
 		totalRanks = enemies.Count;
-		enemiesSpawnedPerLevel = Random.Range(20, 60);
+		enemiesSpawnedPerLevel = 100;//Random.Range(20, 60);
 	}
 	
 	// Update is called once per frame
@@ -29,6 +28,7 @@ public class EnemyManager : MonoBehaviour {
 		maxEnemiesOnScreen = Mathf.Max(0, maxEnemiesOnScreen);
 		if(enemiesSpawned >= enemiesSpawnedPerLevel && maxEnemiesOnScreen <= 0){
 			levelWin.LevelWon();
+			ClearEnemies();
 		}
 		secondsPassed += 1.5f*Time.deltaTime;
 	}
@@ -38,7 +38,7 @@ public class EnemyManager : MonoBehaviour {
 			for(int i=0; i<enemies.Count; i++){
 				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen <= 6){
 					Instantiate(enemies[Random.Range(0, enemies.Count)], 
-								new Vector3(Random.Range(-10, 10), enemies[i].transform.position.y, enemies[i].transform.position.z), 
+								new Vector3(Random.Range(-12, 12), enemies[i].transform.position.y, enemies[i].transform.position.z), 
 								enemies[i].transform.rotation);
 					enemiesSpawned++;
 					maxEnemiesOnScreen++;
@@ -51,7 +51,7 @@ public class EnemyManager : MonoBehaviour {
 	void SpawnRanks(){
 		if(secondsPassed > 3f){
 			Instantiate(enemies[currentRank],
-						new Vector3(Random.Range(-10, 10), enemies[currentRank].transform.position.y, enemies[currentRank].transform.position.z),
+						new Vector3(Random.Range(-12, 12), enemies[currentRank].transform.position.y, enemies[currentRank].transform.position.z),
 						enemies[currentRank].transform.rotation);
 			secondsPassed = 0f;
 			currentRank++;

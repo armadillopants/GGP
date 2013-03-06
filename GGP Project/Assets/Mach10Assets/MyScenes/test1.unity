@@ -262,8 +262,8 @@ MonoBehaviour:
   playerSpeed: 20
   coolDown: .5
   keyCounter: 1
-  isRotating: 0
   curDodgeTime: 0
+  isRotating: 0
   isDodgingLeft: 0
   isDodgingRight: 0
 --- !u!114 &204386687
@@ -298,10 +298,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c72fd5c0037e6b748982bf6fa1c47fda, type: 3}
   m_Name: 
-  boosts:
-  - {fileID: 100000, guid: 306a501da7072e641bbd9db955f17362, type: 2}
-  - {fileID: 100000, guid: 77a228b18ce9ca3468b54070d49136da, type: 2}
-  - {fileID: 100000, guid: b5c0593713b9d0b4db6978f860c9acca, type: 2}
 --- !u!1 &426665129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,6 +1690,10 @@ Prefab:
       propertyPath: boosts.Array.data[2]
       value: 
       objectReference: {fileID: 100000, guid: 72017b0228e76b245ac60777ed846248, type: 2}
+    - target: {fileID: 11400004, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: coolDown
+      value: .5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74758fead630d647927b6501f08fce3, type: 2}
   m_RootGameObject: {fileID: 204386684}

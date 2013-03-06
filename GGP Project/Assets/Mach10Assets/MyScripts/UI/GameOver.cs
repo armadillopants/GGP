@@ -27,6 +27,7 @@ public class GameOver : MonoBehaviour {
 								   size.x / 2,
 								   size.y / 2), 
 						"Restart")){
+				Score.ResetScore();
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,

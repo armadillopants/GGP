@@ -40,6 +40,7 @@ public class Health : MonoBehaviour {
 				mover.setClampPos(false);
 				mover.ResetPlayerPos();
 				ModifyHealth(100f);
+				Score.TakeScore(Random.Range(5, 15));
 			} else if(isShield){
 				curHealth = 0f;
 			} else {
@@ -47,6 +48,7 @@ public class Health : MonoBehaviour {
 				powerUp.DropPowerUp();
 				Boosts boost = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Boosts>();
 				boost.DropPowerUp();
+				Score.AddScore(Random.Range(5, 20));
 				Die();
 			}
 		}

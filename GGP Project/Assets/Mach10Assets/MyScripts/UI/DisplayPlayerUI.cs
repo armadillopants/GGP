@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class DisplayPlayerUI : MonoBehaviour {
 	private Health health;
@@ -35,6 +34,7 @@ public class DisplayPlayerUI : MonoBehaviour {
 			GUILayout.Label("Health: " + health.getHealth());
 			GUILayout.Label("Lives: " + lives.getLives());
 			GUILayout.Label("Shield: " + shieldHealth.getHealth());
+			GUILayout.Label("Score: " + Score.getScore());
 		}
 	}
 }

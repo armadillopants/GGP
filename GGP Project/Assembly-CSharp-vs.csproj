@@ -54,6 +54,7 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Bullet.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\CollisionHandler.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Health.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\Global\Score.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Weapon.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\BoostsManager.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\Lives.cs" />

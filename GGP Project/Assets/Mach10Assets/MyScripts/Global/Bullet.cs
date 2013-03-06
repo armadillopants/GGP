@@ -19,6 +19,12 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update(){
+		Camera cam = Camera.main;
+		float distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
+		float top = cam.ViewportToWorldPoint(new Vector3(0, 0.9f, distance)).z;
+		if(trans.position.z >= top){
+			Kill();
+		}
 		if(isHoming){
 			target = FindNearestEnemey();
 			if(target){

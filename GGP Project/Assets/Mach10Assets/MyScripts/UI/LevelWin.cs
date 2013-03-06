@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class LevelWin : MonoBehaviour {
 	private bool levelWon = false;
@@ -16,8 +15,8 @@ public class LevelWin : MonoBehaviour {
 	void OnGUI(){
 		if(levelWon){
 			GUIStyle style = new GUIStyle();
-			style.fontSize = 60;
-			GUIContent content = new GUIContent("LEVEL COMPLETED");
+			style.fontSize = 30;
+			GUIContent content = new GUIContent("LEVEL COMPLETED\n" + "\t\t\t\t\tScore: " + Score.getScore());
 			Vector2 size = style.CalcSize(content);
 			GUI.Label(new Rect(Screen.width / 2 - size.x / 2,
 								Screen.height / 3,
@@ -35,6 +34,7 @@ public class LevelWin : MonoBehaviour {
 								   size.x / 2,
 								   size.y / 2), 
 						"Restart")){
+				Score.ResetScore();
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,
