@@ -36,7 +36,7 @@ public class Health : MonoBehaviour {
 		curHealth = Mathf.Max(0f, curHealth-damage);
 		if(curHealth == 0){
 			if(isPlayer){
-				lives.TakeLives(1f);
+				lives.TakeLives(1);
 				mover.setClampPos(false);
 				mover.ResetPlayerPos();
 				ModifyHealth(100f);
@@ -60,6 +60,10 @@ public class Health : MonoBehaviour {
 	
 	public float getHealth(){
 		return curHealth;
+	}
+	
+	public float getMaxHealth(){
+		return maxHealth;
 	}
 	
 	public void Die(){

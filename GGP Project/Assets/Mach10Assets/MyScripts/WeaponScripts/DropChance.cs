@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class DropChance : MonoBehaviour {
 	public GameObject[] obj;
@@ -10,7 +9,8 @@ public class DropChance : MonoBehaviour {
 		curObj = obj[Random.Range(0, obj.Length)];
 		float dropChance = Random.Range(0, 1f);
 		if(dropChance <= dropRate){
-			Instantiate(curObj, transform.parent.position, Quaternion.identity);
+			GameObject droppedObj =  (GameObject)Instantiate(curObj, transform.parent.position, Quaternion.identity);
+			droppedObj.name = curObj.name;
 		}
 	}
 }

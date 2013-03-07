@@ -1849,6 +1849,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4b6f7f84c5aa79248bd89687106e8023, type: 2}
+      propertyPath: shieldMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 8bdc417e1231a934c92619ab7fb71330, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b6f7f84c5aa79248bd89687106e8023, type: 2}
   m_RootGameObject: {fileID: 86817831}
