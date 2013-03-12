@@ -43,7 +43,7 @@ public class BaseEnemy : MonoBehaviour {
 	public virtual void EnemyAttack(){
 		float left = cam.ViewportToWorldPoint(new Vector3(-0.2f, 0, distance)).x;
 		float right = cam.ViewportToWorldPoint(new Vector3(1.2f, 0, distance)).x;
-		if(trans.position.z <= down+1f || trans.position.x <= left || trans.position.x >= right){
+		if(trans.position.z <= down || trans.position.x <= left || trans.position.x >= right){
 			health.Die();
 		}
 	}

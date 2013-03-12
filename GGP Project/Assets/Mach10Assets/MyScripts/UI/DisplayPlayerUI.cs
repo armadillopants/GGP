@@ -7,7 +7,7 @@ public class DisplayPlayerUI : MonoBehaviour {
 	private GameObject player;
 	private GameObject shield;
 	private EnemyManager manager;
-	Rect box = new Rect(10, 10, 100, 20);
+	Rect box = new Rect(10, Screen.height/1.2f, 100, 20);
 	private Texture2D healthBar;
 	private Texture2D shieldBar;
 	//public Material shieldMat;
@@ -57,8 +57,8 @@ public class DisplayPlayerUI : MonoBehaviour {
 			//GUI.backgroundColor = Color.red;
 			//GUI.Button(new Rect(10, 10, Screen.width/2 /(health.getMaxHealth()/health.getHealth()), 20), "Health: " + health.getHealth() + "/" + health.getMaxHealth());
 			//GUILayout.Label("Health: " + health.getHealth());
-			GUI.Box(new Rect(10, 40, 100, 20), "Lives: " + lives.getLives());
-			GUI.Box(new Rect(10, 70, 100, 20), "Score: " + Score.getScore());
+			GUI.Box(new Rect(10, Screen.height/1.15f, 100, 20), "Lives: " + lives.getLives());
+			GUI.Box(new Rect(10, Screen.height/1.1f, 100, 20), "Score: " + Score.getScore());
 			//GUILayout.Label("Lives: " + lives.getLives());
 			//GUILayout.Label("Shield: " + shieldHealth.getHealth());
 			//GUILayout.Label("Score: " + Score.getScore());

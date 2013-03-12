@@ -14,13 +14,11 @@ public class CollisionHandler : MonoBehaviour {
 	void OnTriggerEnter(Collider hit){
 		if(hit.tag == "Player"){
 			Health shieldHealth = shield.GetComponent<Health>();
-			shieldHealth.TakeDamage(10f);
 			if(shieldHealth.getHealth() > 0){
+				shieldHealth.TakeDamage(10f);
 				shield.renderer.enabled = true;
 			} else {
 				shield.renderer.enabled = false;
-			}
-			if(shieldHealth.getHealth() <= 0){
 				Health playerHealth = player.GetComponentInChildren<Health>();
 				playerHealth.TakeDamage(20f);
 			}

@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Mach10Assets\MyScripts\UI\DisplayPlayerUI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Mach10Assets\MyScripts\Global\Bullet.cs">
     <Files>
-      <File FileName="Assets\Mach10Assets\MyScripts\UI\DisplayPlayerUI.cs" Line="13" Column="4" />
-      <File FileName="Assets\Mach10Assets\MyScripts\Global\Health.cs" Line="40" Column="30" />
+      <File FileName="Assets\Mach10Assets\MyScripts\Global\Bullet.cs" Line="32" Column="59" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -879,6 +879,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f870a27f35a59149839276b46fc9c7f, type: 3}
   m_Name: 
+  playerExplosion: {fileID: 100004, guid: 169b10ce10f4327cb9f40f6b117ed8d7, type: 2}
+  enemyExplosion: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -892,8 +894,8 @@ MonoBehaviour:
   playerSpeed: 20
   coolDown: .5
   keyCounter: 1
-  isRotating: 0
   curDodgeTime: 0
+  isRotating: 0
   isDodgingLeft: 0
   isDodgingRight: 0
 --- !u!114 &11400006
@@ -986,6 +988,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f870a27f35a59149839276b46fc9c7f, type: 3}
   m_Name: 
+  playerExplosion: {fileID: 0}
+  enemyExplosion: {fileID: 0}
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1

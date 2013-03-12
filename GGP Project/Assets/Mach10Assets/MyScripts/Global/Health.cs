@@ -9,6 +9,8 @@ public class Health : MonoBehaviour {
 	private PlayerMovement mover;
 	private Lives lives;
 	private GameObject player;
+	public GameObject playerExplosion;
+	public GameObject enemyExplosion;
 	//XmlDocument doc;
 
 	// Use this for initialization
@@ -41,12 +43,15 @@ public class Health : MonoBehaviour {
 				mover.ResetPlayerPos();
 				ModifyHealth(100f);
 				Score.TakeScore(Random.Range(5, 15));
+				if(playerExplosion){
+					Instantiate(playerExplosion, transform.position, Quaternion.identity);
+				}
 			} else if(isShield){
 				curHealth = 0f;
 			} else {
 				PowerUps powerUp = GameObject.FindGameObjectWithTag("Enemy").GetComponent<PowerUps>();
-				powerUp.DropPowerUp();
 				Boosts boost = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Boosts>();
+				powerUp.DropPowerUp();
 				boost.DropPowerUp();
 				Score.AddScore(Random.Range(5, 20));
 				Die();
@@ -69,6 +74,9 @@ public class Health : MonoBehaviour {
 	public void Die(){
 		EnemyManager manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
 		manager.maxEnemiesOnScreen--;
+		if(enemyExplosion){
+			Instantiate(enemyExplosion, transform.position, Quaternion.identity);
+		}
 		Destroy(gameObject);
 	}
 }
