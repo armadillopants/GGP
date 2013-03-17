@@ -8,46 +8,41 @@ public class Bullet : MonoBehaviour {
 	public float damage = 0.0f;
 	public GameObject target;
 	public bool isHoming = false;
-	private bool canShoot = false;
 	private float damp = 6.0f;
 	private Health health;
 	Camera cam;
+	
+	float distance;
+	float top;
+	float down;
 
 	// Use this for initialization
 	void Start(){
 		trans = transform;
 		Invoke("Kill", lifeTime);
 		cam = Camera.main;
-		canShoot = false;
+		distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
+		top = cam.ViewportToWorldPoint(new Vector3(0, 0.9f, distance)).z;
+		down = cam.ViewportToWorldPoint(new Vector3(0, 0f, distance)).z;
 	}
 	
 	// Update is called once per frame
 	void Update(){
-		float distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
-		float top = cam.ViewportToWorldPoint(new Vector3(0, 1f, distance)).z;
-		float down = cam.ViewportToWorldPoint(new Vector3(0, 0f, distance)).z;
 		if(trans.position.z >= top || trans.position.z <= down){
 			Kill();
 		}
-		if(trans.position.z <= top && trans.position.z >= down){
-			canShoot = true;
-		} else {
-			canShoot = false;
-		}
 		
-		if(canShoot){
-			if(isHoming){
-				target = FindNearestEnemey();
-				if(target){
-					trans.Translate(Vector3.forward*bulletSpeed*Time.deltaTime);
-					Quaternion rotate = Quaternion.LookRotation(target.transform.position - trans.position);
-					trans.rotation = Quaternion.Slerp(trans.rotation, rotate, Time.deltaTime * damp);
-				} else {
-					trans.Translate(Vector3.forward*bulletSpeed*Time.deltaTime);
-				}
+		if(isHoming){
+			target = FindNearestEnemey();
+			if(target){
+				trans.Translate(Vector3.forward*bulletSpeed*Time.deltaTime);
+				Quaternion rotate = Quaternion.LookRotation(target.transform.position - trans.position);
+				trans.rotation = Quaternion.Slerp(trans.rotation, rotate, Time.deltaTime * damp);
 			} else {
 				trans.Translate(Vector3.forward*bulletSpeed*Time.deltaTime);
 			}
+		} else {
+			trans.Translate(Vector3.forward*bulletSpeed*Time.deltaTime);
 		}
 	}
 	
@@ -66,7 +61,6 @@ public class Bullet : MonoBehaviour {
 			Kill();
 		}
 		if(hit.tag == "GroundEnemy"){
-			Debug.Log("Hit");
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
 			Kill();
@@ -85,7 +79,7 @@ public class Bullet : MonoBehaviour {
 	}
 	
 	void Kill(){
-		if(explosion != null){
+		if(explosion != null && !(trans.position.z >= top || trans.position.z <= down)){
 			Instantiate(explosion, trans.position, trans.rotation);
 		}
 		// Stop emitting particles in any children
@@ -111,10 +105,6 @@ public class Bullet : MonoBehaviour {
 	
 	public void ModifyLifeTime(float amount){
 		lifeTime = amount;
-	}
-	
-	public void CanShoot(bool shoot){
-		canShoot = shoot;
 	}
 	
 	GameObject FindNearestEnemey(){

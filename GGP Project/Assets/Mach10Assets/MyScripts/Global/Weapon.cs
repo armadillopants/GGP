@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Weapon : MonoBehaviour {
 	public GameObject projectile;
@@ -8,7 +7,9 @@ public class Weapon : MonoBehaviour {
 	protected float nextFireTime = 0.0f;
 	protected int roundsPerBurst = 0;
 	private float coneAngle = 0.0f;
+	protected float lastFrameShot = -1f;
 	protected Bullet bullet;
+	protected bool canShoot = false;
 
 	// Use this for initialization
 	public virtual void Start(){
@@ -21,6 +22,24 @@ public class Weapon : MonoBehaviour {
 			FireProjectile();
 		}
 	}
+	
+	void LateUpdate(){			
+		// We shot this frame, enable the audio
+		if(lastFrameShot == Time.frameCount){
+			if(audio){
+				if(!audio.isPlaying){
+					audio.Play();
+					audio.loop = true;
+				}
+			}
+		} else {
+			// Disable audio loop when not firing
+			if(audio){
+				audio.loop = false;
+			}
+		}
+	}
+	
 	
 	public virtual void FireProjectile(){
 		// If there is more than one bullet between the last frame and this frame
@@ -43,7 +62,12 @@ public class Weapon : MonoBehaviour {
 				Quaternion.Euler(Random.Range(-coneAngle, coneAngle), Random.Range(-coneAngle, coneAngle), 0);
 			GameObject proj = (GameObject)Instantiate(projectile, muzzlePos[i].position, muzzlePos[i].rotation * coneRandomRotation);
 			bullet = proj.GetComponent<Bullet>();
+			lastFrameShot = Time.frameCount;
 		}
+	}
+	
+	public void CanShoot(bool shoot){
+		canShoot = shoot;
 	}
 	
 	public void ModifyFireRate(float amount){

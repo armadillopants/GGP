@@ -28,7 +28,9 @@ public class WeaponManager : MonoBehaviour {
 	public void SortPowerUps(){
 		curWeapon = weapons[Random.Range(1, weapons.Length)];
 		curWeapon.enabled = true;
+		curWeapon.audio.enabled = true;
 		weapons[0].enabled = false;
+		weapons[0].audio.enabled = false;
 		startTimer = true;
 	}
 	
@@ -36,7 +38,9 @@ public class WeaponManager : MonoBehaviour {
 		countDown -= Time.deltaTime;
 		if(countDown <= 0){
 			curWeapon.enabled = false;
+			curWeapon.audio.enabled = false;
 			weapons[0].enabled = true;
+			weapons[0].audio.enabled = true;
 			ResetCountDown();
 			startTimer = false;
 		}

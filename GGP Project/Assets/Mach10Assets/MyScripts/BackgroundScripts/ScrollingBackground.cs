@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class ScrollingBackground : MonoBehaviour {
+public class ScrollingBackground : Scroller {
 	
-	public Texture[] textures;
-	public float scrollSpeed = -0.1f;
-	public float changeInterval = 1f;
+	//public Texture[] textures;
+	//public float scrollSpeed = -0.1f;
+	//public float changeInterval = 1f;
 	
 	/*void Update(){
 		if(textures.Length == 0){
@@ -17,7 +17,7 @@ public class ScrollingBackground : MonoBehaviour {
 	}*/
  
     void LateUpdate(){
-		float offset = Time.time * scrollSpeed;
+		offset = Time.time * scrollSpeed;
 		renderer.material.mainTextureOffset = new Vector2(0, offset);
     }
 }

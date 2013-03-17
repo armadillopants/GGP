@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class BaseEnemy : MonoBehaviour {
 
@@ -12,8 +11,9 @@ public class BaseEnemy : MonoBehaviour {
 	private float maxLookTime = 3f;
 	private float minLookTime = 0f;
 	
-	public Transform turretBall;
+	public Transform[] turretBall;
 	protected Health health;
+	protected Weapon weapon;
 	protected float distance;
 	protected float top;
 	protected float down;
@@ -43,6 +43,11 @@ public class BaseEnemy : MonoBehaviour {
 	public virtual void EnemyAttack(){
 		float left = cam.ViewportToWorldPoint(new Vector3(-0.2f, 0, distance)).x;
 		float right = cam.ViewportToWorldPoint(new Vector3(1.2f, 0, distance)).x;
+		if(trans.position.z < top && trans.position.z > down){
+			if(weapon){
+				weapon.CanShoot(true);
+			}
+		}
 		if(trans.position.z <= down || trans.position.x <= left || trans.position.x >= right){
 			health.Die();
 		}

@@ -8,6 +8,7 @@ public class GovGunbot : BaseEnemy {
 		health.ModifyHealth(40f);
 		ModifySpeed(Random.Range(3f, 5f));
 		ModifyHeight(15f);
+		weapon = GetComponent<GunbotProjectile>();
 		base.Start();
 	}
 	

@@ -11,6 +11,8 @@ public class TurretProjectile : Weapon {
 	
 	// Update is called once per frame
 	public override void Update(){
-		FireProjectile();
+		if(canShoot){
+			FireProjectile();
+		}
 	}
 }

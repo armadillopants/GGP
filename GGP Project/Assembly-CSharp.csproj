@@ -44,7 +44,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\Scroller.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingBackground.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingTargets.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingTrees.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\BaseEnemy.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\EnemyManager.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\GovGunbot.cs" />
@@ -54,6 +57,7 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Bullet.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\CollisionHandler.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Health.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\Global\RandomSound.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Score.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Weapon.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\BoostsManager.cs" />

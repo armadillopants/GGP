@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 956bbc52b7e95224a9e0250f559c6833, type: 3}
   m_Name: 
+  powerUpSound: {fileID: 8300000, guid: 6d2e97dec6f7c6b489f081dbd14f5c05, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

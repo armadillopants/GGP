@@ -13,7 +13,7 @@ public class DisplayPlayerUI : MonoBehaviour {
 	//public Material shieldMat;
 
 	// Use this for initialization
-	void Start () {
+	void Start(){
 		player = GameObject.Find("Player");
 		health = player.GetComponent<Health>();
 		health.ModifyHealth(100f);

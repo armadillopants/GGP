@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 	private float maxHealth = 0.0f;
-	private float curHealth = 0.0f;
+	public float curHealth = 0.0f;
 	private bool isPlayer = false;
 	private bool isShield = false;
 	private PlayerMovement mover;
