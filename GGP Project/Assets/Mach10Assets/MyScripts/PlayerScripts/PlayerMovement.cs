@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour {
 			RotatePlayer();
 			
 			// For dodging controls
-			if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
+			/*if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
 				if(coolDown > 0 && keyCounter == 1){
 					//isDodgingLeft = true;
 				} else {
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour {
 				isRotating = false;
 				curDodgeTime += 0.5f*Time.deltaTime;
 				ClampDodgeTime();
-			}
+			}*/
 		}
 	}
 	
@@ -118,14 +118,14 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	public void ResetPlayerPos(){
-		trans.position = new Vector3(trans.position.x, playerFixedHeight, trans.position.z-15);
+		trans.position = new Vector3(trans.position.x, playerFixedHeight, down-15);
 	}
 	
 	void FlyOnScreen(){
 		canControl = false;
 		Vector3 startPoint = new Vector3(trans.position.x, playerFixedHeight, trans.position.z);
 		Vector3 endPoint = new Vector3(trans.position.x, playerFixedHeight, down);
-		trans.position = Vector3.MoveTowards(startPoint, endPoint, (playerSpeed/2)*Time.deltaTime);
+		trans.position = Vector3.MoveTowards(startPoint, endPoint, (playerSpeed/3)*Time.deltaTime);
 		if(trans.position.z >= down){
 			clampPosition = true;
 			canControl = true;
@@ -145,6 +145,8 @@ public class PlayerMovement : MonoBehaviour {
 			isRotating = true;
 			isDodgingRight = false;
 			trans.localEulerAngles = new Vector3(0, 0, playerRotation);
+		} else {
+			isRotating = false;
 		}
 	}
 	

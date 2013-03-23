@@ -11,6 +11,8 @@ public class Health : MonoBehaviour {
 	private GameObject player;
 	public GameObject playerExplosion;
 	public GameObject enemyExplosion;
+	PowerUps powerUp;
+	Boosts boost;
 	//XmlDocument doc;
 
 	// Use this for initialization
@@ -27,6 +29,10 @@ public class Health : MonoBehaviour {
 		}
 		lives = player.GetComponent<Lives>();
 		mover = player.GetComponent<PlayerMovement>();
+		if(GameObject.FindGameObjectWithTag("Manager") != null){
+			powerUp = GameObject.FindGameObjectWithTag("Enemy").GetComponent<PowerUps>();
+			boost = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Boosts>();
+		}
 	}
 	
 	public void ModifyHealth(float amount){
@@ -42,18 +48,19 @@ public class Health : MonoBehaviour {
 				mover.setClampPos(false);
 				mover.ResetPlayerPos();
 				ModifyHealth(100f);
-				Score.TakeScore(Random.Range(5, 15));
+				Score.TakeScore(50);
 				if(playerExplosion){
 					Instantiate(playerExplosion, transform.position, Quaternion.identity);
 				}
 			} else if(isShield){
 				curHealth = 0f;
 			} else {
-				PowerUps powerUp = GameObject.FindGameObjectWithTag("Enemy").GetComponent<PowerUps>();
-				Boosts boost = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Boosts>();
-				powerUp.DropPowerUp();
-				boost.DropPowerUp();
-				Score.AddScore(Random.Range(5, 20));
+				if(powerUp){
+					powerUp.DropPowerUp();
+				}
+				if(boost){
+					boost.DropPowerUp();
+				}
 				Die();
 			}
 		}
@@ -72,10 +79,11 @@ public class Health : MonoBehaviour {
 	}
 	
 	public void Die(){
-		EnemyManager manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
-		manager.maxEnemiesOnScreen--;
 		if(enemyExplosion){
 			Instantiate(enemyExplosion, transform.position, Quaternion.identity);
+		}
+		if(gameObject.name == "Scorpion(Clone)"){
+			Score.AddScore(150);
 		}
 		Destroy(gameObject);
 	}

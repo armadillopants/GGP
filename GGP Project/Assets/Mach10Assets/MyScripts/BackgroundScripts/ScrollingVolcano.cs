@@ -1,27 +1,27 @@
 using UnityEngine;
 
-public class ScrollingTargets : Scroller {
-	private GameObject[] targets;
-
+public class ScrollingVolcano : Scroller {
+	private GameObject[] volcanos;
+	
 	// Use this for initialization
 	public override void Start () {
-		targets = GameObject.FindGameObjectsWithTag("Target");
+		volcanos = GameObject.FindGameObjectsWithTag("Volcano");
 		base.Start();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		foreach(GameObject target in targets){
+		foreach(GameObject volcano in volcanos){
 			offset = Time.time * scrollSpeed;
 			transform.position = new Vector3(0, 0, -offset);
-			Vector3 currentPos = target.transform.position;
+			Vector3 currentPos = volcano.transform.position;
 			
 			if(currentPos.z <= down){
 				currentPos.z = currentPos.z + top+top;
 				wrapAround = true;
 			}
 			if(wrapAround){
-				target.transform.position = currentPos;
+				volcano.transform.position = currentPos;
 			}
 			wrapAround = false;
 		}

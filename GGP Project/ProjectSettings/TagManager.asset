@@ -7,14 +7,15 @@ TagManager:
   - Enemy
   - Ground
   - TurretBall
-  - Bullet
+  - Lava
   - Target
   - Manager
   - PowerUp
   - Shield
   - Boost
-  - Tree
-  - 
+  - Item
+  - Explosion
+  - Volcano
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -15,7 +15,7 @@ public class GovGunbot : BaseEnemy {
 	public override void EnemyAttack(){
 		Vector3 startPoint = new Vector3(trans.position.x, getFixedHeight(), trans.position.z);
 		Vector3 endPoint = new Vector3(trans.position.x, getFixedHeight(), down);
-		trans.rotation = Quaternion.Euler(trans.position.x, 180, 0);
+		trans.rotation = Quaternion.Euler(0, 180, 0);
 		if(target){
 			trans.position = Vector3.MoveTowards(startPoint, endPoint, getSpeed()*Time.deltaTime);
 		}

@@ -124,7 +124,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb7de508ecbf94b43895c4f5d3221307, type: 3}
   m_Name: 
-  turretBall: {fileID: 0}
+  turretBall:
+  - {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,6 +136,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f870a27f35a59149839276b46fc9c7f, type: 3}
   m_Name: 
+  curHealth: 0
   playerExplosion: {fileID: 0}
   enemyExplosion: {fileID: 100004, guid: 1ac6d701f8a489549b7ae9cd2b4e7100, type: 2}
 --- !u!114 &11400004
@@ -147,7 +149,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43fa0daeb9fa35e43b5b272011bef469, type: 3}
   m_Name: 
-  explosion: {fileID: 100004, guid: 1ac6d701f8a489549b7ae9cd2b4e7100, type: 2}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

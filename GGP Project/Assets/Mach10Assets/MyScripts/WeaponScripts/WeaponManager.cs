@@ -6,12 +6,12 @@ public class WeaponManager : MonoBehaviour {
 	private float countDown;
 	private bool startTimer = false;
 
-	void Start () {
+	void Start(){
 		curWeapon = weapons[0];
 		countDown = Random.Range(5f, 15f);
 	}
 	
-	void Update () {
+	void Update(){
 		if(startTimer){
 			CountDown();
 		}

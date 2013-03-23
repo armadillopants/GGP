@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class GameOver : MonoBehaviour {
 	private bool gameOver = false;
@@ -34,8 +33,15 @@ public class GameOver : MonoBehaviour {
 								   Screen.height / 3 + size.y * 2 + 5,
 								   size.x / 2,
 								   size.y / 2),
-						"Quit")){
+						"Main Menu")){
 				Application.LoadLevel("MainMenu");
+			}
+			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,
+								   Screen.height / 3 + size.y * 2 + 50,
+								   size.x / 2,
+								   size.y / 2),
+						"Quit")){
+				Application.Quit();
 			}
 		}
 	}	

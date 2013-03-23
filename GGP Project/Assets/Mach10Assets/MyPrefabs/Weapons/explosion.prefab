@@ -56,7 +56,7 @@ GameObject:
   - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: explosion
-  m_TagString: Untagged
+  m_TagString: Explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -468,6 +468,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 471aede0f2f1ab74e9f3c0528dca4f00, type: 3}
   - {fileID: 8300000, guid: 282e5e084e4c2354fbd52556f6f0b602, type: 3}
   - {fileID: 8300000, guid: cf3abddb5de323643acb07e35f57f34c, type: 3}
+  playSound: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

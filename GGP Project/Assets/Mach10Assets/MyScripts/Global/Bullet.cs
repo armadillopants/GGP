@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour {
 		cam = Camera.main;
 		distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
 		top = cam.ViewportToWorldPoint(new Vector3(0, 0.9f, distance)).z;
-		down = cam.ViewportToWorldPoint(new Vector3(0, 0f, distance)).z;
+		down = cam.ViewportToWorldPoint(new Vector3(0, -0.3f, distance)).z;
 	}
 	
 	// Update is called once per frame
@@ -50,20 +50,37 @@ public class Bullet : MonoBehaviour {
 		if(hit.tag == "Enemy"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
+			if(health.getHealth() <= 0){
+				if(hit.transform.parent.name == "Kamikaze(Clone)"){
+					Score.AddScore(50);
+				} else if(hit.transform.parent.name == "Gov_GunBot(Clone)"){
+					Score.AddScore(100);
+				} else if(hit.transform.parent.name == "Gov_Sentry(Clone)"){
+					Score.AddScore(20);
+				}
+			}
+			Explode();
 			Kill();
 		}
 		if(hit.tag == "Player"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
+			Explode();
 			Kill();
 		}
 		if(hit.tag == "Ground"){
+			Explode();
 			Kill();
 		}
 		if(hit.tag == "GroundEnemy"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
+			Explode();
 			Kill();
+		}
+		if(hit.tag == "Item"){
+			hit.collider.renderer.enabled = false;
+			hit.collider.transform.FindChild("Stump").gameObject.SetActive(true);//.renderer.enabled = true;
 		}
 		if(hit.tag == "Shield"){
 			health = hit.transform.GetComponent<Health>();
@@ -74,11 +91,12 @@ public class Bullet : MonoBehaviour {
 			} else {
 				hit.collider.enabled = false;
 			}
+			Explode();
 			Kill();
 		}
 	}
 	
-	void Kill(){
+	void Explode(){
 		if(explosion != null && !(trans.position.z >= top || trans.position.z <= down)){
 			Instantiate(explosion, trans.position, trans.rotation);
 		}
@@ -90,7 +108,9 @@ public class Bullet : MonoBehaviour {
 
 		// Detach children - We do this to detach the trail rendererer which should be set up to auto destruct
 		trans.DetachChildren();
-		
+	}
+	
+	void Kill(){
 		// Destroy the projectile
 		Destroy(gameObject);
 	}

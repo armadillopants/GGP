@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
 	private bool paused = false;
@@ -54,9 +53,16 @@ public class PauseMenu : MonoBehaviour {
 								   Screen.height / 3 + size.y * 2 + 50,
 								   size.x / 2f,
 								   size.y / 2),
-						"Quit")){
+						"Main Menu")){
 				paused = false;
 				Application.LoadLevel("MainMenu");
+			}
+			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,
+								   Screen.height / 3 + size.y * 2 + 100,
+								   size.x / 2,
+								   size.y / 2),
+						"Quit")){
+				Application.Quit();
 			}
 		}
 	}

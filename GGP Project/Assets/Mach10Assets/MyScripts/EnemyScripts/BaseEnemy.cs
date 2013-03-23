@@ -35,6 +35,7 @@ public class BaseEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update(){
+		RenderEnemy();
 		if(target != null){
 			EnemyAttack();
 		}
@@ -49,7 +50,17 @@ public class BaseEnemy : MonoBehaviour {
 			}
 		}
 		if(trans.position.z <= down || trans.position.x <= left || trans.position.x >= right){
-			health.Die();
+			Destroy(gameObject);
+		}
+	}
+	
+	void RenderEnemy(){
+		Renderer data = transform.FindChild("CollisionData").renderer;
+		if(!data.IsVisibleFrom(cam)){
+			data.enabled = false;
+		}
+		if(data.IsVisibleFrom(cam)){
+			data.enabled = true;
 		}
 	}
 	

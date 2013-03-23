@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class RandomSound : MonoBehaviour {
-	public	AudioClip[] sounds;
+	public AudioClip[] sounds;
 	private AudioClip curSound;
 
 	// Use this for initialization

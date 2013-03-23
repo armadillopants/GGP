@@ -46,8 +46,9 @@
   <ItemGroup>
      <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\Scroller.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingBackground.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingItems.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingTargets.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingTrees.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingVolcano.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\BaseEnemy.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\EnemyManager.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\GovGunbot.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerMovement.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerSwoop.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\ShieldAnim.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\RendererExtensions.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\TextEditor.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\CameraMover.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\DisplayPlayerUI.cs" />

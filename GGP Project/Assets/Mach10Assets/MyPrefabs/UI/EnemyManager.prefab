@@ -47,7 +47,6 @@ MonoBehaviour:
   enemiesSpawnedPerLevel: 0
   enemiesSpawned: 0
   maxEnemiesOnScreen: 0
-  secondsPassed: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

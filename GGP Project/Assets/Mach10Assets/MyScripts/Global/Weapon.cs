@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	public virtual void Update(){
-		if(Input.GetKey(KeyCode.Space)){
+		if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Z)){
 			FireProjectile();
 		}
 	}
