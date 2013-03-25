@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 	private Transform trans;
 	private Camera cam;
+	public GameObject reticule;
 	private Vector3 moveDirection = Vector3.zero;
 	public float playerSpeed = 10.0f;
 	private float playerFixedHeight = 15f;
@@ -29,6 +30,8 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start(){
+		GameObject ret = (GameObject)Instantiate(reticule, reticule.transform.position, Quaternion.identity);
+		ret.name = reticule.name;
 		canControl = true;
 		trans = transform;
 		cam = Camera.mainCamera;
@@ -43,17 +46,20 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update(){
+		reticule = GameObject.Find("Reticule");
 		// Clamps player position to screen boundaries
 		if(clampPosition){
 			ClampPositionToViewPort();
 		} else {
 			FlyOnScreen();
 		}
-		
+
 		// Reset the euler angles whenever not rotating
 		if(!isRotating){
 			trans.localEulerAngles = new Vector3(0, 0, 0);
 		}
+		
+		reticule.transform.position = new Vector3(trans.position.x, reticule.transform.position.y, trans.position.z);
 		
 		if(canControl){
 			// For WASD and ARROW controls

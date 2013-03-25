@@ -929,9 +929,9 @@ AudioSource:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7d75c6dc5a5ec8846969b3f08b8f6c10, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2fe83af7b1eda404a9022cf2d2bbf30d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .800000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1178,6 +1178,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bf11db37f777924ca25081e80c22059, type: 3}
   m_Name: 
+  reticule: {fileID: 100000, guid: 4385db744de81ae4bab29e67eb7ee143, type: 2}
   playerSpeed: 20
   coolDown: .5
   keyCounter: 1

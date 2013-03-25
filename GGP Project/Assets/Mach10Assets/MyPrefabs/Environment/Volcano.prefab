@@ -108,7 +108,7 @@ GameObject:
   - 111: {fileID: 11100000}
   m_Layer: 0
   m_Name: Volcano
-  m_TagString: Untagged
+  m_TagString: Volcano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 4a6998689b76a534a848a50e205926bd, type: 2}
+  - {fileID: 2100000, guid: 8a09fcf2a251ce64c918ebed0dc858be, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

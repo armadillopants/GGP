@@ -8,4 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Mach10Assets/MyScenes/MainMenu.unity
   - enabled: 1
-    path: Assets/Mach10Assets/MyScenes/test1.unity
+    path: Assets/Mach10Assets/MyScenes/Level1.unity

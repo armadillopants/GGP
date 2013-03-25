@@ -15,6 +15,8 @@ public class EnemyManager : MonoBehaviour {
 	Camera cam;
 	float distance;
 	float top;
+	float left;
+	float right;
 
 	// Use this for initialization
 	void Start(){
@@ -26,6 +28,8 @@ public class EnemyManager : MonoBehaviour {
 		targets = GameObject.FindGameObjectsWithTag("Target");
 		distance = Vector3.Dot(cam.transform.forward, transform.position-cam.transform.position);
 		top = cam.ViewportToWorldPoint(new Vector3(0, 1f, distance)).z;
+		left = cam.ViewportToWorldPoint(new Vector3(0.3f, 0, distance)).x;
+		right = cam.ViewportToWorldPoint(new Vector3(0.7f, 0, distance)).x;
 	}
 	
 	// Update is called once per frame
@@ -51,7 +55,7 @@ public class EnemyManager : MonoBehaviour {
 			for(int i=0; i<airEnemies.Count; i++){
 				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= 6){
 					Instantiate(airEnemies[Random.Range(0, airEnemies.Count)], 
-								new Vector3(Random.Range(-12, 12), airEnemies[i].transform.position.y, airEnemies[i].transform.position.z), 
+								new Vector3(Random.Range(left, right), airEnemies[i].transform.position.y, airEnemies[i].transform.position.z), 
 								Quaternion.identity);
 					enemiesSpawned++;
 				}

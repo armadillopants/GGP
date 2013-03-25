@@ -5,9 +5,11 @@ public class Lives : MonoBehaviour {
 	private int startLives = 0;
 	private int curLives = 0;
 	private GameObject player;
+	private GameObject reticule;
 	
 	void Start(){
 		player = GameObject.Find("Player");
+		reticule = GameObject.Find("Reticule");
 	}
 	
 	public void ModifyLives(int amount){
@@ -34,5 +36,6 @@ public class Lives : MonoBehaviour {
 		GameOver gameOver = GameObject.Find("GameOver").GetComponent<GameOver>();
 		gameOver.EndGame();
 		Destroy(player);
+		Destroy(reticule);
 	}
 }

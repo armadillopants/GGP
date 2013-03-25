@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 public class DisplayPlayerUI : MonoBehaviour {
 	private Health health;
@@ -11,11 +14,40 @@ public class DisplayPlayerUI : MonoBehaviour {
 	private Texture2D healthBar;
 	private Texture2D shieldBar;
 	//public Material shieldMat;
+	
+	[XmlRootAttribute("PlayerStats")]
+	public class PlayerStatsInfo{
+		[XmlElementAttribute("health")]
+		public float health;
+		[XmlElementAttribute("shieldHealth")]
+		public float shieldHealth;
+		[XmlElementAttribute("lives")]
+		public int lives;
+	}
+	
+	void GetXML(){
+		FileStream readFS = new FileStream("PlayerStats.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+		//PlayerStatsInfo info = (PlayerStatsInfo)SerializerObj.Deserialize(readFS);
+		readFS.Close();
+		//Debug.Log(info.health);
+	}
 
 	// Use this for initialization
 	void Start(){
+		TextAsset xmlData = new TextAsset();
+		xmlData = (TextAsset)Resources.Load("PlayerStats.xml", typeof(TextAsset));
+		XmlDocument doc = new XmlDocument();
+		doc.LoadXml(xmlData.text);
+		XmlNode firstNode = doc.FirstChild;
+		Debug.Log(xmlData.name);
+		Debug.Log(firstNode.InnerText);
+		//Debug.Log(firstNode.Attributes);
+		//XmlNodeList healthAdd = doc.GetElementsByTagName("health");
+		//<?xml version="1.0" encoding="utf-8" ?>
+		
 		player = GameObject.Find("Player");
 		health = player.GetComponent<Health>();
+		//health.curHealth = float.Parse(firstNode.Attributes.GetNamedItem("health").Value);
 		health.ModifyHealth(100f);
 		
 		shield = GameObject.FindGameObjectWithTag("Shield");
