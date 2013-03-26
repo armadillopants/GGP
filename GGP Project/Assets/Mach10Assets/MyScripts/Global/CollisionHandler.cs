@@ -23,7 +23,9 @@ public class CollisionHandler : MonoBehaviour {
 				playerHealth.TakeDamage(20f);
 				Score.TakeScore(10);
 			}
-			health.Die();
+			if(health){
+				health.Die();
+			}
 		}
 	}
 }

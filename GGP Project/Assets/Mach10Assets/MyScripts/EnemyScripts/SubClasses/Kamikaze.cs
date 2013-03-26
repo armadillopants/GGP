@@ -15,7 +15,7 @@ public class Kamikaze : BaseEnemy {
 		if(target){
 			if(curLookTime > 0){
 				curLookTime -= Time.deltaTime;
-				trans.position = new Vector3(trans.position.x, getFixedHeight(), Mathf.Lerp(trans.position.z, top, 2f*Time.deltaTime));
+				trans.position = new Vector3(trans.position.x, getFixedHeight(), Mathf.Lerp(trans.position.z, top-1, 2f*Time.deltaTime));
 				// Rotate to look at the player
 	   			trans.rotation = Quaternion.Slerp(trans.rotation,
 	    			Quaternion.LookRotation(target.position-trans.position), 1);

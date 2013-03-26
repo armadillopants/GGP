@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Mach10Assets/MyScenes/MainMenu.unity
   - enabled: 1
     path: Assets/Mach10Assets/MyScenes/Level1.unity
+  - enabled: 1
+    path: Assets/Mach10Assets/MyScenes/Level2.unity

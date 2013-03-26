@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float playerSpeed = 10.0f;
 	private float playerFixedHeight = 15f;
 	private float playerRotation = 20f;
+	Weapon[] weapon;
 	
 	public float coolDown = 0.5f;
 	public int keyCounter = 1;
@@ -32,6 +33,8 @@ public class PlayerMovement : MonoBehaviour {
 	void Start(){
 		GameObject ret = (GameObject)Instantiate(reticule, reticule.transform.position, Quaternion.identity);
 		ret.name = reticule.name;
+		GameObject wep = GameObject.Find("Weapons");
+		weapon = wep.GetComponentsInChildren<Weapon>();
 		canControl = true;
 		trans = transform;
 		cam = Camera.mainCamera;
@@ -40,8 +43,8 @@ public class PlayerMovement : MonoBehaviour {
 		distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
 		top = cam.ViewportToWorldPoint(new Vector3(0, 0.9f, distance)).z;
 		down = cam.ViewportToWorldPoint(new Vector3(0, 0.1f, distance)).z;
-		left = cam.ViewportToWorldPoint(new Vector3(0.1f, 0, distance)).x;
-        right = cam.ViewportToWorldPoint(new Vector3(0.9f, 0, distance)).x;
+		left = cam.ViewportToWorldPoint(new Vector3(0.04f, 0, distance)).x;
+        right = cam.ViewportToWorldPoint(new Vector3(0.96f, 0, distance)).x;
 	}
 	
 	// Update is called once per frame
@@ -66,6 +69,10 @@ public class PlayerMovement : MonoBehaviour {
 			moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 			moveDirection *= playerSpeed * Time.deltaTime;
 			trans.Translate(moveDirection);
+			
+			foreach(Weapon wep in weapon){
+				wep.CanShoot(true);
+			}
 			
 			// Rotate the player Z axis slightly when moving left or right
 			RotatePlayer();
@@ -129,6 +136,9 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void FlyOnScreen(){
 		canControl = false;
+		foreach(Weapon wep in weapon){
+			wep.CanShoot(false);
+		}
 		Vector3 startPoint = new Vector3(trans.position.x, playerFixedHeight, trans.position.z);
 		Vector3 endPoint = new Vector3(trans.position.x, playerFixedHeight, down);
 		trans.position = Vector3.MoveTowards(startPoint, endPoint, (playerSpeed/3)*Time.deltaTime);

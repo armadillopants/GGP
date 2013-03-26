@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<PlayerStats>
-	<Health>health= "100"</Health>
-	<Speed>speed= "20"</Speed>
-	<ShieldHealth>shieldHealth ="50"</ShieldHealth>
-	<Lives>lives= "3"</Lives>
-</PlayerStats>
+<PlayerStats> health= "100", shieldHealth= "50", lives= "3" </PlayerStats>
