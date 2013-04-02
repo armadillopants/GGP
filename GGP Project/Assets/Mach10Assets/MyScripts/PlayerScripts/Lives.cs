@@ -1,9 +1,8 @@
 using UnityEngine;
-using System.Collections;
 
 public class Lives : MonoBehaviour {
 	private int startLives = 0;
-	private int curLives = 0;
+	public int curLives = 0;
 	private GameObject player;
 	private GameObject reticule;
 	

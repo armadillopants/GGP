@@ -47,6 +47,7 @@ public class PauseMenu : MonoBehaviour {
 								   size.x / 2,
 								   size.y / 2),
 						"Restart")){
+				Score.ResetScore();
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,
@@ -55,6 +56,7 @@ public class PauseMenu : MonoBehaviour {
 								   size.y / 2),
 						"Main Menu")){
 				paused = false;
+				Score.ResetScore();
 				Application.LoadLevel("MainMenu");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,

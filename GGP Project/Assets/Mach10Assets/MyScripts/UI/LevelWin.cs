@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class LevelWin : MonoBehaviour {
 	private bool levelWon = false;
+	public string curLevel = "";
 	public string nextLevel = "";
+	private GameOver gameOver;
+	
+	void Start(){
+		gameOver = GameObject.Find("GameOver").GetComponent<GameOver>();
+	}
 	
 	public void LevelWon(){
 		levelWon = true;
@@ -13,7 +19,7 @@ public class LevelWin : MonoBehaviour {
 	}
 	
 	void OnGUI(){
-		if(levelWon){
+		if(levelWon && !gameOver.getGameOver()){
 			GUIStyle style = new GUIStyle();
 			style.fontSize = 30;
 			GUIContent content = new GUIContent("LEVEL COMPLETED\n" + "\t\t\t\t\tScore: " + Score.getScore());
@@ -27,6 +33,7 @@ public class LevelWin : MonoBehaviour {
 								   size.x / 2,
 								   size.y / 2), 
 						"Next Level")){
+				Score.ResetScore();
 				Application.LoadLevel(nextLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,
@@ -42,6 +49,7 @@ public class LevelWin : MonoBehaviour {
 								   size.x / 2,
 								   size.y / 2),
 						"Main Menu")){
+				Score.ResetScore();
 				Application.LoadLevel("MainMenu");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,

@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour {
 	private bool gameOver = false;
+	private LevelWin levelWin;
+	
+	void Start(){
+		levelWin = GameObject.Find("LevelWin").GetComponent<LevelWin>();
+	}
 	
 	public void EndGame(){
 		gameOver = true;
@@ -12,7 +17,7 @@ public class GameOver : MonoBehaviour {
 	}
 	
 	void OnGUI(){
-		if(gameOver){
+		if(gameOver && !levelWin.getLevelWon()){
 			GUIStyle style = new GUIStyle();
 			style.fontSize = 60;
 			GUIContent content = new GUIContent("GAME OVER");
@@ -34,6 +39,7 @@ public class GameOver : MonoBehaviour {
 								   size.x / 2,
 								   size.y / 2),
 						"Main Menu")){
+				Score.ResetScore();
 				Application.LoadLevel("MainMenu");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,

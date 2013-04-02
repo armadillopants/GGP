@@ -55,11 +55,14 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\GovSentry.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\GroundTurret.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\Kamikaze.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\Swarmer.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\GUIx.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Bullet.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\CollisionHandler.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Health.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\RandomSound.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Score.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\Global\ViewFrustrum.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Weapon.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\BoostsManager.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\Lives.cs" />
@@ -113,6 +116,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Resources\PlayerStats.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
@@ -132,7 +136,6 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CameraMotionBlurDX11.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
-     <None Include="Assets\Resources\PlayerStats.xml.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlurEffectConeTaps.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CameraMotionBlur.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />

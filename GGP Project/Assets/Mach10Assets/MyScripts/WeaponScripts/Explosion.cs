@@ -23,9 +23,18 @@ public class Explosion : MonoBehaviour {
 			damage *= explosionDamage;
 			
 			// Apply damage
-			if(hit.tag == "Enemy" || hit.tag == "GroundEnemy"){
+			if(hit.tag == "Enemy"){
 				health = hit.transform.parent.GetComponent<Health>();
 				health.TakeDamage((float)damage);
+			}
+			if(hit.tag == "GroundEnemy"){
+				health = hit.transform.parent.GetComponent<Health>();
+				health.TakeDamage((float)damage);
+				Score.AddScore(150);
+			}
+			if(hit.tag == "Item"){
+				hit.collider.renderer.enabled = false;
+				hit.collider.transform.FindChild("Stump").gameObject.SetActive(true);
 			}
 		}
 		// Stop emitting particles

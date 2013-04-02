@@ -491,7 +491,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63965223d310579499f68cff826b8b43, type: 3}
   m_Name: 
-  levelName: 
+  levelName: Survival
 --- !u!1 &307650366
 GameObject:
   m_ObjectHideFlags: 0

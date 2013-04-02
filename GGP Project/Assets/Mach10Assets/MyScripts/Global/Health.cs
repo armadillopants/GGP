@@ -1,5 +1,4 @@
 using UnityEngine;
-//using System.Xml;
 
 public class Health : MonoBehaviour {
 	private float maxHealth = 0.0f;
@@ -13,13 +12,9 @@ public class Health : MonoBehaviour {
 	public GameObject enemyExplosion;
 	PowerUps powerUp;
 	Boosts boost;
-	//XmlDocument doc;
 
 	// Use this for initialization
 	void Start(){
-		//doc = new XmlDocument("directory path to xml document");
-		//XmlNode firstNode = doc.FirstChild;
-		//curHealth = float.Parse(firstNode.Attributes.GetNamedItem("health").Value);
 		player = GameObject.Find("Player");
 		if(gameObject.tag == "Player"){
 			isPlayer = true;
@@ -29,10 +24,17 @@ public class Health : MonoBehaviour {
 		}
 		lives = player.GetComponent<Lives>();
 		mover = player.GetComponent<PlayerMovement>();
-		if(GameObject.FindGameObjectWithTag("Manager") != null){
-			powerUp = GameObject.FindGameObjectWithTag("Enemy").GetComponent<PowerUps>();
-			boost = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Boosts>();
+		GameObject[] manager = GameObject.FindGameObjectsWithTag("Manager");
+		foreach(GameObject m in manager){
+			if(m != null){
+				powerUp = m.GetComponentInChildren<PowerUps>();
+				boost = m.GetComponentInChildren<Boosts>();
+			}
 		}
+	}
+	
+	public void SetMaxHealth(float amount){
+		maxHealth = amount;
 	}
 	
 	public void ModifyHealth(float amount){
@@ -81,9 +83,6 @@ public class Health : MonoBehaviour {
 	public void Die(){
 		if(enemyExplosion){
 			Instantiate(enemyExplosion, transform.position, Quaternion.identity);
-		}
-		if(gameObject.name == "Scorpion(Clone)"){
-			Score.AddScore(150);
 		}
 		Destroy(gameObject);
 	}

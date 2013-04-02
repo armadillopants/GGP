@@ -8,32 +8,39 @@ public class DisplayPlayerUI : MonoBehaviour {
 	private GameObject player;
 	private GameObject shield;
 	private EnemyManager manager;
-	Rect box = new Rect(10, Screen.height/1.2f, 100, 20);
 	private Texture2D healthBar;
 	private Texture2D shieldBar;
-	//public Material shieldMat;
+	public Texture2D playerHUD;
+	public GameObject playerLife;
+	
+	Rect healthBox;
+	Rect liveBox;
+	Rect scoreBox;
+	Rect HUD;
 	
 	// Use this for initialization
 	void Start(){
-		TextAsset xmlData = new TextAsset();
-		xmlData = (TextAsset)Resources.Load("PlayerStats.xml", typeof(TextAsset));
+		TextAsset asset = new TextAsset();
+		asset = (TextAsset)Resources.Load("PlayerStats", typeof(TextAsset));
 		XmlDocument doc = new XmlDocument();
-		doc.LoadXml(xmlData.text);
+		doc.LoadXml(asset.text);
 		XmlNode firstNode = doc.FirstChild;
-		Debug.Log(xmlData.name);
-		Debug.Log(firstNode.InnerText);
 		
 		player = GameObject.Find("Player");
 		health = player.GetComponent<Health>();
-		//health.curHealth = float.Parse(firstNode.Attributes.GetNamedItem("health").Value);
-		health.ModifyHealth(100f);
+		health.SetMaxHealth(100f);
+		health.curHealth = float.Parse(firstNode.Attributes.GetNamedItem("health").Value);
+		//health.ModifyHealth(100f);
 		
 		shield = GameObject.FindGameObjectWithTag("Shield");
 		shieldHealth = shield.GetComponent<Health>();
-		shieldHealth.ModifyHealth(50f);
+		shieldHealth.SetMaxHealth(50f);
+		shieldHealth.curHealth = float.Parse(firstNode.Attributes.GetNamedItem("shieldHealth").Value);
+		//shieldHealth.ModifyHealth(50f);
 		
 		lives = player.GetComponent<Lives>();
-		lives.ModifyLives(3);
+		lives.curLives = int.Parse(firstNode.Attributes.GetNamedItem("lives").Value);
+		//lives.ModifyLives(3);
 		manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
 		
 		healthBar = new Texture2D(1, 1, TextureFormat.RGB24, false);
@@ -43,6 +50,11 @@ public class DisplayPlayerUI : MonoBehaviour {
 		shieldBar = new Texture2D(1, 1, TextureFormat.RGB24, false);
 		shieldBar.SetPixel(0, 0, Color.green);
 		shieldBar.Apply();
+		
+		HUD = new Rect(0, Screen.height-120, Screen.width, playerHUD.height);
+		healthBox = new Rect(20, Screen.height-85, 135, 22);
+		liveBox = new Rect(25, Screen.height-55, 135, 20);
+		scoreBox = new Rect(25, Screen.height-30, 135, 20);
 	}
 	
 	void Update(){
@@ -53,25 +65,31 @@ public class DisplayPlayerUI : MonoBehaviour {
 	
 	void OnGUI(){
 		if(player){
-			GUI.BeginGroup(box);
+			GUIx.DrawScaleTexture(HUD, playerHUD);
+			GUI.BeginGroup(healthBox);
 			{
-				GUI.DrawTexture(new Rect(0, 0, box.width*health.getHealth()/health.getMaxHealth(), box.height), healthBar, ScaleMode.StretchToFill);
+				GUI.DrawTexture(new Rect(0, 0, 
+					healthBox.width*health.getHealth()/health.getMaxHealth(), healthBox.height), healthBar, ScaleMode.StretchToFill);
 			}
 			GUI.EndGroup();
-			GUI.BeginGroup(box);
+			GUI.BeginGroup(healthBox);
 			{
-				//Graphics.DrawTexture(new Rect(0, 0, box.width*shieldHealth.getHealth()/shieldHealth.getMaxHealth(), box.height), shieldBar, shieldMat);
-				GUI.DrawTexture(new Rect(0, 0, box.width*shieldHealth.getHealth()/shieldHealth.getMaxHealth(), box.height), shieldBar, ScaleMode.StretchToFill);
+				GUI.DrawTexture(new Rect(0, 0, 
+					healthBox.width*shieldHealth.getHealth()/shieldHealth.getMaxHealth(), healthBox.height), shieldBar, ScaleMode.StretchToFill);
 			}
 			GUI.EndGroup();
-			//GUI.backgroundColor = Color.red;
-			//GUI.Button(new Rect(10, 10, Screen.width/2 /(health.getMaxHealth()/health.getHealth()), 20), "Health: " + health.getHealth() + "/" + health.getMaxHealth());
-			//GUILayout.Label("Health: " + health.getHealth());
-			GUI.Box(new Rect(10, Screen.height/1.15f, 100, 20), "Lives: " + lives.getLives());
-			GUI.Box(new Rect(10, Screen.height/1.1f, 100, 20), "Score: " + Score.getScore());
-			//GUILayout.Label("Lives: " + lives.getLives());
-			//GUILayout.Label("Shield: " + shieldHealth.getHealth());
-			//GUILayout.Label("Score: " + Score.getScore());
+			GUI.BeginGroup(liveBox);
+			{
+				for(int i=0; i<lives.getLives(); i++){
+					GUI.Label(new Rect(0, 0, liveBox.width, liveBox.height), "Lives: " + lives.getLives());
+				}
+			}
+			GUI.EndGroup();
+			GUI.BeginGroup(scoreBox);
+			{
+				GUI.Label(new Rect(0, 0, scoreBox.width, scoreBox.height), "Score: " + Score.getScore());
+			}
+			GUI.EndGroup();
 		}
 	}
 }

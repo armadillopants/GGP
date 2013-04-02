@@ -57,6 +57,14 @@ public class Bullet : MonoBehaviour {
 					Score.AddScore(100);
 				} else if(hit.transform.parent.name == "Gov_Sentry(Clone)"){
 					Score.AddScore(20);
+				} else if(hit.transform.parent.name == "Swarmer(Clone)"){
+					Score.AddScore(5);
+				}
+			}
+			if(trans.childCount > 0){
+				GameObject col = trans.FindChild("Collision").gameObject;
+				if(col){
+					Destroy(col.gameObject);
 				}
 			}
 			Explode();
@@ -65,6 +73,12 @@ public class Bullet : MonoBehaviour {
 		if(hit.tag == "Player"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
+			if(trans.childCount > 0){
+				GameObject col = trans.FindChild("Collision").gameObject;
+				if(col){
+					Destroy(col.gameObject);
+				}
+			}
 			Explode();
 			Kill();
 		}
@@ -72,16 +86,16 @@ public class Bullet : MonoBehaviour {
 			Explode();
 			Kill();
 		}
-		if(hit.tag == "GroundEnemy"){
+		/*if(hit.tag == "GroundEnemy"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
 			Explode();
 			Kill();
-		}
-		if(hit.tag == "Item"){
+		}*/
+		/*if(hit.tag == "Item"){
 			hit.collider.renderer.enabled = false;
-			hit.collider.transform.FindChild("Stump").gameObject.SetActive(true);//.renderer.enabled = true;
-		}
+			hit.collider.transform.FindChild("Stump").gameObject.SetActive(true);
+		}*/
 		if(hit.tag == "Shield"){
 			health = hit.transform.GetComponent<Health>();
 			health.TakeDamage(damage);
@@ -91,13 +105,19 @@ public class Bullet : MonoBehaviour {
 			} else {
 				hit.collider.enabled = false;
 			}
+			if(trans.childCount > 0){
+				GameObject col = trans.FindChild("Collision").gameObject;
+				if(col){
+					Destroy(col.gameObject);
+				}
+			}
 			Explode();
 			Kill();
 		}
 	}
 	
 	void Explode(){
-		if(explosion != null && !(trans.position.z >= top || trans.position.z <= down)){
+		if(explosion != null){// && !(trans.position.z >= vf.GetTopZ() || trans.position.z <= vf.GetDownZ())){
 			Instantiate(explosion, trans.position, trans.rotation);
 		}
 		// Stop emitting particles in any children

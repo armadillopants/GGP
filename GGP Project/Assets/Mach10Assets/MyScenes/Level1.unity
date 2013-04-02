@@ -154,7 +154,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 10901880}
   - 33: {fileID: 10901883}
-  - 64: {fileID: 10901882}
   - 23: {fileID: 10901881}
   m_Layer: 0
   m_Name: Stump
@@ -193,20 +192,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &10901882
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1824776536}
-  m_GameObject: {fileID: 10901879}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &10901883
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -262,7 +247,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 40.4672394
+      value: 37.8967552
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.y
@@ -270,7 +255,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 27.0153141
+      value: 28.1375904
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalRotation.x
@@ -306,7 +291,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 27164278}
   - 33: {fileID: 27164281}
-  - 64: {fileID: 27164280}
   - 23: {fileID: 27164279}
   m_Layer: 0
   m_Name: Stump
@@ -345,20 +329,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &27164280
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1002130503}
-  m_GameObject: {fileID: 27164277}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &27164281
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -376,7 +346,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 37686295}
   - 33: {fileID: 37686298}
-  - 64: {fileID: 37686297}
   - 23: {fileID: 37686296}
   m_Layer: 0
   m_Name: Stump
@@ -415,20 +384,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &37686297
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1763617015}
-  m_GameObject: {fileID: 37686294}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &37686298
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -556,7 +511,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100022, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 50441501}
@@ -574,7 +529,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400022, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 50441500}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -586,7 +541,7 @@ MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6400000, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 50441500}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -600,7 +555,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 50441500}
   m_Enabled: 1
   m_CastShadows: 1
@@ -622,7 +577,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 50441500}
   m_Mesh: {fileID: 4300000, guid: cc197b96a8eca404099f1f35277b96e9, type: 3}
 --- !u!1 &52005650
@@ -634,7 +589,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 52005651}
   - 33: {fileID: 52005654}
-  - 64: {fileID: 52005653}
   - 23: {fileID: 52005652}
   m_Layer: 0
   m_Name: Stump
@@ -673,20 +627,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &52005653
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 191165148}
-  m_GameObject: {fileID: 52005650}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &52005654
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -704,7 +644,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 58360847}
   - 33: {fileID: 58360850}
-  - 64: {fileID: 58360849}
   - 23: {fileID: 58360848}
   m_Layer: 0
   m_Name: Stump
@@ -743,20 +682,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &58360849
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1948738650}
-  m_GameObject: {fileID: 58360846}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &58360850
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -814,7 +739,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 82189981}
   - 33: {fileID: 82189984}
-  - 64: {fileID: 82189983}
   - 23: {fileID: 82189982}
   m_Layer: 0
   m_Name: Stump
@@ -853,20 +777,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &82189983
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 113968857}
-  m_GameObject: {fileID: 82189980}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &82189984
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -913,6 +823,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0cdfc674b3fda148a1ab475a03f267c, type: 3}
   m_Name: 
+  playerHUD: {fileID: 2800000, guid: 5474ca6f36209cb4aa27579874aff33e, type: 3}
 --- !u!1 &92898176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +944,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 96560790}
   - 33: {fileID: 96560793}
-  - 64: {fileID: 96560792}
   - 23: {fileID: 96560791}
   m_Layer: 0
   m_Name: Stump
@@ -1072,20 +982,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &96560792
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 141222669}
-  m_GameObject: {fileID: 96560789}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &96560793
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1103,7 +999,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 100067868}
   - 33: {fileID: 100067871}
-  - 64: {fileID: 100067870}
   - 23: {fileID: 100067869}
   m_Layer: 0
   m_Name: Stump
@@ -1142,20 +1037,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &100067870
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 886334644}
-  m_GameObject: {fileID: 100067867}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &100067871
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1253,7 +1134,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 117066228}
   - 33: {fileID: 117066231}
-  - 64: {fileID: 117066230}
   - 23: {fileID: 117066229}
   m_Layer: 0
   m_Name: Stump
@@ -1292,20 +1172,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &117066230
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1768909563}
-  m_GameObject: {fileID: 117066227}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &117066231
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1318,7 +1184,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100014, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 119151048}
@@ -1333,7 +1199,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400014, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 119151047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1391,7 +1257,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 133703791}
   - 33: {fileID: 133703794}
-  - 64: {fileID: 133703793}
   - 23: {fileID: 133703792}
   m_Layer: 0
   m_Name: Stump
@@ -1430,20 +1295,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &133703793
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 934113505}
-  m_GameObject: {fileID: 133703790}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &133703794
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1612,7 +1463,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 380a3ff98e329674db1349c4e381be73, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -42.6710663
+      value: -39.9001389
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 380a3ff98e329674db1349c4e381be73, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1620,7 +1471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 380a3ff98e329674db1349c4e381be73, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -16.7476196
+      value: -11.0205231
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 380a3ff98e329674db1349c4e381be73, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1656,7 +1507,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 178538235}
   - 33: {fileID: 178538238}
-  - 64: {fileID: 178538237}
   - 23: {fileID: 178538236}
   m_Layer: 0
   m_Name: Stump
@@ -1695,20 +1545,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &178538237
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 749875338}
-  m_GameObject: {fileID: 178538234}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &178538238
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1783,7 +1619,7 @@ Transform:
   m_PrefabInternal: {fileID: 331082901}
   m_GameObject: {fileID: 189256871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.4835758, y: 0, z: 31.1702633}
+  m_LocalPosition: {x: 27.1328449, y: 0, z: 28.5389328}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 857305226}
@@ -1837,7 +1673,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.0326986
+      value: 8.95903873
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1845,7 +1681,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 37.2190895
+      value: 33.6363182
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1983,7 +1819,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100024, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 204386685}
@@ -2002,7 +1838,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 204386684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 15, z: 0}
@@ -2019,7 +1855,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400004, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 204386684}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2038,7 +1874,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400002, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 204386684}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2052,18 +1888,19 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 204386684}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3268dd646f366fa4f97a1803b9ddc814, type: 3}
   m_Name: 
+  curLives: 0
 --- !u!114 &204386689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400022, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 204386684}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2121,7 +1958,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 22.1594906
+      value: 20.4946251
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2266,7 +2103,7 @@ Transform:
   m_PrefabInternal: {fileID: 1743234794}
   m_GameObject: {fileID: 241325406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.2653008, y: 0, z: -3.98347378}
+  m_LocalPosition: {x: -37.8058243, y: 0, z: -3.98347378}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 1393809175}
@@ -2320,7 +2157,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 14.6218643
+      value: 13.6513977
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2328,7 +2165,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -23.8877754
+      value: -26.582119
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2580,7 +2417,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 28.4835758
+      value: 27.1328449
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2588,7 +2425,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 31.1702633
+      value: 28.5389328
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2695,7 +2532,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -41.6714706
+      value: -39.081356
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2703,7 +2540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 35.5350266
+      value: 33.2878265
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2921,7 +2758,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 365101749}
   - 33: {fileID: 365101752}
-  - 64: {fileID: 365101751}
   - 23: {fileID: 365101750}
   m_Layer: 0
   m_Name: Stump
@@ -2960,20 +2796,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &365101751
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1126348436}
-  m_GameObject: {fileID: 365101748}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &365101752
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3144,7 +2966,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 375180443}
   - 33: {fileID: 375180446}
-  - 64: {fileID: 375180445}
   - 23: {fileID: 375180444}
   m_Layer: 0
   m_Name: Stump
@@ -3183,20 +3004,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &375180445
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1356311884}
-  m_GameObject: {fileID: 375180442}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &375180446
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3558,7 +3365,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 414305227}
   - 33: {fileID: 414305230}
-  - 64: {fileID: 414305229}
   - 23: {fileID: 414305228}
   m_Layer: 0
   m_Name: Stump
@@ -3597,20 +3403,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &414305229
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 552551867}
-  m_GameObject: {fileID: 414305226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &414305230
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3937,7 +3729,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 470441430}
   - 33: {fileID: 470441433}
-  - 64: {fileID: 470441432}
   - 23: {fileID: 470441431}
   m_Layer: 0
   m_Name: Stump
@@ -3976,20 +3767,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &470441432
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1633620493}
-  m_GameObject: {fileID: 470441429}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &470441433
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4202,7 +3979,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 510200978}
   - 33: {fileID: 510200981}
-  - 64: {fileID: 510200980}
   - 23: {fileID: 510200979}
   m_Layer: 0
   m_Name: Stump
@@ -4241,20 +4017,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &510200980
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 712609817}
-  m_GameObject: {fileID: 510200977}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &510200981
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4316,7 +4078,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 515791639}
   - 33: {fileID: 515791642}
-  - 64: {fileID: 515791641}
   - 23: {fileID: 515791640}
   m_Layer: 0
   m_Name: Stump
@@ -4355,20 +4116,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &515791641
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1404820257}
-  m_GameObject: {fileID: 515791638}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &515791642
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4465,7 +4212,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100020, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 549329076}
@@ -4484,7 +4231,7 @@ ParticleRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2600004, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 549329072}
   m_Enabled: 1
   m_CastShadows: 1
@@ -4513,7 +4260,7 @@ ParticleAnimator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1200004, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 549329072}
   Does Animate Color?: 1
   colorAnimation[0]:
@@ -4544,7 +4291,7 @@ EllipsoidParticleEmitter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1500004, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 549329072}
   serializedVersion: 2
   m_Enabled: 1
@@ -4571,7 +4318,7 @@ EllipsoidParticleEmitter:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400020, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 549329072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -.985367537}
@@ -4789,7 +4536,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 587549614}
   - 33: {fileID: 587549617}
-  - 64: {fileID: 587549616}
   - 23: {fileID: 587549615}
   m_Layer: 0
   m_Name: Stump
@@ -4828,20 +4574,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &587549616
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 608751247}
-  m_GameObject: {fileID: 587549613}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &587549617
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4854,7 +4586,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100008, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 594282867}
@@ -4869,7 +4601,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400008, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 594282866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.71165657, z: -.452784598}
@@ -4920,7 +4652,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100040, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 601912578}
@@ -4937,7 +4669,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400040, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 601912577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.00316619873, z: .750423014}
@@ -4949,7 +4681,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400016, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 601912577}
   m_Enabled: 0
   m_EditorHideFlags: 0
@@ -4963,7 +4695,7 @@ AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8200000, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 601912577}
   m_Enabled: 1
   serializedVersion: 3
@@ -5142,7 +4874,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 621434227}
   - 33: {fileID: 621434230}
-  - 64: {fileID: 621434229}
   - 23: {fileID: 621434228}
   m_Layer: 0
   m_Name: Stump
@@ -5181,20 +4912,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &621434229
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 822286358}
-  m_GameObject: {fileID: 621434226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &621434230
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5237,7 +4954,7 @@ Transform:
   m_PrefabInternal: {fileID: 192547717}
   m_GameObject: {fileID: 624401001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.0326986, y: .5, z: 37.2190895}
+  m_LocalPosition: {x: 8.95903873, y: .5, z: 33.6363182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1895533734}
@@ -5250,7 +4967,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 625455829}
   - 33: {fileID: 625455832}
-  - 64: {fileID: 625455831}
   - 23: {fileID: 625455830}
   m_Layer: 0
   m_Name: Stump
@@ -5289,20 +5005,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &625455831
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 495201568}
-  m_GameObject: {fileID: 625455828}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &625455832
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5338,6 +5040,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e72f8abe9938e4b90b2340079d46b4, type: 3}
   m_Name: 
+  curLevel: Level1
   nextLevel: Level2
 --- !u!4 &668199806
 Transform:
@@ -5629,6 +5332,46 @@ Prefab:
   m_RootGameObject: {fileID: 1254122759}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &722473158
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
+  m_RootGameObject: {fileID: 1220737700}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &733715841
 GameObject:
   m_ObjectHideFlags: 0
@@ -5749,7 +5492,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 742765177}
   - 33: {fileID: 742765180}
-  - 64: {fileID: 742765179}
   - 23: {fileID: 742765178}
   m_Layer: 0
   m_Name: Stump
@@ -5788,20 +5530,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &742765179
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1314667077}
-  m_GameObject: {fileID: 742765176}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &742765180
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5899,7 +5627,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 756756507}
   - 33: {fileID: 756756510}
-  - 64: {fileID: 756756509}
   - 23: {fileID: 756756508}
   m_Layer: 0
   m_Name: Stump
@@ -5938,20 +5665,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &756756509
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1415439165}
-  m_GameObject: {fileID: 756756506}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &756756510
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5969,7 +5682,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 760142091}
   - 33: {fileID: 760142094}
-  - 64: {fileID: 760142093}
   - 23: {fileID: 760142092}
   m_Layer: 0
   m_Name: Stump
@@ -6008,20 +5720,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &760142093
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 564844331}
-  m_GameObject: {fileID: 760142090}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &760142094
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6238,7 +5936,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 795297875}
   - 33: {fileID: 795297878}
-  - 64: {fileID: 795297877}
   - 23: {fileID: 795297876}
   m_Layer: 0
   m_Name: Stump
@@ -6277,20 +5974,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &795297877
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 598678409}
-  m_GameObject: {fileID: 795297874}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &795297878
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6405,7 +6088,7 @@ Transform:
   m_PrefabInternal: {fileID: 177273363}
   m_GameObject: {fileID: 811338570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.6710663, y: 0, z: -16.7476196}
+  m_LocalPosition: {x: -39.9001389, y: 0, z: -11.0205231}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 1775525848}
@@ -6448,6 +6131,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eee710571e37cf44b8294674463239ac, type: 2}
   m_RootGameObject: {fileID: 1796677156}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &819675681
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a74758fead630d647927b6501f08fce3, type: 2}
+  m_RootGameObject: {fileID: 204386684}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1001 &822286358
@@ -6565,7 +6288,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 840058871}
@@ -6582,7 +6305,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 840058870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.00316619873, z: .750423193}
@@ -6594,7 +6317,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400006, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 840058870}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -6608,7 +6331,7 @@ AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8200002, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 840058870}
   m_Enabled: 1
   serializedVersion: 3
@@ -6802,7 +6525,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 857305226}
   - 33: {fileID: 857305229}
-  - 64: {fileID: 857305228}
   - 23: {fileID: 857305227}
   m_Layer: 0
   m_Name: Stump
@@ -6841,20 +6563,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &857305228
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1837148280}
-  m_GameObject: {fileID: 857305225}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &857305229
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6911,7 +6619,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100042, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 869464509}
@@ -6928,7 +6636,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400042, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 869464508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.00316619873, z: .750422895}
@@ -6940,7 +6648,7 @@ AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8200004, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 869464508}
   m_Enabled: 1
   serializedVersion: 3
@@ -6997,7 +6705,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400014, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 869464508}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7029,7 +6737,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 880970428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: .100000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 335945463}
@@ -7110,6 +6818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119de7aa4914ab746830f19d6a86db19, type: 3}
   m_Name: 
   scrollSpeed: 6
+  up: 1.25
+  bottom: -.200000003
 --- !u!1001 &882576087
 Prefab:
   m_ObjectHideFlags: 0
@@ -7199,7 +6909,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 888818780}
   - 33: {fileID: 888818783}
-  - 64: {fileID: 888818782}
   - 23: {fileID: 888818781}
   m_Layer: 0
   m_Name: Stump
@@ -7238,20 +6947,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &888818782
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 94745922}
-  m_GameObject: {fileID: 888818779}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &888818783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7411,7 +7106,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 906863671}
   - 33: {fileID: 906863674}
-  - 64: {fileID: 906863673}
   - 23: {fileID: 906863672}
   m_Layer: 0
   m_Name: Stump
@@ -7450,20 +7144,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &906863673
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1933623326}
-  m_GameObject: {fileID: 906863670}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &906863674
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7514,7 +7194,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 914779202}
@@ -7529,7 +7209,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 914779201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -7637,7 +7317,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 922882616}
   - 33: {fileID: 922882619}
-  - 64: {fileID: 922882618}
   - 23: {fileID: 922882617}
   m_Layer: 0
   m_Name: Stump
@@ -7676,20 +7355,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &922882618
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 578954366}
-  m_GameObject: {fileID: 922882615}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &922882619
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7791,7 +7456,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 945614796}
   - 33: {fileID: 945614799}
-  - 64: {fileID: 945614798}
   - 23: {fileID: 945614797}
   m_Layer: 0
   m_Name: Stump
@@ -7830,20 +7494,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &945614798
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1060545798}
-  m_GameObject: {fileID: 945614795}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &945614799
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7957,6 +7607,10 @@ Prefab:
     - target: {fileID: 400000, guid: 7eeb4284097f7c345b4a8ac15540a381, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7eeb4284097f7c345b4a8ac15540a381, type: 2}
+      propertyPath: curLevel
+      value: Level1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7eeb4284097f7c345b4a8ac15540a381, type: 2}
@@ -8087,7 +7741,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 995136214}
   - 33: {fileID: 995136217}
-  - 64: {fileID: 995136216}
   - 23: {fileID: 995136215}
   m_Layer: 0
   m_Name: Stump
@@ -8126,20 +7779,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &995136216
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1283019219}
-  m_GameObject: {fileID: 995136213}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &995136217
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8342,7 +7981,7 @@ Transform:
   m_PrefabInternal: {fileID: 24675485}
   m_GameObject: {fileID: 1003875185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.4672394, y: 0, z: 27.0153141}
+  m_LocalPosition: {x: 37.8967552, y: 0, z: 28.1375904}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 82189981}
@@ -8356,7 +7995,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1008576029}
   - 33: {fileID: 1008576032}
-  - 64: {fileID: 1008576031}
   - 23: {fileID: 1008576030}
   m_Layer: 0
   m_Name: Stump
@@ -8395,20 +8033,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1008576031
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 680662684}
-  m_GameObject: {fileID: 1008576028}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1008576032
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8541,7 +8165,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1018421058}
   - 33: {fileID: 1018421061}
-  - 64: {fileID: 1018421060}
   - 23: {fileID: 1018421059}
   m_Layer: 0
   m_Name: Stump
@@ -8580,20 +8203,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1018421060
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1078618441}
-  m_GameObject: {fileID: 1018421057}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1018421061
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8695,7 +8304,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1064455598}
   - 33: {fileID: 1064455601}
-  - 64: {fileID: 1064455600}
   - 23: {fileID: 1064455599}
   m_Layer: 0
   m_Name: Stump
@@ -8734,20 +8342,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1064455600
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 377319673}
-  m_GameObject: {fileID: 1064455597}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1064455601
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8805,7 +8399,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.8870716
+      value: 14.5529633
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.y
@@ -8813,7 +8407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -15.8571358
+      value: -17.5330849
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalRotation.x
@@ -8887,7 +8481,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1093746764}
   - 33: {fileID: 1093746767}
-  - 64: {fileID: 1093746766}
   - 23: {fileID: 1093746765}
   m_Layer: 0
   m_Name: Stump
@@ -8926,20 +8519,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1093746766
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1943047166}
-  m_GameObject: {fileID: 1093746763}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1093746767
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8997,7 +8576,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1106693675}
   - 33: {fileID: 1106693678}
-  - 64: {fileID: 1106693677}
   - 23: {fileID: 1106693676}
   m_Layer: 0
   m_Name: Stump
@@ -9036,20 +8614,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1106693677
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 149506077}
-  m_GameObject: {fileID: 1106693674}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1106693678
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9218,7 +8782,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1131386316}
   - 33: {fileID: 1131386319}
-  - 64: {fileID: 1131386318}
   - 23: {fileID: 1131386317}
   m_Layer: 0
   m_Name: Stump
@@ -9257,20 +8820,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1131386318
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1618175726}
-  m_GameObject: {fileID: 1131386315}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1131386319
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9371,7 +8920,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100044, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1181055357}
@@ -9386,7 +8935,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400044, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1181055356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.800000012, y: -.311519623, z: 1.06321681}
@@ -9437,7 +8986,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100010, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1197666051}
@@ -9454,7 +9003,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400010, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1197666050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.00316619873, z: .750423014}
@@ -9466,13 +9015,13 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400010, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1197666050}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d643ea300e515b43bedfe4eefe40936, type: 3}
   m_Name: 
-  projectile: {fileID: 100000, guid: 0b09c1c0d2330e442a9abcba6e20c692, type: 2}
+  projectile: {fileID: 100002, guid: 4a534c7981f84b947a93aae41186857a, type: 2}
   muzzlePos:
   - {fileID: 1607562834}
 --- !u!82 &1197666053
@@ -9480,7 +9029,7 @@ AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8200006, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1197666050}
   m_Enabled: 1
   serializedVersion: 3
@@ -9660,7 +9209,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-  m_PrefabInternal: {fileID: 1453722965}
+  m_PrefabInternal: {fileID: 722473158}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1220737701}
@@ -9676,7 +9225,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-  m_PrefabInternal: {fileID: 1453722965}
+  m_PrefabInternal: {fileID: 722473158}
   m_GameObject: {fileID: 1220737700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -9688,18 +9237,19 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4,
     type: 2}
-  m_PrefabInternal: {fileID: 1453722965}
+  m_PrefabInternal: {fileID: 722473158}
   m_GameObject: {fileID: 1220737700}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba09af97c2217c7429f43b79da4cbd33, type: 3}
   m_Name: 
   airEnemies:
-  - {fileID: 100000, guid: d11f27667b733204ba42dcb31369f01c, type: 2}
+  - {fileID: 100106, guid: 04292bda7c165284782afb2a491d7067, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
   - {fileID: 100006, guid: 26865c51b93da4b4db76a3d92f55e553, type: 2}
   groundEnemies:
   - {fileID: 100122, guid: 3bbd4f636faad9f45a31bbaa9cef879a, type: 2}
+  swarmer: {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0
   enemiesSpawned: 0
@@ -9911,7 +9461,7 @@ Transform:
   m_PrefabInternal: {fileID: 1978770921}
   m_GameObject: {fileID: 1225520440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.0431442, y: 0, z: -7.91376686}
+  m_LocalPosition: {x: -30.906105, y: 0, z: -7.91376686}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 470441430}
@@ -10305,7 +9855,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100018, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1269538168}
@@ -10324,7 +9874,7 @@ ParticleRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2600002, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1269538164}
   m_Enabled: 1
   m_CastShadows: 1
@@ -10353,7 +9903,7 @@ ParticleAnimator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1200002, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1269538164}
   Does Animate Color?: 1
   colorAnimation[0]:
@@ -10384,7 +9934,7 @@ EllipsoidParticleEmitter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1500002, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1269538164}
   serializedVersion: 2
   m_Enabled: 1
@@ -10411,7 +9961,7 @@ EllipsoidParticleEmitter:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400018, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1269538164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: -1.60000002}
@@ -10666,7 +10216,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1307414604}
   - 33: {fileID: 1307414607}
-  - 64: {fileID: 1307414606}
   - 23: {fileID: 1307414605}
   m_Layer: 0
   m_Name: Stump
@@ -10705,20 +10254,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1307414606
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1205886562}
-  m_GameObject: {fileID: 1307414603}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1307414607
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10886,7 +10421,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100012, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1342049926}
@@ -10907,7 +10442,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300002, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1342049922}
   m_Enabled: 1
   m_CastShadows: 0
@@ -10926,7 +10461,7 @@ CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13600000, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1342049922}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -10940,14 +10475,14 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300002, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1342049922}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1342049926
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400012, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1342049922}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -10959,7 +10494,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400020, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1342049922}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -10972,7 +10507,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400018, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1342049922}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -11162,7 +10697,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1393809175}
   - 33: {fileID: 1393809178}
-  - 64: {fileID: 1393809177}
   - 23: {fileID: 1393809176}
   m_Layer: 0
   m_Name: Stump
@@ -11201,20 +10735,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1393809177
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 770240077}
-  m_GameObject: {fileID: 1393809174}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1393809178
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11338,7 +10858,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100026, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1412895623}
@@ -11355,7 +10875,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400026, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1412895622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.00316619873, z: .750423014}
@@ -11367,13 +10887,13 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400012, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1412895622}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5ea9a736f89824aac09fce3070dcab, type: 3}
   m_Name: 
-  projectile: {fileID: 100000, guid: 494835daa8c698d48a103a0bfc8abfa5, type: 2}
+  projectile: {fileID: 100004, guid: 8bf1d50ea3202254ab83d4f38906deb4, type: 2}
   muzzlePos:
   - {fileID: 1607562834}
 --- !u!82 &1412895625
@@ -11381,7 +10901,7 @@ AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8200008, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1412895622}
   m_Enabled: 1
   serializedVersion: 3
@@ -11712,7 +11232,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1449445870}
   - 33: {fileID: 1449445873}
-  - 64: {fileID: 1449445872}
   - 23: {fileID: 1449445871}
   m_Layer: 0
   m_Name: Stump
@@ -11751,20 +11270,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1449445872
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1818476524}
-  m_GameObject: {fileID: 1449445869}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1449445873
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11782,7 +11287,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1450343452}
   - 33: {fileID: 1450343455}
-  - 64: {fileID: 1450343454}
   - 23: {fileID: 1450343453}
   m_Layer: 0
   m_Name: Stump
@@ -11821,20 +11325,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1450343454
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 220051061}
-  m_GameObject: {fileID: 1450343451}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1450343455
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11843,46 +11333,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 220051061}
   m_GameObject: {fileID: 1450343451}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1453722965
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5544501b5cdda1f49bedd4c5ca7ea7e4, type: 2}
-  m_RootGameObject: {fileID: 1220737700}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1462535061
 GameObject:
   m_ObjectHideFlags: 0
@@ -11892,7 +11342,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1462535062}
   - 33: {fileID: 1462535065}
-  - 64: {fileID: 1462535064}
   - 23: {fileID: 1462535063}
   m_Layer: 0
   m_Name: Stump
@@ -11931,20 +11380,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1462535064
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1617385058}
-  m_GameObject: {fileID: 1462535061}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1462535065
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11957,7 +11392,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100016, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1467581541}
@@ -11975,7 +11410,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400016, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1467581540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2, y: 0, z: -1.60000002}
@@ -11987,7 +11422,7 @@ ParticleRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2600000, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1467581540}
   m_Enabled: 1
   m_CastShadows: 1
@@ -12016,7 +11451,7 @@ ParticleAnimator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1200000, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1467581540}
   Does Animate Color?: 1
   colorAnimation[0]:
@@ -12047,7 +11482,7 @@ EllipsoidParticleEmitter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1500000, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1467581540}
   serializedVersion: 2
   m_Enabled: 1
@@ -12145,7 +11580,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100046, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1481322826}
@@ -12160,7 +11595,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400046, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1481322825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .800000012, y: -.311519623, z: 1.06321681}
@@ -12176,7 +11611,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1487275128}
   - 33: {fileID: 1487275131}
-  - 64: {fileID: 1487275130}
   - 23: {fileID: 1487275129}
   m_Layer: 0
   m_Name: Stump
@@ -12215,20 +11649,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1487275130
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 350043547}
-  m_GameObject: {fileID: 1487275127}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1487275131
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12359,7 +11779,7 @@ Transform:
   m_PrefabInternal: {fileID: 253367021}
   m_GameObject: {fileID: 1510990284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.6218643, y: .5, z: -23.8877754}
+  m_LocalPosition: {x: 13.6513977, y: .5, z: -26.582119}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1895533734}
@@ -12527,7 +11947,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1538936144}
   - 33: {fileID: 1538936147}
-  - 64: {fileID: 1538936146}
   - 23: {fileID: 1538936145}
   m_Layer: 0
   m_Name: Stump
@@ -12566,20 +11985,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1538936146
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1348065301}
-  m_GameObject: {fileID: 1538936143}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1538936147
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12637,7 +12042,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1556190131}
   - 33: {fileID: 1556190134}
-  - 64: {fileID: 1556190133}
   - 23: {fileID: 1556190132}
   m_Layer: 0
   m_Name: Stump
@@ -12676,20 +12080,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1556190133
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1928110123}
-  m_GameObject: {fileID: 1556190130}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1556190134
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12882,7 +12272,7 @@ Transform:
   m_PrefabInternal: {fileID: 340096746}
   m_GameObject: {fileID: 1576124612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.6714706, y: 0, z: 35.5350266}
+  m_LocalPosition: {x: -39.081356, y: 0, z: 33.2878265}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 117066228}
@@ -13014,7 +12404,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100048, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1607562834}
@@ -13029,7 +12419,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400048, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1607562833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.323165894, z: 1.15042293}
@@ -13101,7 +12491,7 @@ Transform:
   m_PrefabInternal: {fileID: 225380239}
   m_GameObject: {fileID: 1617828334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.1594906, y: 0, z: -22.546484}
+  m_LocalPosition: {x: 20.4946251, y: 0, z: -22.546484}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 621434227}
@@ -13274,7 +12664,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1650337697}
   - 33: {fileID: 1650337700}
-  - 64: {fileID: 1650337699}
   - 23: {fileID: 1650337698}
   m_Layer: 0
   m_Name: Stump
@@ -13313,20 +12702,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1650337699
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 418688512}
-  m_GameObject: {fileID: 1650337696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1650337700
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13499,7 +12874,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1682911302}
   - 33: {fileID: 1682911305}
-  - 64: {fileID: 1682911304}
   - 23: {fileID: 1682911303}
   m_Layer: 0
   m_Name: Stump
@@ -13538,20 +12912,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1682911304
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1687625314}
-  m_GameObject: {fileID: 1682911301}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1682911305
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13706,7 +13066,7 @@ Transform:
   m_PrefabInternal: {fileID: 1086893509}
   m_GameObject: {fileID: 1688345467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.8870716, y: 0, z: -15.8571358}
+  m_LocalPosition: {x: 14.5529633, y: 0, z: -17.5330849}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 1064455598}
@@ -13831,7 +13191,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1718034507}
   - 33: {fileID: 1718034510}
-  - 64: {fileID: 1718034509}
   - 23: {fileID: 1718034508}
   m_Layer: 0
   m_Name: Stump
@@ -13870,20 +13229,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1718034509
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1210494122}
-  m_GameObject: {fileID: 1718034506}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1718034510
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13945,7 +13290,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1728764621}
   - 33: {fileID: 1728764624}
-  - 64: {fileID: 1728764623}
   - 23: {fileID: 1728764622}
   m_Layer: 0
   m_Name: Stump
@@ -13984,20 +13328,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1728764623
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1304449788}
-  m_GameObject: {fileID: 1728764620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1728764624
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14015,7 +13345,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1741616929}
   - 33: {fileID: 1741616932}
-  - 64: {fileID: 1741616931}
   - 23: {fileID: 1741616930}
   m_Layer: 0
   m_Name: Stump
@@ -14054,20 +13383,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1741616931
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 2054549712}
-  m_GameObject: {fileID: 1741616928}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1741616932
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14085,7 +13400,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 380a3ff98e329674db1349c4e381be73, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -40.2653008
+      value: -37.8058243
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 380a3ff98e329674db1349c4e381be73, type: 2}
       propertyPath: m_LocalPosition.y
@@ -14200,7 +13515,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1746609400}
   - 33: {fileID: 1746609403}
-  - 64: {fileID: 1746609402}
   - 23: {fileID: 1746609401}
   m_Layer: 0
   m_Name: Stump
@@ -14239,20 +13553,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1746609402
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1238631226}
-  m_GameObject: {fileID: 1746609399}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1746609403
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14389,7 +13689,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e28227b9c446f34ebd8ee1c2027ee5f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e28227b9c446f34ebd8ee1c2027ee5f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14507,7 +13807,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1765370535}
   - 33: {fileID: 1765370538}
-  - 64: {fileID: 1765370537}
   - 23: {fileID: 1765370536}
   m_Layer: 0
   m_Name: Stump
@@ -14546,20 +13845,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1765370537
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1686734319}
-  m_GameObject: {fileID: 1765370534}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1765370538
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14629,7 +13914,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1775525848}
   - 33: {fileID: 1775525851}
-  - 64: {fileID: 1775525850}
   - 23: {fileID: 1775525849}
   m_Layer: 0
   m_Name: Stump
@@ -14668,20 +13952,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1775525850
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 751083198}
-  m_GameObject: {fileID: 1775525847}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1775525851
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14734,46 +14004,6 @@ Prefab:
   m_RootGameObject: {fileID: 2095894528}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1001 &1783637051
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_RootGameObject: {fileID: 204386684}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1796677156
 GameObject:
   m_ObjectHideFlags: 0
@@ -14783,7 +14013,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1796677157}
   - 33: {fileID: 1796677160}
-  - 64: {fileID: 1796677159}
   - 23: {fileID: 1796677158}
   m_Layer: 0
   m_Name: Stump
@@ -14822,20 +14051,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1796677159
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 814749554}
-  m_GameObject: {fileID: 1796677156}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1796677160
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15410,7 +14625,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1861528132}
   - 33: {fileID: 1861528135}
-  - 64: {fileID: 1861528134}
   - 23: {fileID: 1861528133}
   m_Layer: 0
   m_Name: Stump
@@ -15449,20 +14663,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1861528134
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1658212612}
-  m_GameObject: {fileID: 1861528131}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1861528135
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15480,7 +14680,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1869277164}
   - 33: {fileID: 1869277167}
-  - 64: {fileID: 1869277166}
   - 23: {fileID: 1869277165}
   m_Layer: 0
   m_Name: Stump
@@ -15519,20 +14718,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1869277166
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1802276925}
-  m_GameObject: {fileID: 1869277163}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1869277167
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15660,7 +14845,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1890994498}
@@ -15676,7 +14861,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1890994497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -15690,7 +14875,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400008, guid: a74758fead630d647927b6501f08fce3,
     type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 1890994497}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -15710,7 +14895,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1891969443}
   - 33: {fileID: 1891969446}
-  - 64: {fileID: 1891969445}
   - 23: {fileID: 1891969444}
   m_Layer: 0
   m_Name: Stump
@@ -15749,20 +14933,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1891969445
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 397804650}
-  m_GameObject: {fileID: 1891969442}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1891969446
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15891,6 +15061,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0060d0ac5d68a4287d652af8fa7427, type: 3}
   m_Name: 
   scrollSpeed: 6
+  up: 1.25
+  bottom: -.200000003
 --- !u!1 &1922724180
 GameObject:
   m_ObjectHideFlags: 0
@@ -15982,7 +15154,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1925629176}
   - 33: {fileID: 1925629175}
-  - 64: {fileID: 1925629174}
   - 23: {fileID: 1925629173}
   - 114: {fileID: 1925629177}
   m_Layer: 0
@@ -16011,20 +15182,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1925629174
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 7e28227b9c446f34ebd8ee1c2027ee5f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1761001760}
-  m_GameObject: {fileID: 1925629172}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1925629175
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16040,7 +15197,7 @@ Transform:
   m_PrefabInternal: {fileID: 1761001760}
   m_GameObject: {fileID: 1925629172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: .100000001, z: 0}
   m_LocalScale: {x: 2.84176636, y: 1, z: 8.21554565}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16056,6 +15213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f30c8ecd4c553419a4b5cc3cfab0e8, type: 3}
   m_Name: 
   scrollSpeed: -.0700000003
+  up: 1.25
+  bottom: -.200000003
 --- !u!1 &1926475299
 GameObject:
   m_ObjectHideFlags: 0
@@ -16065,7 +15224,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1926475300}
   - 33: {fileID: 1926475303}
-  - 64: {fileID: 1926475302}
   - 23: {fileID: 1926475301}
   m_Layer: 0
   m_Name: Stump
@@ -16104,20 +15262,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1926475302
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 479168401}
-  m_GameObject: {fileID: 1926475299}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1926475303
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16286,7 +15430,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1941798512}
   - 33: {fileID: 1941798515}
-  - 64: {fileID: 1941798514}
   - 23: {fileID: 1941798513}
   m_Layer: 0
   m_Name: Stump
@@ -16325,20 +15468,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1941798514
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1529876424}
-  m_GameObject: {fileID: 1941798511}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1941798515
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16578,7 +15707,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -34.0431442
+      value: -30.906105
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73dd5dd457cc910449a4da5be94b2558, type: 2}
       propertyPath: m_LocalPosition.y
@@ -16693,7 +15822,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1996043123}
   - 33: {fileID: 1996043126}
-  - 64: {fileID: 1996043125}
   - 23: {fileID: 1996043124}
   m_Layer: 0
   m_Name: Stump
@@ -16732,20 +15860,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &1996043125
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 882576087}
-  m_GameObject: {fileID: 1996043122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1996043126
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16900,7 +16014,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2017306954}
@@ -16915,7 +16029,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: a74758fead630d647927b6501f08fce3, type: 2}
-  m_PrefabInternal: {fileID: 1783637051}
+  m_PrefabInternal: {fileID: 819675681}
   m_GameObject: {fileID: 2017306953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -17121,6 +16235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f30c8ecd4c553419a4b5cc3cfab0e8, type: 3}
   m_Name: 
   scrollSpeed: -.100000001
+  up: 1.25
+  bottom: -.200000003
 --- !u!1 &2046575726
 GameObject:
   m_ObjectHideFlags: 0
@@ -17201,7 +16317,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2051585093}
   - 33: {fileID: 2051585096}
-  - 64: {fileID: 2051585095}
   - 23: {fileID: 2051585094}
   m_Layer: 0
   m_Name: Stump
@@ -17240,20 +16355,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &2051585095
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1592790722}
-  m_GameObject: {fileID: 2051585092}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &2051585096
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17509,7 +16610,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2101475057}
   - 33: {fileID: 2101475060}
-  - 64: {fileID: 2101475059}
   - 23: {fileID: 2101475058}
   m_Layer: 0
   m_Name: Stump
@@ -17548,20 +16648,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &2101475059
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 1124487264}
-  m_GameObject: {fileID: 2101475056}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &2101475060
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17650,7 +16736,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2107062857}
   - 33: {fileID: 2107062860}
-  - 64: {fileID: 2107062859}
   - 23: {fileID: 2107062858}
   m_Layer: 0
   m_Name: Stump
@@ -17689,20 +16774,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &2107062859
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 249890410}
-  m_GameObject: {fileID: 2107062856}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &2107062860
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17794,6 +16865,10 @@ Prefab:
       propertyPath: shieldMat
       value: 
       objectReference: {fileID: 2100000, guid: 8bdc417e1231a934c92619ab7fb71330, type: 2}
+    - target: {fileID: 11400000, guid: 4b6f7f84c5aa79248bd89687106e8023, type: 2}
+      propertyPath: playerHUD
+      value: 
+      objectReference: {fileID: 2800000, guid: 5474ca6f36209cb4aa27579874aff33e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b6f7f84c5aa79248bd89687106e8023, type: 2}
   m_RootGameObject: {fileID: 86817831}
@@ -17808,7 +16883,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2130881020}
   - 33: {fileID: 2130881023}
-  - 64: {fileID: 2130881022}
   - 23: {fileID: 2130881021}
   m_Layer: 0
   m_Name: Stump
@@ -17847,20 +16921,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &2130881022
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 740574770}
-  m_GameObject: {fileID: 2130881019}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &2130881023
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17922,7 +16982,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2137867267}
   - 33: {fileID: 2137867270}
-  - 64: {fileID: 2137867269}
   - 23: {fileID: 2137867268}
   m_Layer: 0
   m_Name: Stump
@@ -17961,20 +17020,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &2137867269
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 112958721}
-  m_GameObject: {fileID: 2137867266}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &2137867270
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18036,7 +17081,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2142883010}
   - 33: {fileID: 2142883013}
-  - 64: {fileID: 2142883012}
   - 23: {fileID: 2142883011}
   m_Layer: 0
   m_Name: Stump
@@ -18075,20 +17119,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &2142883012
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 382323177}
-  m_GameObject: {fileID: 2142883009}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &2142883013
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18106,7 +17136,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2145094593}
   - 33: {fileID: 2145094596}
-  - 64: {fileID: 2145094595}
   - 23: {fileID: 2145094594}
   m_Layer: 0
   m_Name: Stump
@@ -18145,20 +17174,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!64 &2145094595
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: eee710571e37cf44b8294674463239ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 683711364}
-  m_GameObject: {fileID: 2145094592}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &2145094596
 MeshFilter:
   m_ObjectHideFlags: 0
