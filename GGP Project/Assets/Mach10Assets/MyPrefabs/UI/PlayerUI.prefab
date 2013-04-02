@@ -38,7 +38,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cdfc674b3fda148a1ab475a03f267c, type: 3}
   m_Name: 
   playerHUD: {fileID: 2800000, guid: 5474ca6f36209cb4aa27579874aff33e, type: 3}
-  playerLife: {fileID: 100000, guid: b643ee8ddf9d2aa4c9b86a53c20ca363, type: 2}
+  playerLife:
+  - {fileID: 2800000, guid: 6693c8302f2241346b31bb590b1e580f, type: 3}
+  - {fileID: 2800000, guid: 6693c8302f2241346b31bb590b1e580f, type: 3}
+  - {fileID: 2800000, guid: 6693c8302f2241346b31bb590b1e580f, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

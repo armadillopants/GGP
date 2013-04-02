@@ -97,7 +97,7 @@ public class EnemyManager : MonoBehaviour {
 	}
 	
 	void SpawnGroundEnemies(){
-		if(secondsPassed[1] > 5f){
+		if(secondsPassed[1] > 6f){
 			for(int i=0; i<groundEnemies.Count; i++){
 				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= 6){
 					foreach(GameObject target in targets){

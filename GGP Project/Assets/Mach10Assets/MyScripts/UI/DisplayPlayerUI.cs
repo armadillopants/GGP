@@ -11,7 +11,7 @@ public class DisplayPlayerUI : MonoBehaviour {
 	private Texture2D healthBar;
 	private Texture2D shieldBar;
 	public Texture2D playerHUD;
-	public GameObject playerLife;
+	public Texture2D[] playerLife;
 	
 	Rect healthBox;
 	Rect liveBox;
@@ -81,7 +81,14 @@ public class DisplayPlayerUI : MonoBehaviour {
 			GUI.BeginGroup(liveBox);
 			{
 				for(int i=0; i<lives.getLives(); i++){
-					GUI.Label(new Rect(0, 0, liveBox.width, liveBox.height), "Lives: " + lives.getLives());
+					if(lives.getLives() <=3){
+						GUI.Label(new Rect(0, 0, liveBox.width, liveBox.height), "Lives: ");
+						GUI.Label(new Rect(35+25*i, 0, liveBox.width, liveBox.height), playerLife[i]);
+					}
+				}
+				if(lives.getLives() > 3){
+					GUI.Label(new Rect(0, 0, liveBox.width, liveBox.height), "Lives: " + " \t\t X " + lives.getLives());
+					GUI.Label(new Rect(35, 0, liveBox.width, liveBox.height), playerLife[0]);
 				}
 			}
 			GUI.EndGroup();
