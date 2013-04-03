@@ -101,9 +101,6 @@ public class Bullet : MonoBehaviour {
 			health.TakeDamage(damage);
 			if(health.getHealth() > 0){
 				hit.renderer.enabled = true;
-				hit.collider.enabled = true;
-			} else {
-				hit.collider.enabled = false;
 			}
 			if(trans.childCount > 0){
 				GameObject col = trans.FindChild("Collision").gameObject;

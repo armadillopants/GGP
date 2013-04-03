@@ -4,10 +4,11 @@ using System.Collections.Generic;
 public class EnemyManager : MonoBehaviour {
 	public List<GameObject> airEnemies = new List<GameObject>();
 	public List<GameObject> groundEnemies = new List<GameObject>();
-	public GameObject swarmer;
+	public List<GameObject> swarmers = new List<GameObject>();
+	private float enemiesAllowed;
 	public GameObject[] maxEnemiesOnScreen;
-	public float enemiesSpawnedPerLevel;
-	public float enemiesSpawned;
+	private float enemiesSpawnedPerLevel;
+	private float enemiesSpawned;
 	private int totalRanks;
 	private int currentRank = 0;
 	private float[] secondsPassed = new float[3];
@@ -27,11 +28,15 @@ public class EnemyManager : MonoBehaviour {
 		totalRanks = airEnemies.Count;
 		if(levelWin.curLevel == "Level1"){
 			enemiesSpawnedPerLevel = 100f;
+			enemiesAllowed = 6f;
 		} else if(levelWin.curLevel == "Level2"){
 			enemiesSpawnedPerLevel = 150f;
+			enemiesAllowed = 8f;
 		} else if(levelWin.curLevel == "Level3"){
 			enemiesSpawnedPerLevel = 200f;
+			enemiesAllowed = 10f;
 		} else if(levelWin.curLevel == "Survival"){
+			enemiesAllowed = 12f;
 			enemiesSpawnedPerLevel = Mathf.Infinity;
 		}
 		targets = GameObject.FindGameObjectsWithTag("Target");
@@ -85,7 +90,7 @@ public class EnemyManager : MonoBehaviour {
 	void SpawnAirEnemies(){
 		if(secondsPassed[0] > 5f){
 			for(int i=0; i<airEnemies.Count; i++){
-				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= 6){
+				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= enemiesAllowed){
 					Instantiate(airEnemies[Random.Range(0, airEnemies.Count)], 
 						new Vector3(Random.Range(left, right), airEnemies[i].transform.position.y, airEnemies[i].transform.position.z), 
 						Quaternion.identity);
@@ -99,7 +104,7 @@ public class EnemyManager : MonoBehaviour {
 	void SpawnGroundEnemies(){
 		if(secondsPassed[1] > 6f){
 			for(int i=0; i<groundEnemies.Count; i++){
-				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= 6){
+				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= enemiesAllowed){
 					foreach(GameObject target in targets){
 						if(target.transform.position.z >= top){
 							Instantiate(groundEnemies[Random.Range(0, groundEnemies.Count)], 
@@ -116,9 +121,9 @@ public class EnemyManager : MonoBehaviour {
 	
 	void SpawnSwarmers(){
 		if(secondsPassed[2] > 7f){
-			for(int i=0; i<=5; i++){
-				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= 6){
-					Instantiate(swarmer, new Vector3(Random.Range(transform.position.x-3, transform.position.x+3), swarmer.transform.position.y, Random.Range(25, 30)),
+			for(int i=0; i<swarmers.Count; i++){
+				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= enemiesAllowed){
+					Instantiate(swarmers[i], new Vector3(Random.Range(transform.position.x-3, transform.position.x+3), swarmers[i].transform.position.y, Random.Range(25, 35)),
 						Quaternion.identity);
 					enemiesSpawned++;
 				}
@@ -137,11 +142,11 @@ public class EnemyManager : MonoBehaviour {
 		}
 	}
 	
-	public void ModifyEnemiesPerLevel(int amount){
+	public void ModifyEnemiesPerLevel(float amount){
 		enemiesSpawnedPerLevel = amount;
 	}
 	
-	public void AddEnemy(GameObject enemy){
+	/*public void AddEnemy(GameObject enemy){
 		for(int i=0; i<airEnemies.Count; i++){
 			airEnemies.Add(enemy);
 		}
@@ -154,7 +159,7 @@ public class EnemyManager : MonoBehaviour {
 				break;
 			}
 		}
-	}
+	}*/
 	
 	public void ClearEnemies(){
 		GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Manager");
@@ -163,5 +168,6 @@ public class EnemyManager : MonoBehaviour {
 		}
 		airEnemies.Clear();
 		groundEnemies.Clear();
+		swarmers.Clear();
 	}
 }

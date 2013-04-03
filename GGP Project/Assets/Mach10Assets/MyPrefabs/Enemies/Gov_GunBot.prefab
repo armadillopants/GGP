@@ -329,7 +329,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 306a501da7072e641bbd9db955f17362, type: 2}
   - {fileID: 100000, guid: 77a228b18ce9ca3468b54070d49136da, type: 2}
   - {fileID: 100000, guid: b5c0593713b9d0b4db6978f860c9acca, type: 2}
-  dropRate: .400000006
+  dropRate: .300000012
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -70,7 +70,6 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerSwoop.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\ShieldAnim.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\RendererExtensions.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\TextEditor.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\CameraMover.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\DisplayPlayerUI.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\DrawGizmos.cs" />
@@ -94,7 +93,6 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\Shotgun.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\TurretProjectile.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\WeaponManager.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\XmlRW.cs" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />

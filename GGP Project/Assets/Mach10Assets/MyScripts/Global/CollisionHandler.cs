@@ -18,7 +18,6 @@ public class CollisionHandler : MonoBehaviour {
 				shieldHealth.TakeDamage(10f);
 				shield.renderer.enabled = true;
 			} else {
-				shield.renderer.enabled = false;
 				Health playerHealth = player.GetComponentInChildren<Health>();
 				playerHealth.TakeDamage(20f);
 				Score.TakeScore(10);

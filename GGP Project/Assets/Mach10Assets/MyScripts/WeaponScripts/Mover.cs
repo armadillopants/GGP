@@ -1,20 +1,20 @@
 using UnityEngine;
-using System.Collections;
 
 public class Mover : MonoBehaviour {
-	float speed = 4f;
 	private Camera cam;
+	Vector3 randMove;
 
 	// Use this for initialization
-	void Start () {
+	void Start(){
 		cam = Camera.main;
+		randMove = new Vector3(Random.Range(-0.1f, 0.1f), 0, 0);
 	}
 	
 	// Update is called once per frame
 	void Update(){
 		float distance = Vector3.Dot(cam.transform.forward, transform.position - cam.transform.position);
 		float down = cam.ViewportToWorldPoint(new Vector3(0, 0.1f, distance)).z;
-		transform.position -= Vector3.forward*Random.Range(speed/2,speed+4)*Time.deltaTime;
+		transform.position -= (Vector3.forward*Random.Range(2f, 8f)*Time.deltaTime)+randMove;
 		transform.Rotate(new Vector3(180*Time.deltaTime, 180*Time.deltaTime, 180*Time.deltaTime), Space.World);
 		if(transform.position.z <= down){
 			Destroy(gameObject);

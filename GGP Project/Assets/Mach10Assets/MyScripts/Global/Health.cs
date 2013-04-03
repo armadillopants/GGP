@@ -33,6 +33,17 @@ public class Health : MonoBehaviour {
 		}
 	}
 	
+	void Update(){
+		if(isShield){
+			if(curHealth > 0){
+				collider.enabled = true;
+			} else {
+				collider.enabled = false;
+				renderer.enabled = false;
+			}
+		}
+	}
+	
 	public void SetMaxHealth(float amount){
 		maxHealth = amount;
 	}

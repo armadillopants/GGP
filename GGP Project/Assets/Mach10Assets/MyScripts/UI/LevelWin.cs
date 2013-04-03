@@ -12,6 +12,9 @@ public class LevelWin : MonoBehaviour {
 	
 	public void LevelWon(){
 		levelWon = true;
+		GameObject player = GameObject.Find("Player");
+		PlayerMovement move = player.GetComponent<PlayerMovement>();
+		move.LevelComplete();
 	}
 	
 	public bool getLevelWon(){
@@ -28,13 +31,24 @@ public class LevelWin : MonoBehaviour {
 								Screen.height / 3,
 							   	size.x, size.y),
 					 			content, style);
-			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,
-								   Screen.height / 3 + size.y + 20,
-								   size.x / 2,
-								   size.y / 2), 
-						"Next Level")){
-				Score.ResetScore();
-				Application.LoadLevel(nextLevel);
+			if(curLevel != "Level3"){
+				if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,
+									   Screen.height / 3 + size.y + 20,
+									   size.x / 2,
+									   size.y / 2), 
+							"Next Level")){
+					Score.ResetScore();
+					Application.LoadLevel(nextLevel);
+				}
+			} else {
+				if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,
+									   Screen.height / 3 + size.y + 20,
+									   size.x / 2,
+									   size.y / 2), 
+							"Survival")){
+					Score.ResetScore();
+					Application.LoadLevel("Survival");
+				}
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 4,
 								   Screen.height / 3 + size.y * 2 + 5,

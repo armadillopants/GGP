@@ -43,7 +43,12 @@ MonoBehaviour:
   - {fileID: 100006, guid: 26865c51b93da4b4db76a3d92f55e553, type: 2}
   groundEnemies:
   - {fileID: 100122, guid: 3bbd4f636faad9f45a31bbaa9cef879a, type: 2}
-  swarmer: {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  swarmers:
+  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0
   enemiesSpawned: 0

@@ -119,6 +119,10 @@ public class PlayerMovement : MonoBehaviour {
 				curDodgeTime += 0.5f*Time.deltaTime;
 				ClampDodgeTime();
 			}*/
+		} else {
+			foreach(Weapon wep in weapon){
+				wep.CanShoot(false);
+			}
 		}
 	}
 	
@@ -134,11 +138,14 @@ public class PlayerMovement : MonoBehaviour {
 		trans.position = new Vector3(trans.position.x, playerFixedHeight, down-15);
 	}
 	
+	public void LevelComplete(){
+		canControl = false;
+		isRotating = false;
+		trans.position = Vector3.Lerp(trans.position, new Vector3(0, 0, down), 1f*Time.deltaTime);
+	}
+	
 	void FlyOnScreen(){
 		canControl = false;
-		foreach(Weapon wep in weapon){
-			wep.CanShoot(false);
-		}
 		Vector3 startPoint = new Vector3(trans.position.x, playerFixedHeight, trans.position.z);
 		Vector3 endPoint = new Vector3(trans.position.x, playerFixedHeight, down);
 		trans.position = Vector3.MoveTowards(startPoint, endPoint, (playerSpeed/3)*Time.deltaTime);

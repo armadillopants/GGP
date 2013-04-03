@@ -3,7 +3,7 @@ using UnityEngine;
 public class Swarmer : BaseEnemy {
 
 	public override void Start(){
-		health.ModifyHealth(15f);
+		health.ModifyHealth(10f);
 		ModifyHeight(15f);
 		weapon = GetComponent<GunbotProjectile>();
 		base.Start();
