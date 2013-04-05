@@ -4,7 +4,7 @@ public class GovGunbot : BaseEnemy {
 
 	// Use this for initialization
 	public override void Start(){
-		health.ModifyHealth(40f);
+		health.ModifyHealth(50f);
 		ModifySpeed(Random.Range(3f, 5f));
 		ModifyHeight(15f);
 		weapon = GetComponent<GunbotProjectile>();

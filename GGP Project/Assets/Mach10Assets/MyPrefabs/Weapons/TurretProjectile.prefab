@@ -13,7 +13,7 @@ GameObject:
   - 54: {fileID: 5400000}
   m_Layer: 11
   m_Name: TurretProjectile
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13caa8d0c5cd5794ea3c9d64e08169a4, type: 3}
   m_Name: 
   explosion: {fileID: 100004, guid: 1ac6d701f8a489549b7ae9cd2b4e7100, type: 2}
-  bulletSpeed: 10
+  bulletSpeed: 15
   lifeTime: 3
   damage: 20
   target: {fileID: 0}

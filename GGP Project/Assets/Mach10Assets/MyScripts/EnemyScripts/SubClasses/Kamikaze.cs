@@ -3,7 +3,7 @@ using UnityEngine;
 public class Kamikaze : BaseEnemy {
 	
 	public override void Start(){
-		health.ModifyHealth(20f);
+		health.ModifyHealth(30f);
 		ModifySpeed(30f);
 		ModifyHeight(15f);
 		base.Start();

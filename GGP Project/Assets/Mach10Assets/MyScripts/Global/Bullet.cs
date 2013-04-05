@@ -15,6 +15,9 @@ public class Bullet : MonoBehaviour {
 	float distance;
 	float top;
 	float down;
+	
+	PowerUps powerUp;
+	Boosts boost;
 
 	// Use this for initialization
 	void Start(){
@@ -51,6 +54,10 @@ public class Bullet : MonoBehaviour {
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
 			if(health.getHealth() <= 0){
+				powerUp = hit.transform.parent.FindChild("CollisionData").GetComponent<PowerUps>();
+				boost = hit.transform.parent.FindChild("CollisionData").GetComponent<Boosts>();
+				powerUp.DropPowerUp();
+				boost.DropPowerUp();
 				if(hit.transform.parent.name == "Kamikaze(Clone)"){
 					Score.AddScore(50);
 				} else if(hit.transform.parent.name == "Gov_GunBot(Clone)"){

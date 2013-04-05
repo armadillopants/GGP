@@ -145,6 +145,14 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void FlyOnScreen(){
+		GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Manager");
+		foreach(GameObject enemy in enemyList){
+			Destroy(enemy);
+		}
+		GameObject[] bulletList = GameObject.FindGameObjectsWithTag("Bullet");
+		foreach(GameObject bullet in bulletList){
+			Destroy(bullet);
+		}
 		canControl = false;
 		Vector3 startPoint = new Vector3(trans.position.x, playerFixedHeight, trans.position.z);
 		Vector3 endPoint = new Vector3(trans.position.x, playerFixedHeight, down);

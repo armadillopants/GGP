@@ -12,7 +12,9 @@ public class Bomb : Weapon {
 	
 	public override void Update(){
 		if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl) || Input.GetKeyDown(KeyCode.X)){
-			FireProjectile();
+			if(canShoot){
+				FireProjectile();
+			}
 		}
 	}
 	

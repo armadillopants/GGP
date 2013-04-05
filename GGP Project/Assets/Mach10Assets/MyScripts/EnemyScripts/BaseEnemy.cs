@@ -44,11 +44,11 @@ public class BaseEnemy : MonoBehaviour {
 	public virtual void EnemyAttack(){
 		float left = cam.ViewportToWorldPoint(new Vector3(-0.2f, 0, distance)).x;
 		float right = cam.ViewportToWorldPoint(new Vector3(1.2f, 0, distance)).x;
-		if(trans.position.z < top && trans.position.z > down){
+		/*if(trans.position.z < top && trans.position.z > down){
 			if(weapon){
 				weapon.CanShoot(true);
 			}
-		}
+		}*/
 		if(trans.position.z <= down || trans.position.x <= left || trans.position.x >= right){
 			Destroy(gameObject);
 		}
@@ -61,6 +61,13 @@ public class BaseEnemy : MonoBehaviour {
 		}
 		if(data.IsVisibleFrom(cam)){
 			data.enabled = true;
+			if(weapon){
+				weapon.CanShoot(true);
+			} else {
+				if(weapon){
+					weapon.CanShoot(false);
+				}
+			}
 		}
 	}
 	

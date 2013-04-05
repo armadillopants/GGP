@@ -6,7 +6,7 @@ TagManager:
   - GroundEnemy
   - Enemy
   - Ground
-  - TurretBall
+  - Bullet
   - Lava
   - Target
   - Manager

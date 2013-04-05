@@ -54,7 +54,9 @@ public class EnemyManager : MonoBehaviour {
 		if(currentRank == totalRanks){
 			SpawnAirEnemies();
 			SpawnGroundEnemies();
-			SpawnSwarmers();
+			if(levelWin.curLevel != "Level1"){
+				SpawnSwarmers();
+			}
 		} else {
 			SpawnRanks();
 		}
@@ -123,7 +125,7 @@ public class EnemyManager : MonoBehaviour {
 		if(secondsPassed[2] > 7f){
 			for(int i=0; i<swarmers.Count; i++){
 				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= enemiesAllowed){
-					Instantiate(swarmers[i], new Vector3(Random.Range(transform.position.x-3, transform.position.x+3), swarmers[i].transform.position.y, Random.Range(25, 35)),
+					Instantiate(swarmers[i], new Vector3(Random.Range(transform.position.x-4, transform.position.x+4), swarmers[i].transform.position.y, Random.Range(25, 35)),
 						Quaternion.identity);
 					enemiesSpawned++;
 				}
@@ -165,6 +167,10 @@ public class EnemyManager : MonoBehaviour {
 		GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Manager");
 		foreach(GameObject enemy in enemyList){
 			Destroy(enemy);
+		}
+		GameObject[] bulletList = GameObject.FindGameObjectsWithTag("Bullet");
+		foreach(GameObject bullet in bulletList){
+			Destroy(bullet);
 		}
 		airEnemies.Clear();
 		groundEnemies.Clear();

@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 706984975}
   m_GameObject: {fileID: 13688743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.9359283, y: 0, z: 27.6046753}
+  m_LocalPosition: {x: 33.9359283, y: 0, z: 26.917923}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1527265283}
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119de7aa4914ab746830f19d6a86db19, type: 3}
   m_Name: 
   scrollSpeed: 6
-  up: 1.58899999
+  up: 1.58949995
   bottom: -.5
 --- !u!1 &75219480
 GameObject:
@@ -1132,7 +1132,7 @@ Transform:
   m_GameObject: {fileID: 204386684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 15, z: 0}
-  m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
+  m_LocalScale: {x: .600000024, y: .600000024, z: .600000024}
   m_Children:
   - {fileID: 50441501}
   - {fileID: 549329076}
@@ -3623,7 +3623,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 182d0a588d610fb4f9595ea32bf1a53d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 27.6046753
+      value: 26.917923
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 182d0a588d610fb4f9595ea32bf1a53d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4228,7 +4228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 182d0a588d610fb4f9595ea32bf1a53d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 43.2528114
+      value: 43.6127853
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 182d0a588d610fb4f9595ea32bf1a53d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9330,7 +9330,7 @@ Transform:
   m_PrefabInternal: {fileID: 858624512}
   m_GameObject: {fileID: 1936526937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.5568123, y: 0, z: 43.2528114}
+  m_LocalPosition: {x: 33.5568123, y: 0, z: 43.6127853}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 404905116}
@@ -9495,6 +9495,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: a74758fead630d647927b6501f08fce3, type: 2}
       propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200004, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 10458e6cb87fc9342adc75bbf60a9483, type: 3}
+    - target: {fileID: 8200004, guid: a74758fead630d647927b6501f08fce3, type: 2}
+      propertyPath: m_Pitch
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
