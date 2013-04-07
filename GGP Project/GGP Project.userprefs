@@ -1,11 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Mach10Assets\MyScripts\Global\Bullet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Mach10Assets\MyScripts\Global\Tutorial.cs">
     <Files>
-      <File FileName="Assets\Mach10Assets\MyScripts\EnemyScripts\EnemyManager.cs" Line="174" Column="4" />
-      <File FileName="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\TurretProjectile.cs" Line="7" Column="40" />
-      <File FileName="Assets\Mach10Assets\MyScripts\EnemyScripts\BaseEnemy.cs" Line="38" Column="17" />
-      <File FileName="Assets\Mach10Assets\MyScripts\Global\Bullet.cs" Line="28" Column="52" />
+      <File FileName="Assets\Mach10Assets\MyScripts\Global\Tutorial.cs" Line="30" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

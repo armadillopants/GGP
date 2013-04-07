@@ -14,8 +14,8 @@ PlayerSettings:
   productName: GGP
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  defaultScreenWidth: 480
-  defaultScreenHeight: 800
+  defaultScreenWidth: 1024
+  defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_RenderingPath: 1
@@ -24,7 +24,7 @@ PlayerSettings:
   m_UseDX11: 0
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
-  displayResolutionDialog: 0
+  displayResolutionDialog: 1
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
   allowedAutorotateToLandscapeRight: 1
@@ -144,10 +144,13 @@ PlayerSettings:
   scriptingDefineSymbols:
     data:
       first: 1
-      second: 2
+      second: 
     data:
       first: 2
-      second: 2
+      second: 
+    data:
+      first: 11
+      second: 
   metroPackageName: 
   metroPackageLogo: 
   metroPackageVersion: 

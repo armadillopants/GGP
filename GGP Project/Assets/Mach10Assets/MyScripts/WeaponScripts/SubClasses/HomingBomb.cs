@@ -1,13 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class Bomb : Weapon {
-
+public class HomingBomb : Weapon {
+	
 	// Use this for initialization
 	public override void Start(){
 		ModifyFireRate(2f);
 		ModifyConeAngle(5f);
-		ModifyRoundsPerBurst(3);
+		ModifyRoundsPerBurst(6);
 	}
 	
 	public override void Update(){

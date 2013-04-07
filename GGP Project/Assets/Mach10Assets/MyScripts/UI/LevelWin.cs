@@ -37,7 +37,7 @@ public class LevelWin : MonoBehaviour {
 									   size.x / 2,
 									   size.y / 2), 
 							"Next Level")){
-					Score.ResetScore();
+					//Score.ResetScore();
 					Application.LoadLevel(nextLevel);
 				}
 			} else {

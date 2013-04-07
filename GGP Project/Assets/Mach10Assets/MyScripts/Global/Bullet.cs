@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour {
 	public float damage = 0.0f;
 	public GameObject target;
 	public bool isHoming = false;
+	public string enemyType = "";
 	private float damp = 6.0f;
 	private Health health;
 	Camera cam;
@@ -93,12 +94,12 @@ public class Bullet : MonoBehaviour {
 			Explode();
 			Kill();
 		}
-		/*if(hit.tag == "GroundEnemy"){
+		if(hit.tag == "GroundEnemy"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
 			Explode();
 			Kill();
-		}*/
+		}
 		/*if(hit.tag == "Item"){
 			hit.collider.renderer.enabled = false;
 			hit.collider.transform.FindChild("Stump").gameObject.SetActive(true);
@@ -121,7 +122,7 @@ public class Bullet : MonoBehaviour {
 	}
 	
 	void Explode(){
-		if(explosion != null){// && !(trans.position.z >= vf.GetTopZ() || trans.position.z <= vf.GetDownZ())){
+		if(explosion != null){
 			Instantiate(explosion, trans.position, trans.rotation);
 		}
 		// Stop emitting particles in any children
@@ -130,7 +131,7 @@ public class Bullet : MonoBehaviour {
 			emitter.emit = false;
 		}
 
-		// Detach children - We do this to detach the trail rendererer which should be set up to auto destruct
+		// Detach children
 		trans.DetachChildren();
 	}
 	
@@ -153,7 +154,7 @@ public class Bullet : MonoBehaviour {
 	
 	GameObject FindNearestEnemey(){
 		GameObject[] enemyList;
-		enemyList = GameObject.FindGameObjectsWithTag("Enemy");
+		enemyList = GameObject.FindGameObjectsWithTag(enemyType);
 		GameObject closest = null;
 		float distance = Mathf.Infinity;
 		
