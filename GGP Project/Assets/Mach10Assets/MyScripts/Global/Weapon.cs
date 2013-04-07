@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class Weapon : MonoBehaviour {
-	public GameObject projectile;
+	public GameObject[] projectile;
 	public Transform[] muzzlePos;
 	protected float fireRate = 0.0f;
 	protected float nextFireTime = 0.0f;
@@ -58,14 +58,23 @@ public class Weapon : MonoBehaviour {
 	}
 	
 	public virtual void CreateProjectile(){
+		Quaternion coneRandomRotation = 
+			Quaternion.Euler(Random.Range(-coneAngle, coneAngle), Random.Range(-coneAngle, coneAngle), 0);
 		// Spawn visual projectile
 		for(int i=0; i<muzzlePos.Length; i++){
-			Quaternion coneRandomRotation = 
-				Quaternion.Euler(Random.Range(-coneAngle, coneAngle), Random.Range(-coneAngle, coneAngle), 0);
-			GameObject proj = (GameObject)Instantiate(projectile, muzzlePos[i].position, muzzlePos[i].rotation * coneRandomRotation);
-			bullet = proj.GetComponent<Bullet>();
-			lastFrameShot = Time.frameCount;
+			if(projectile.Length == 1){
+				GameObject proj = (GameObject)Instantiate(projectile[0], muzzlePos[i].position, muzzlePos[i].rotation * coneRandomRotation);
+				bullet = proj.GetComponent<Bullet>();
+			}
 		}
+		if(projectile.Length > 1){
+			GameObject proj;
+			proj = (GameObject)Instantiate(projectile[0], muzzlePos[0].position, muzzlePos[0].rotation * coneRandomRotation);
+			proj = (GameObject)Instantiate(projectile[1], muzzlePos[1].position, muzzlePos[1].rotation * coneRandomRotation);
+			proj = (GameObject)Instantiate(projectile[2], muzzlePos[2].position, muzzlePos[2].rotation * coneRandomRotation);
+			bullet = proj.GetComponent<Bullet>();
+		}
+		lastFrameShot = Time.frameCount;
 	}
 	
 	public void CanShoot(bool shoot){

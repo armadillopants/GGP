@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Tutorial : MonoBehaviour {
 	public AudioClip[] clips;
@@ -21,8 +20,6 @@ public class Tutorial : MonoBehaviour {
 		} else if(!audio.isPlaying){
 			audio.clip = clips[curClip];
 			nextClip = true;
-			//audio.Play();
-			//curClip++;
 		}
 	}
 

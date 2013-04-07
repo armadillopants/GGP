@@ -100,10 +100,6 @@ public class Bullet : MonoBehaviour {
 			Explode();
 			Kill();
 		}
-		/*if(hit.tag == "Item"){
-			hit.collider.renderer.enabled = false;
-			hit.collider.transform.FindChild("Stump").gameObject.SetActive(true);
-		}*/
 		if(hit.tag == "Shield"){
 			health = hit.transform.GetComponent<Health>();
 			health.TakeDamage(damage);
@@ -138,18 +134,6 @@ public class Bullet : MonoBehaviour {
 	void Kill(){
 		// Destroy the projectile
 		Destroy(gameObject);
-	}
-	
-	public void ModifyDamage(float amount){
-		damage = amount;
-	}
-	
-	public void ModifySpeed(float amount){
-		bulletSpeed = amount;
-	}
-	
-	public void ModifyLifeTime(float amount){
-		lifeTime = amount;
 	}
 	
 	GameObject FindNearestEnemey(){

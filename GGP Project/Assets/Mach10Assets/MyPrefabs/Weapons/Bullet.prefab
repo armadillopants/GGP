@@ -136,9 +136,10 @@ MonoBehaviour:
   explosion: {fileID: 0}
   bulletSpeed: 80
   lifeTime: .300000012
-  damage: 5
+  damage: 3
   target: {fileID: 0}
   isHoming: 0
+  enemyType: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

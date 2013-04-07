@@ -154,6 +154,7 @@ MonoBehaviour:
   damage: 20
   target: {fileID: 0}
   isHoming: 0
+  enemyType: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

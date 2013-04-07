@@ -1,6 +1,3 @@
-using UnityEngine;
-using System.Collections;
-
 public class MachineGun : Weapon {
 
 	// Use this for initialization
