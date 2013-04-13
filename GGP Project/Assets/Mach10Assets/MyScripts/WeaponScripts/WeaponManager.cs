@@ -41,6 +41,7 @@ public class WeaponManager : MonoBehaviour {
 			curWeapon.audio.enabled = false;
 			weapons[0].enabled = true;
 			weapons[0].audio.enabled = true;
+			curWeapon = weapons[0];
 			ResetCountDown();
 			startTimer = false;
 		}

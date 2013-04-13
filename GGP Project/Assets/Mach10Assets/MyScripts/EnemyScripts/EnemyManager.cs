@@ -2,18 +2,22 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class EnemyManager : MonoBehaviour {
+	public List<GameObject> tutorialAirEnemies = new List<GameObject>();
+	public List<GameObject> tutorialGroundEnemies = new List<GameObject>();
 	public List<GameObject> airEnemies = new List<GameObject>();
 	public List<GameObject> groundEnemies = new List<GameObject>();
 	public List<GameObject> swarmers = new List<GameObject>();
 	private float enemiesAllowed;
 	public GameObject[] maxEnemiesOnScreen;
-	private float enemiesSpawnedPerLevel;
-	private float enemiesSpawned;
+	public float enemiesSpawnedPerLevel;
+	public float enemiesSpawned;
 	private int totalRanks;
 	private int currentRank = 0;
 	private float[] secondsPassed = new float[3];
 	private LevelWin levelWin;
 	private GameObject[] targets;
+	public bool spawnTutAirEnemies = false;
+	public bool spawnTutGroundEnemies = false;
 	
 	Camera cam;
 	float distance;
@@ -26,7 +30,10 @@ public class EnemyManager : MonoBehaviour {
 		cam = Camera.main;
 		levelWin = GameObject.Find("LevelWin").GetComponent<LevelWin>();
 		totalRanks = airEnemies.Count;
-		if(levelWin.curLevel == "Level1"){
+		if(levelWin.curLevel == "Tutorial"){
+			enemiesSpawnedPerLevel = 10f;
+			enemiesAllowed = 4f;
+		} else if(levelWin.curLevel == "Level1"){
 			enemiesSpawnedPerLevel = 100f;
 			enemiesAllowed = 6f;
 		} else if(levelWin.curLevel == "Level2"){
@@ -51,40 +58,50 @@ public class EnemyManager : MonoBehaviour {
 		if(maxEnemiesOnScreen != null){
 			maxEnemiesOnScreen = GameObject.FindGameObjectsWithTag("Manager");
 		}
-		if(currentRank == totalRanks){
-			SpawnAirEnemies();
-			SpawnGroundEnemies();
-			if(levelWin.curLevel != "Level1"){
+		if(levelWin.curLevel != "Tutorial"){
+			if(currentRank == totalRanks){
+				SpawnAirEnemies();
+				SpawnGroundEnemies();
 				SpawnSwarmers();
+			} else {
+				SpawnRanks();
 			}
 		} else {
-			SpawnRanks();
+			if(spawnTutAirEnemies){
+				SpawnTutorialAirEnemies();
+			}
+			if(spawnTutGroundEnemies){
+				SpawnTutorialGroundEnemies();
+			}
 		}
-		if(enemiesSpawned >= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length<=0){
+		if(enemiesSpawned >= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length<=0 && levelWin.curLevel != "Tutorial"){
 			levelWin.LevelWon();
 			ClearEnemies();
 		}
 		
 		switch(levelWin.curLevel){
+		case "Tutorial":
+			secondsPassed[0] += 1f*Time.deltaTime;
+			break;
 		case "Level1":
-			secondsPassed[0] += 0.7f*Time.deltaTime;
-			secondsPassed[1] += 0.5f*Time.deltaTime;
+			secondsPassed[0] += 0.8f*Time.deltaTime;
+			secondsPassed[1] += 0.6f*Time.deltaTime;
 			secondsPassed[2] += 0.3f*Time.deltaTime;
 			break;
 		case "Level2":
-			secondsPassed[0] += 1f*Time.deltaTime;
-			secondsPassed[1] += 0.7f*Time.deltaTime;
-			secondsPassed[2] += 0.5f*Time.deltaTime;
+			secondsPassed[0] += 1.3f*Time.deltaTime;
+			secondsPassed[1] += 1f*Time.deltaTime;
+			secondsPassed[2] += 0.8f*Time.deltaTime;
 			break;
 		case "Level3":
-			secondsPassed[0] += 1.3f*Time.deltaTime;
-			secondsPassed[1] += 0.9f*Time.deltaTime;
-			secondsPassed[2] += 0.7f*Time.deltaTime;
+			secondsPassed[0] += 1.5f*Time.deltaTime;
+			secondsPassed[1] += 1.2f*Time.deltaTime;
+			secondsPassed[2] += 1f*Time.deltaTime;
 			break;
 		case "Survival":
-			secondsPassed[0] += 1.5f*Time.deltaTime;
-			secondsPassed[1] += 1f*Time.deltaTime;
-			secondsPassed[2] += 0.9f*Time.deltaTime;
+			secondsPassed[0] += 2f*Time.deltaTime;
+			secondsPassed[1] += 1.5f*Time.deltaTime;
+			secondsPassed[2] += 1.3f*Time.deltaTime;
 			break;
 		}
 	}
@@ -143,6 +160,38 @@ public class EnemyManager : MonoBehaviour {
 			currentRank++;
 		}
 	}
+
+	void SpawnTutorialAirEnemies(){
+		if(secondsPassed[0] > 3f){
+			for(int i=0; i<tutorialAirEnemies.Count; i++){
+				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= enemiesAllowed){
+					Instantiate(tutorialAirEnemies[Random.Range(0, tutorialAirEnemies.Count)],
+						new Vector3(Random.Range(left, right), tutorialAirEnemies[i].transform.position.y, tutorialAirEnemies[i].transform.position.z),
+						Quaternion.identity);
+					enemiesSpawned++;
+				}
+			}
+			secondsPassed[0] = 0f;
+		}
+	}
+
+	void SpawnTutorialGroundEnemies(){
+		if(secondsPassed[0] > 3f){
+			for(int i=0; i<tutorialGroundEnemies.Count; i++){
+				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= enemiesAllowed){
+					foreach(GameObject target in targets){
+						if(target.transform.position.z >= top){
+							Instantiate(tutorialGroundEnemies[Random.Range(0, tutorialGroundEnemies.Count)], 
+								target.transform.position, 
+								Quaternion.identity);
+							enemiesSpawned++;
+						}
+					}
+				}
+			}
+			secondsPassed[0] = 0f;
+		}
+	}
 	
 	public void ModifyEnemiesPerLevel(float amount){
 		enemiesSpawnedPerLevel = amount;
@@ -175,5 +224,6 @@ public class EnemyManager : MonoBehaviour {
 		airEnemies.Clear();
 		groundEnemies.Clear();
 		swarmers.Clear();
+		tutorialAirEnemies.Clear();
 	}
 }

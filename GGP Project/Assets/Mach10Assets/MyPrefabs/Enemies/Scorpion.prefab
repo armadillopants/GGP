@@ -1830,7 +1830,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3432a796411f3d64cb87337b5275f464, type: 3}
   m_Name: 
-  projectile: {fileID: 100000, guid: b7853fa49afa2a6439af20cef3159850, type: 2}
+  projectile:
+  - {fileID: 100000, guid: b7853fa49afa2a6439af20cef3159850, type: 2}
   muzzlePos:
   - {fileID: 400124}
   - {fileID: 400126}

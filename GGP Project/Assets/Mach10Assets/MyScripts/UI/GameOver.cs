@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameOver : MonoBehaviour {
 	private bool gameOver = false;
 	private LevelWin levelWin;
+	public AudioClip lose;
 	
 	void Start(){
 		levelWin = GameObject.Find("LevelWin").GetComponent<LevelWin>();
@@ -10,6 +11,7 @@ public class GameOver : MonoBehaviour {
 	
 	public void EndGame(){
 		gameOver = true;
+		AudioSource.PlayClipAtPoint(lose, transform.position, 1f);
 	}
 	
 	public bool getGameOver(){

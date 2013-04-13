@@ -1630,6 +1630,7 @@ MonoBehaviour:
   obj:
   - {fileID: 100000, guid: 93efc3934b829aa43a81aa940fb9a6cd, type: 2}
   dropRate: .150000006
+  canDrop: 0
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1645,6 +1646,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 77a228b18ce9ca3468b54070d49136da, type: 2}
   - {fileID: 100000, guid: b5c0593713b9d0b4db6978f860c9acca, type: 2}
   dropRate: .200000003
+  canDrop: 0
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1667,7 +1669,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 0ed11fbc0146e9446b634726ace88ae7, type: 2}
+  - {fileID: 2100000, guid: 2e0ff42c8d374ea4e928133a414176c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

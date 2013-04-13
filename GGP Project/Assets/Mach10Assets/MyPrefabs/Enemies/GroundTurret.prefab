@@ -126,6 +126,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400014}
   - 135: {fileID: 13500000}
+  - 23: {fileID: 2300008}
   m_Layer: 12
   m_Name: CollisionData
   m_TagString: GroundEnemy
@@ -300,6 +301,24 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+--- !u!23 &2300008
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -419,7 +438,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3432a796411f3d64cb87337b5275f464, type: 3}
   m_Name: 
-  projectile: {fileID: 100000, guid: 950969bc269c536499f5a6bf1e45de41, type: 2}
+  projectile:
+  - {fileID: 100000, guid: b7853fa49afa2a6439af20cef3159850, type: 2}
   muzzlePos:
   - {fileID: 400002}
   - {fileID: 400006}

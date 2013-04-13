@@ -42,6 +42,13 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6693c8302f2241346b31bb590b1e580f, type: 3}
   - {fileID: 2800000, guid: 6693c8302f2241346b31bb590b1e580f, type: 3}
   - {fileID: 2800000, guid: 6693c8302f2241346b31bb590b1e580f, type: 3}
+  powerUpTex:
+  - {fileID: 2800000, guid: 74d1e381f0a434a4abc0148a47d0877b, type: 3}
+  - {fileID: 2800000, guid: ff1d5721b4feafc448eb1218a0a1fb1c, type: 3}
+  - {fileID: 2800000, guid: c452c3aae88fbf1458f305a057ea117f, type: 3}
+  - {fileID: 2800000, guid: 5fc8c9eba82bc614caa76b8ce0b39bb8, type: 3}
+  - {fileID: 2800000, guid: f543968bb560afc40ad980a67b3b2186, type: 3}
+  - {fileID: 2800000, guid: 9f266645cf3a4284ea0608ab7f4b93bf, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

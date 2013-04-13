@@ -37,7 +37,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e72f8abe9938e4b90b2340079d46b4, type: 3}
   m_Name: 
-  nextLevel: Level2
+  curLevel: Level3
+  nextLevel: 
+  win: {fileID: 8300000, guid: a6e1ddf073ce48e42bfacc88e0c3860e, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -37,6 +37,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba09af97c2217c7429f43b79da4cbd33, type: 3}
   m_Name: 
+  tutorialAirEnemies:
+  - {fileID: 100006, guid: 26865c51b93da4b4db76a3d92f55e553, type: 2}
+  - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
+  tutorialGroundEnemies:
+  - {fileID: 100012, guid: 546d8afc116ddb4429a4f1847943a82f, type: 2}
   airEnemies:
   - {fileID: 100106, guid: 04292bda7c165284782afb2a491d7067, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
@@ -52,6 +57,8 @@ MonoBehaviour:
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0
   enemiesSpawned: 0
+  spawnTutAirEnemies: 0
+  spawnTutGroundEnemies: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

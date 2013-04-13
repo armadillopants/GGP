@@ -4,6 +4,8 @@ public class LevelWin : MonoBehaviour {
 	private bool levelWon = false;
 	public string curLevel = "";
 	public string nextLevel = "";
+	public AudioClip win;
+	private bool playSound = true;
 	private GameOver gameOver;
 	
 	void Start(){
@@ -12,6 +14,10 @@ public class LevelWin : MonoBehaviour {
 	
 	public void LevelWon(){
 		levelWon = true;
+		if(playSound){
+			AudioSource.PlayClipAtPoint(win, transform.position, 1f);
+			playSound = false;
+		}
 		GameObject player = GameObject.Find("Player");
 		PlayerMovement move = player.GetComponent<PlayerMovement>();
 		move.LevelComplete();

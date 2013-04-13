@@ -5,6 +5,7 @@ public class DisplayPlayerUI : MonoBehaviour {
 	private Health health;
 	private Health shieldHealth;
 	private Lives lives;
+	private WeaponManager wep;
 	private GameObject player;
 	private GameObject shield;
 	private EnemyManager manager;
@@ -12,11 +13,13 @@ public class DisplayPlayerUI : MonoBehaviour {
 	private Texture2D shieldBar;
 	public Texture2D playerHUD;
 	public Texture2D[] playerLife;
+	public Texture2D[] powerUpTex;
 	
 	Rect healthBox;
 	Rect liveBox;
 	Rect scoreBox;
 	Rect HUD;
+	Rect powerUpBox;
 	
 	// Use this for initialization
 	void Start(){
@@ -42,6 +45,7 @@ public class DisplayPlayerUI : MonoBehaviour {
 		lives.curLives = int.Parse(firstNode.Attributes.GetNamedItem("lives").Value);
 		//lives.ModifyLives(3);
 		manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
+		wep = GameObject.Find("WeaponManager").GetComponent<WeaponManager>();
 		
 		healthBar = new Texture2D(1, 1, TextureFormat.RGB24, false);
 		healthBar.SetPixel(0, 0, Color.red);
@@ -55,6 +59,7 @@ public class DisplayPlayerUI : MonoBehaviour {
 		healthBox = new Rect(20, Screen.height-85, 135, 22);
 		liveBox = new Rect(25, Screen.height-55, 135, 20);
 		scoreBox = new Rect(25, Screen.height-30, 135, 20);
+		powerUpBox = new Rect(Screen.width-100, Screen.height-90, 64, 64);
 	}
 	
 	void Update(){
@@ -95,6 +100,23 @@ public class DisplayPlayerUI : MonoBehaviour {
 			GUI.BeginGroup(scoreBox);
 			{
 				GUI.Label(new Rect(0, 0, scoreBox.width, scoreBox.height), "Score: " + Score.getScore());
+			}
+			GUI.EndGroup();
+			GUI.BeginGroup(powerUpBox);
+			{
+				if(wep.getWeapon() == wep.weapons[0]){
+					GUI.DrawTexture(new Rect(0, 0, 64, 64), powerUpTex[0], ScaleMode.StretchToFill);
+				} else if(wep.getWeapon() == wep.weapons[1]){
+					GUI.DrawTexture(new Rect(0, 0, 64, 64), powerUpTex[1], ScaleMode.StretchToFill);
+				} else if(wep.getWeapon() == wep.weapons[2]){
+					GUI.DrawTexture(new Rect(0, 0, 64, 64), powerUpTex[2], ScaleMode.StretchToFill);
+				} else if(wep.getWeapon() == wep.weapons[3]){
+					GUI.DrawTexture(new Rect(0, 0, 64, 64), powerUpTex[3], ScaleMode.StretchToFill);
+				} else if(wep.getWeapon() == wep.weapons[4]){
+					GUI.DrawTexture(new Rect(0, 0, 64, 64), powerUpTex[4], ScaleMode.StretchToFill);
+				} else if(wep.getWeapon() == wep.weapons[5]){
+					GUI.DrawTexture(new Rect(0, 0, 64, 64), powerUpTex[5], ScaleMode.StretchToFill);
+				}
 			}
 			GUI.EndGroup();
 		}

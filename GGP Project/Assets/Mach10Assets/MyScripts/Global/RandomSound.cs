@@ -7,6 +7,6 @@ public class RandomSound : MonoBehaviour {
 	// Use this for initialization
 	void Start(){
 		curSound = sounds[Random.Range(0, sounds.Length)];
-		AudioSource.PlayClipAtPoint(curSound, transform.position, 0.5f);
+		AudioSource.PlayClipAtPoint(curSound, transform.position, 0.3f);
 	}
 }

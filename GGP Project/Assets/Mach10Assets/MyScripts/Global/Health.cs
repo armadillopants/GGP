@@ -5,6 +5,7 @@ public class Health : MonoBehaviour {
 	public float curHealth = 0.0f;
 	private bool isPlayer = false;
 	private bool isShield = false;
+	private bool canTakeDamage = true;
 	private PlayerMovement mover;
 	private Lives lives;
 	private GameObject player;
@@ -53,8 +54,14 @@ public class Health : MonoBehaviour {
 		curHealth = maxHealth;
 	}
 	
+	public void SetTakeDamage(bool can){
+		canTakeDamage = can;
+	}
+	
 	public void TakeDamage(float damage){
-		curHealth = Mathf.Max(0f, curHealth-damage);
+		if(canTakeDamage){
+			curHealth = Mathf.Max(0f, curHealth-damage);
+		}
 		if(curHealth == 0){
 			if(isPlayer){
 				lives.TakeLives(1);
