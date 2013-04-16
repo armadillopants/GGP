@@ -790,7 +790,7 @@ GameObject:
   - 4: {fileID: 462305803}
   - 33: {fileID: 462305802}
   - 23: {fileID: 462305800}
-  - 114: {fileID: 462305799}
+  - 114: {fileID: 462305801}
   m_Layer: 10
   m_Name: StarsBack
   m_TagString: Ground
@@ -798,19 +798,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &462305799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 462305798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f30c8ecd4c553419a4b5cc3cfab0e8, type: 3}
-  m_Name: 
-  scrollSpeed: -.0500000007
-  up: 1.25
-  bottom: -.200000003
 --- !u!23 &462305800
 Renderer:
   m_ObjectHideFlags: 0
@@ -829,6 +816,20 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+--- !u!114 &462305801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 462305798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
+  m_Name: 
+  type: 0
+  scrollSpeed: -.0500000007
+  up: 1.25
+  bottom: -.200000003
 --- !u!33 &462305802
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2019,7 +2020,7 @@ GameObject:
   - 4: {fileID: 938754379}
   - 33: {fileID: 938754378}
   - 23: {fileID: 938754376}
-  - 114: {fileID: 938754375}
+  - 114: {fileID: 938754377}
   m_Layer: 10
   m_Name: StarsFront
   m_TagString: Ground
@@ -2027,19 +2028,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &938754375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 938754374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f30c8ecd4c553419a4b5cc3cfab0e8, type: 3}
-  m_Name: 
-  scrollSpeed: -.150000006
-  up: 1.25
-  bottom: -.200000003
 --- !u!23 &938754376
 Renderer:
   m_ObjectHideFlags: 0
@@ -2058,6 +2046,20 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+--- !u!114 &938754377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 938754374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
+  m_Name: 
+  type: 0
+  scrollSpeed: -.150000006
+  up: 1.25
+  bottom: -.200000003
 --- !u!33 &938754378
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2497,11 +2499,13 @@ MonoBehaviour:
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  boss: {fileID: 100106, guid: f337e6c87ed3f494fbf3260a5e4671d4, type: 2}
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0
   enemiesSpawned: 0
   spawnTutAirEnemies: 0
   spawnTutGroundEnemies: 0
+  canSpawnEnemies: 1
 --- !u!1 &1269538164
 GameObject:
   m_ObjectHideFlags: 0
@@ -3392,7 +3396,7 @@ GameObject:
   - 4: {fileID: 1624094793}
   - 33: {fileID: 1624094792}
   - 23: {fileID: 1624094790}
-  - 114: {fileID: 1624094789}
+  - 114: {fileID: 1624094791}
   m_Layer: 10
   m_Name: StarsMid
   m_TagString: Ground
@@ -3400,19 +3404,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1624094789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1624094788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f30c8ecd4c553419a4b5cc3cfab0e8, type: 3}
-  m_Name: 
-  scrollSpeed: -.100000001
-  up: 1.25
-  bottom: -.200000003
 --- !u!23 &1624094790
 Renderer:
   m_ObjectHideFlags: 0
@@ -3431,6 +3422,20 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+--- !u!114 &1624094791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1624094788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
+  m_Name: 
+  type: 0
+  scrollSpeed: -.100000001
+  up: 1.25
+  bottom: -.200000003
 --- !u!33 &1624094792
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3895,7 +3900,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1895533734}
-  - 114: {fileID: 1895533735}
+  - 114: {fileID: 1895533736}
   m_Layer: 0
   m_Name: Targets
   m_TagString: Untagged
@@ -3920,7 +3925,7 @@ Transform:
   - {fileID: 1763872931}
   - {fileID: 12409324}
   m_Father: {fileID: 0}
---- !u!114 &1895533735
+--- !u!114 &1895533736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3928,8 +3933,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895533733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0060d0ac5d68a4287d652af8fa7427, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
   m_Name: 
+  type: 2
   scrollSpeed: 6
   up: 1.245
   bottom: -.200000003
@@ -4202,7 +4208,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2052288796}
-  - 114: {fileID: 2052288797}
+  - 114: {fileID: 2052288798}
   m_Layer: 0
   m_Name: Asteroids
   m_TagString: Untagged
@@ -4227,7 +4233,7 @@ Transform:
   - {fileID: 909909294}
   - {fileID: 2033376002}
   m_Father: {fileID: 0}
---- !u!114 &2052288797
+--- !u!114 &2052288798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -4235,8 +4241,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2052288795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119de7aa4914ab746830f19d6a86db19, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
   m_Name: 
+  type: 1
   scrollSpeed: 6
   up: 1.25
   bottom: -.200000003

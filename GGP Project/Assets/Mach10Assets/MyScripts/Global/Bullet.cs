@@ -57,8 +57,12 @@ public class Bullet : MonoBehaviour {
 			if(health.getHealth() <= 0){
 				powerUp = hit.transform.parent.FindChild("CollisionData").GetComponent<PowerUps>();
 				boost = hit.transform.parent.FindChild("CollisionData").GetComponent<Boosts>();
-				powerUp.DropPowerUp();
-				boost.DropPowerUp();
+				if(powerUp){
+					powerUp.DropPowerUp();
+				}
+				if(boost){
+					boost.DropPowerUp();
+				}
 				if(hit.transform.parent.name == "Kamikaze(Clone)"){
 					Score.AddScore(50);
 				} else if(hit.transform.parent.name == "Gov_GunBot(Clone)"){

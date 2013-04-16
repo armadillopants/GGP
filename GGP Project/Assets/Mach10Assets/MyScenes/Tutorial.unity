@@ -4125,7 +4125,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 880970429}
-  - 114: {fileID: 880970430}
+  - 114: {fileID: 880970431}
   m_Layer: 0
   m_Name: Trees
   m_TagString: Untagged
@@ -4172,7 +4172,7 @@ Transform:
   - {fileID: 1456955886}
   - {fileID: 892783093}
   m_Father: {fileID: 0}
---- !u!114 &880970430
+--- !u!114 &880970431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -4180,8 +4180,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 880970428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119de7aa4914ab746830f19d6a86db19, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
   m_Name: 
+  type: 1
   scrollSpeed: 6
   up: 1.50999999
   bottom: -.600000024
@@ -5692,11 +5693,13 @@ MonoBehaviour:
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  boss: {fileID: 100106, guid: f337e6c87ed3f494fbf3260a5e4671d4, type: 2}
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0
   enemiesSpawned: 0
   spawnTutAirEnemies: 0
   spawnTutGroundEnemies: 0
+  canSpawnEnemies: 1
 --- !u!1001 &1243874695
 Prefab:
   m_ObjectHideFlags: 0
@@ -8337,7 +8340,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1895533734}
-  - 114: {fileID: 1895533735}
+  - 114: {fileID: 1895533736}
   m_Layer: 0
   m_Name: Targets
   m_TagString: Untagged
@@ -8368,7 +8371,7 @@ Transform:
   - {fileID: 283627402}
   - {fileID: 1761403228}
   m_Father: {fileID: 0}
---- !u!114 &1895533735
+--- !u!114 &1895533736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -8376,8 +8379,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895533733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0060d0ac5d68a4287d652af8fa7427, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
   m_Name: 
+  type: 2
   scrollSpeed: 6
   up: 1.5
   bottom: -.600000024
@@ -8980,7 +8984,7 @@ GameObject:
   - 4: {fileID: 2040620461}
   - 33: {fileID: 2040620460}
   - 23: {fileID: 2040620458}
-  - 114: {fileID: 2040620462}
+  - 114: {fileID: 2040620463}
   - 65: {fileID: 2040620459}
   m_Layer: 10
   m_Name: Ground
@@ -9037,7 +9041,7 @@ Transform:
   m_LocalScale: {x: 9, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &2040620462
+--- !u!114 &2040620463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -9045,8 +9049,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2040620457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f30c8ecd4c553419a4b5cc3cfab0e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
   m_Name: 
+  type: 0
   scrollSpeed: -.0599999987
   up: 1.25
   bottom: -.200000003

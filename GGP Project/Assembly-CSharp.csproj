@@ -45,12 +45,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\Scroller.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingBackground.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingItems.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingTargets.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\BackgroundScripts\ScrollingVolcano.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\BaseEnemy.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\EnemyManager.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\Boss.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\GovGunbot.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\GovSentry.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\EnemyScripts\SubClasses\GroundTurret.cs" />
@@ -63,7 +60,6 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\RandomSound.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Score.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Tutorial.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\Global\ViewFrustrum.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Weapon.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\BoostsManager.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\Lives.cs" />

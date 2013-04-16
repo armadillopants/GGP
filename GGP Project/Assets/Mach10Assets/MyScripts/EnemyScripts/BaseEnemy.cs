@@ -17,6 +17,8 @@ public class BaseEnemy : MonoBehaviour {
 	protected float distance;
 	protected float top;
 	protected float down;
+	protected float left;
+	protected float right;
 	
 	void Awake(){
 		health = GetComponent<Health>();
@@ -31,6 +33,8 @@ public class BaseEnemy : MonoBehaviour {
 		distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
 		top = cam.ViewportToWorldPoint(new Vector3(0, 0.9f, distance)).z;
 		down = cam.ViewportToWorldPoint(new Vector3(0, 0f, distance)).z;
+		left = cam.ViewportToWorldPoint(new Vector3(-0.2f, 0, distance)).x;
+		right = cam.ViewportToWorldPoint(new Vector3(1.2f, 0, distance)).x;
 	}
 	
 	// Update is called once per frame
@@ -42,13 +46,6 @@ public class BaseEnemy : MonoBehaviour {
 	}
 	
 	public virtual void EnemyAttack(){
-		float left = cam.ViewportToWorldPoint(new Vector3(-0.2f, 0, distance)).x;
-		float right = cam.ViewportToWorldPoint(new Vector3(1.2f, 0, distance)).x;
-		/*if(trans.position.z < top && trans.position.z > down){
-			if(weapon){
-				weapon.CanShoot(true);
-			}
-		}*/
 		if(trans.position.z <= down || trans.position.x <= left || trans.position.x >= right){
 			Destroy(gameObject);
 		}

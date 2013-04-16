@@ -7,17 +7,20 @@ public class EnemyManager : MonoBehaviour {
 	public List<GameObject> airEnemies = new List<GameObject>();
 	public List<GameObject> groundEnemies = new List<GameObject>();
 	public List<GameObject> swarmers = new List<GameObject>();
+	public GameObject boss;
 	private float enemiesAllowed;
 	public GameObject[] maxEnemiesOnScreen;
 	public float enemiesSpawnedPerLevel;
 	public float enemiesSpawned;
 	private int totalRanks;
 	private int currentRank = 0;
-	private float[] secondsPassed = new float[3];
+	private float[] secondsPassed = new float[4];
 	private LevelWin levelWin;
 	private GameObject[] targets;
 	public bool spawnTutAirEnemies = false;
 	public bool spawnTutGroundEnemies = false;
+	bool once = true;
+	public bool canSpawnEnemies = true;
 	
 	Camera cam;
 	float distance;
@@ -34,7 +37,7 @@ public class EnemyManager : MonoBehaviour {
 			enemiesSpawnedPerLevel = 10f;
 			enemiesAllowed = 4f;
 		} else if(levelWin.curLevel == "Level1"){
-			enemiesSpawnedPerLevel = 100f;
+			enemiesSpawnedPerLevel = 10f;
 			enemiesAllowed = 6f;
 		} else if(levelWin.curLevel == "Level2"){
 			enemiesSpawnedPerLevel = 150f;
@@ -60,11 +63,15 @@ public class EnemyManager : MonoBehaviour {
 		}
 		if(levelWin.curLevel != "Tutorial"){
 			if(currentRank == totalRanks){
-				SpawnAirEnemies();
-				SpawnGroundEnemies();
-				SpawnSwarmers();
+				if(canSpawnEnemies){
+					SpawnAirEnemies();
+					SpawnGroundEnemies();
+					SpawnSwarmers();
+				}
 			} else {
-				SpawnRanks();
+				if(canSpawnEnemies){
+					SpawnRanks();
+				}
 			}
 		} else {
 			if(spawnTutAirEnemies){
@@ -74,9 +81,18 @@ public class EnemyManager : MonoBehaviour {
 				SpawnTutorialGroundEnemies();
 			}
 		}
+		if(levelWin.curLevel == "Survival"){
+			SpawnBoss();
+		}
 		if(enemiesSpawned >= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length<=0 && levelWin.curLevel != "Tutorial"){
-			levelWin.LevelWon();
-			ClearEnemies();
+			if(once){
+				SpawnBoss();
+				ClearEnemies();
+				once = false;
+			}
+			if(!GameObject.Find("Boss(Clone)")){
+				levelWin.LevelWon();
+			}
 		}
 		
 		switch(levelWin.curLevel){
@@ -102,6 +118,7 @@ public class EnemyManager : MonoBehaviour {
 			secondsPassed[0] += 2f*Time.deltaTime;
 			secondsPassed[1] += 1.5f*Time.deltaTime;
 			secondsPassed[2] += 1.3f*Time.deltaTime;
+			secondsPassed[3] += 1f*Time.deltaTime;
 			break;
 		}
 	}
@@ -190,6 +207,17 @@ public class EnemyManager : MonoBehaviour {
 				}
 			}
 			secondsPassed[0] = 0f;
+		}
+	}
+	
+	void SpawnBoss(){
+		if(levelWin.curLevel == "Survival"){
+			if(secondsPassed[3] > 100f){
+				Instantiate(boss, boss.transform.position, Quaternion.identity);
+				canSpawnEnemies = false;
+			}
+		} else {
+			Instantiate(boss, boss.transform.position, Quaternion.identity);
 		}
 	}
 	

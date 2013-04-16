@@ -6695,7 +6695,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 880970429}
-  - 114: {fileID: 880970430}
+  - 114: {fileID: 880970431}
   m_Layer: 0
   m_Name: Trees
   m_TagString: Untagged
@@ -6780,7 +6780,7 @@ Transform:
   - {fileID: 40143372}
   - {fileID: 1681083539}
   m_Father: {fileID: 0}
---- !u!114 &880970430
+--- !u!114 &880970431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -6788,8 +6788,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 880970428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119de7aa4914ab746830f19d6a86db19, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
   m_Name: 
+  type: 1
   scrollSpeed: 6
   up: 1.25
   bottom: -.200000003
@@ -9336,11 +9337,13 @@ MonoBehaviour:
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  boss: {fileID: 100106, guid: f337e6c87ed3f494fbf3260a5e4671d4, type: 2}
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0
   enemiesSpawned: 0
   spawnTutAirEnemies: 0
   spawnTutGroundEnemies: 0
+  canSpawnEnemies: 1
 --- !u!1 &1220788895
 GameObject:
   m_ObjectHideFlags: 0
@@ -13893,7 +13896,12 @@ Prefab:
       propertyPath: scrollSpeed
       value: -.0700000003
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11400000, guid: 7e28227b9c446f34ebd8ee1c2027ee5f, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 7e28227b9c446f34ebd8ee1c2027ee5f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7e28227b9c446f34ebd8ee1c2027ee5f, type: 2}
   m_RootGameObject: {fileID: 1925629172}
   m_IsPrefabParent: 0
@@ -15195,7 +15203,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1895533734}
-  - 114: {fileID: 1895533735}
+  - 114: {fileID: 1895533736}
   m_Layer: 0
   m_Name: Targets
   m_TagString: Untagged
@@ -15225,7 +15233,7 @@ Transform:
   - {fileID: 607101149}
   - {fileID: 370674366}
   m_Father: {fileID: 0}
---- !u!114 &1895533735
+--- !u!114 &1895533736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -15233,8 +15241,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895533733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0060d0ac5d68a4287d652af8fa7427, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
   m_Name: 
+  type: 2
   scrollSpeed: 6
   up: 1.245
   bottom: -.200000003
@@ -15330,7 +15339,7 @@ GameObject:
   - 4: {fileID: 1925629176}
   - 33: {fileID: 1925629175}
   - 23: {fileID: 1925629173}
-  - 114: {fileID: 1925629177}
+  - 114: {fileID: 1925629174}
   m_Layer: 0
   m_Name: River
   m_TagString: Untagged
@@ -15357,6 +15366,20 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+--- !u!114 &1925629174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925629172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c9a4744c5404b4f8b99991b2446010, type: 3}
+  m_Name: 
+  type: 0
+  scrollSpeed: -.0700000003
+  up: 1.25
+  bottom: -.200000003
 --- !u!33 &1925629175
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15376,20 +15399,6 @@ Transform:
   m_LocalScale: {x: 2.84176636, y: 1, z: 8.21554565}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &1925629177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 7e28227b9c446f34ebd8ee1c2027ee5f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1761001760}
-  m_GameObject: {fileID: 1925629172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f30c8ecd4c553419a4b5cc3cfab0e8, type: 3}
-  m_Name: 
-  scrollSpeed: -.0700000003
-  up: 1.25
-  bottom: -.200000003
 --- !u!1 &1926475299
 GameObject:
   m_ObjectHideFlags: 0
@@ -16484,6 +16493,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f30c8ecd4c553419a4b5cc3cfab0e8, type: 3}
   m_Name: 
+  type: 0
   scrollSpeed: -.100000001
   up: 1.25
   bottom: -.200000003

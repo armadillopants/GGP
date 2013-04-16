@@ -22,7 +22,7 @@ public class CollisionHandler : MonoBehaviour {
 				playerHealth.TakeDamage(20f);
 				Score.TakeScore(10);
 			}
-			if(health){
+			if(health && transform.parent.tag == "Manager"){
 				health.Die();
 			}
 		}
