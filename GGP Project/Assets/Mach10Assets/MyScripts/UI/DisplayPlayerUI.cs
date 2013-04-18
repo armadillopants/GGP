@@ -64,7 +64,8 @@ public class DisplayPlayerUI : MonoBehaviour {
 	
 	void Update(){
 		if(lives.getLives() <= 0){
-			manager.ClearEnemies();
+			manager.DestroyEnemies();
+			manager.canSpawnEnemies = false;
 		}
 	}
 	

@@ -83,6 +83,8 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUps\PowerUpMover.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\PowerUps\PowerUps.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\Bomb.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\BossHoming.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\BossScatter.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\GunbotProjectile.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\HomingBomb.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\HomingMissile.cs" />

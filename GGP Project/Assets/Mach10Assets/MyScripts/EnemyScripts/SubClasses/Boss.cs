@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Boss : BaseEnemy {
-	float pickOne;
-	bool once = true;
+	public Weapon[] weapons;
+	private float pickOne;
+	private bool once = true;
 	LevelWin levelWin;
 	
 	// Use this for initialization
@@ -15,7 +16,7 @@ public class Boss : BaseEnemy {
 			health.ModifyHealth(1000f);
 			break;
 		case "Level2":
-			health.ModifyHealth(2000f);
+			health.ModifyHealth(5f);
 			break;
 		case "Level3":
 			health.ModifyHealth(3000f);
@@ -24,13 +25,15 @@ public class Boss : BaseEnemy {
 			health.ModifyHealth(4000f);
 			break;
 		}
+		weapon = weapons[0];
 		ModifyHeight(15f);
-		weapon = GetComponent<GunbotProjectile>();
+		ModifySpeed(30f);
 		base.Start();
 	}
 	
 	public override void EnemyAttack(){
 		ClampLookTime();
+		SwitchWeapon();
 		if(target){
 			// Rotate to look at the player
 	   		trans.rotation = Quaternion.Slerp(trans.rotation,
@@ -45,23 +48,54 @@ public class Boss : BaseEnemy {
 			}
 			if(curLookTime <= 0){
 				once = true;
-				if(pickOne < 0.4f){
-					// Move towards the player
+				// Move towards player if too close
+				if(Vector3.Distance(trans.position, target.position) < 15f){
+					trans.position += trans.forward*getSpeed()*Time.deltaTime;
+					Quaternion rotate = Quaternion.LookRotation(target.transform.position - trans.position);
+					trans.rotation = Quaternion.Slerp(trans.rotation, rotate, Time.deltaTime * 0.5f);
+				}
+				if(Vector3.Distance(trans.position, target.position) < 5f){
+					ModifySpeed(-1f);
+					trans.position += trans.forward*getSpeed()*Time.deltaTime;
+				} else {
+					ModifySpeed(30f);
+				}
+				// Move left or right randomly
+				if(pickOne <= 0.45f){
 			    	trans.position = new Vector3(Mathf.Lerp(trans.position.x, left-left/2, 2f*Time.deltaTime), 
 						getFixedHeight(), trans.position.z);
 				}
-				if(pickOne > 0.6f){
+				if(pickOne >= 0.55f){
 					trans.position = new Vector3(Mathf.Lerp(trans.position.x, right-right/2, 2f*Time.deltaTime), 
 						getFixedHeight(), trans.position.z);
 				}
-				if(pickOne <= 0.6f && pickOne >= 0.4f){
+				if(pickOne < 0.55f && pickOne > 0.45f){
 					trans.position = new Vector3(Mathf.Lerp(trans.position.x, left+right, 2*Time.deltaTime),
 						getFixedHeight(), trans.position.z);
 				}
 				StartCoroutine("Wait");
 			}
 		}
-		base.EnemyAttack();
+		//base.EnemyAttack();
+	}
+	
+	void SwitchWeapon(){
+		if(levelWin.curLevel != "Level1"){
+			if(health.getHealth() < health.getMaxHealth()/2){
+				weapons[0].enabled = false;
+				weapons[0].audio.enabled = false;
+				weapon = weapons[1];
+				weapon.enabled = true;
+				weapon.audio.enabled = true;
+			}
+		}
+		if(levelWin.curLevel == "Level3" || levelWin.curLevel == "Survival"){
+			if(health.getHealth() < health.getMaxHealth()/3){
+				weapon = weapons[2];
+				weapon.enabled = true;
+				weapon.audio.enabled = true;
+			}
+		}
 	}
 	
 	void PickOne(){
@@ -69,7 +103,7 @@ public class Boss : BaseEnemy {
 	}
 	
 	private IEnumerator Wait(){
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(1f);
 		curLookTime = 3f;
 	}
 }

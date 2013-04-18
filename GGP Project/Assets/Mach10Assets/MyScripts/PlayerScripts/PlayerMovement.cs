@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour {
 	private float playerFixedHeight = 15f;
 	private float playerRotation = 20f;
 	Weapon[] weapon;
+	EnemyManager manager;
 	
 	public float coolDown = 0.5f;
 	public int keyCounter = 1;
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour {
 		ret.name = reticule.name;
 		GameObject wep = GameObject.Find("Weapons");
 		weapon = wep.GetComponentsInChildren<Weapon>();
+		manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
 		canControl = true;
 		trans = transform;
 		cam = Camera.mainCamera;
@@ -145,14 +147,8 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void FlyOnScreen(){
-		GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Manager");
-		foreach(GameObject enemy in enemyList){
-			Destroy(enemy);
-		}
-		GameObject[] bulletList = GameObject.FindGameObjectsWithTag("Bullet");
-		foreach(GameObject bullet in bulletList){
-			Destroy(bullet);
-		}
+		manager.canSpawnEnemies = false;
+		manager.DestroyEnemies();
 		canControl = false;
 		Vector3 startPoint = new Vector3(trans.position.x, playerFixedHeight, trans.position.z);
 		Vector3 endPoint = new Vector3(trans.position.x, playerFixedHeight, down);
@@ -160,6 +156,9 @@ public class PlayerMovement : MonoBehaviour {
 		if(trans.position.z >= down){
 			clampPosition = true;
 			canControl = true;
+			if(!GameObject.Find("Bee(Clone)")){
+				manager.canSpawnEnemies = true;
+			}
 		}
 	}
 	

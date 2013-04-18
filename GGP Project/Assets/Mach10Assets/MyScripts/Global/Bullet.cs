@@ -54,9 +54,9 @@ public class Bullet : MonoBehaviour {
 		if(hit.tag == "Enemy"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
+			powerUp = hit.transform.parent.FindChild("CollisionData").GetComponent<PowerUps>();
+			boost = hit.transform.parent.FindChild("CollisionData").GetComponent<Boosts>();
 			if(health.getHealth() <= 0){
-				powerUp = hit.transform.parent.FindChild("CollisionData").GetComponent<PowerUps>();
-				boost = hit.transform.parent.FindChild("CollisionData").GetComponent<Boosts>();
 				if(powerUp){
 					powerUp.DropPowerUp();
 				}
@@ -71,6 +71,16 @@ public class Bullet : MonoBehaviour {
 					Score.AddScore(20);
 				} else if(hit.transform.parent.name == "Swarmer(Clone)"){
 					Score.AddScore(5);
+				} else if(hit.transform.parent.name == "Bee(Clone)"){
+					Score.AddScore(500);
+				}
+			}
+			if(hit.transform.parent.name == "Bee(Clone)"){
+				if(powerUp){
+					powerUp.DropPowerUp();
+				}
+				if(boost){
+					boost.DropPowerUp();
 				}
 			}
 			if(trans.childCount > 0){

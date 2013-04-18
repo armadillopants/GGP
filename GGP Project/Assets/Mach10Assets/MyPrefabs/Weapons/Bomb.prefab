@@ -81,12 +81,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13caa8d0c5cd5794ea3c9d64e08169a4, type: 3}
   m_Name: 
-  explosion: {fileID: 100004, guid: 169b10ce10f4327cb9f40f6b117ed8d7, type: 2}
+  explosion: {fileID: 100002, guid: bc26b2d5c5ad0e64389480832811414a, type: 2}
   bulletSpeed: -5
   lifeTime: 3
   damage: 5
   target: {fileID: 0}
   isHoming: 0
+  enemyType: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

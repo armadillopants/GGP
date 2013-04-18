@@ -37,10 +37,10 @@ public class EnemyManager : MonoBehaviour {
 			enemiesSpawnedPerLevel = 10f;
 			enemiesAllowed = 4f;
 		} else if(levelWin.curLevel == "Level1"){
-			enemiesSpawnedPerLevel = 10f;
+			enemiesSpawnedPerLevel = 100f;
 			enemiesAllowed = 6f;
 		} else if(levelWin.curLevel == "Level2"){
-			enemiesSpawnedPerLevel = 150f;
+			enemiesSpawnedPerLevel = 1f;
 			enemiesAllowed = 8f;
 		} else if(levelWin.curLevel == "Level3"){
 			enemiesSpawnedPerLevel = 200f;
@@ -82,15 +82,26 @@ public class EnemyManager : MonoBehaviour {
 			}
 		}
 		if(levelWin.curLevel == "Survival"){
-			SpawnBoss();
+			if(secondsPassed[3] > 120f){
+				if(once){
+					SpawnBoss();
+					once = false;
+					canSpawnEnemies = false;
+				}
+			}
+			if(!GameObject.Find("Bee(Clone)")){
+				canSpawnEnemies = true;
+				once = true;
+			}
 		}
 		if(enemiesSpawned >= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length<=0 && levelWin.curLevel != "Tutorial"){
 			if(once){
 				SpawnBoss();
-				ClearEnemies();
+				canSpawnEnemies = false;
+				DestroyEnemies();
 				once = false;
 			}
-			if(!GameObject.Find("Boss(Clone)")){
+			if(!GameObject.Find("Bee(Clone)")){
 				levelWin.LevelWon();
 			}
 		}
@@ -118,7 +129,9 @@ public class EnemyManager : MonoBehaviour {
 			secondsPassed[0] += 2f*Time.deltaTime;
 			secondsPassed[1] += 1.5f*Time.deltaTime;
 			secondsPassed[2] += 1.3f*Time.deltaTime;
-			secondsPassed[3] += 1f*Time.deltaTime;
+			if(canSpawnEnemies){
+				secondsPassed[3] += 1f*Time.deltaTime;
+			}
 			break;
 		}
 	}
@@ -159,7 +172,8 @@ public class EnemyManager : MonoBehaviour {
 		if(secondsPassed[2] > 7f){
 			for(int i=0; i<swarmers.Count; i++){
 				if(enemiesSpawned <= enemiesSpawnedPerLevel && maxEnemiesOnScreen.Length <= enemiesAllowed){
-					Instantiate(swarmers[i], new Vector3(Random.Range(transform.position.x-4, transform.position.x+4), swarmers[i].transform.position.y, Random.Range(25, 35)),
+					Instantiate(swarmers[i], 
+						new Vector3(Random.Range(transform.position.x-4, transform.position.x+4), swarmers[i].transform.position.y, Random.Range(25, 35)),
 						Quaternion.identity);
 					enemiesSpawned++;
 				}
@@ -211,36 +225,11 @@ public class EnemyManager : MonoBehaviour {
 	}
 	
 	void SpawnBoss(){
-		if(levelWin.curLevel == "Survival"){
-			if(secondsPassed[3] > 100f){
-				Instantiate(boss, boss.transform.position, Quaternion.identity);
-				canSpawnEnemies = false;
-			}
-		} else {
-			Instantiate(boss, boss.transform.position, Quaternion.identity);
-		}
+		Instantiate(boss, boss.transform.position, Quaternion.identity);
+		secondsPassed[3] = 0f;
 	}
 	
-	public void ModifyEnemiesPerLevel(float amount){
-		enemiesSpawnedPerLevel = amount;
-	}
-	
-	/*public void AddEnemy(GameObject enemy){
-		for(int i=0; i<airEnemies.Count; i++){
-			airEnemies.Add(enemy);
-		}
-	}
-	
-	public void RemoveEnemy(GameObject enemy){
-		for(int i=0; i<airEnemies.Count; i++){
-			if(airEnemies[i] == enemy){
-				airEnemies.RemoveAt(i);
-				break;
-			}
-		}
-	}*/
-	
-	public void ClearEnemies(){
+	public void DestroyEnemies(){
 		GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Manager");
 		foreach(GameObject enemy in enemyList){
 			Destroy(enemy);
@@ -249,9 +238,5 @@ public class EnemyManager : MonoBehaviour {
 		foreach(GameObject bullet in bulletList){
 			Destroy(bullet);
 		}
-		airEnemies.Clear();
-		groundEnemies.Clear();
-		swarmers.Clear();
-		tutorialAirEnemies.Clear();
 	}
 }

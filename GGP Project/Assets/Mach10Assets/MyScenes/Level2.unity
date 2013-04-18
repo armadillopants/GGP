@@ -2710,6 +2710,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c47b646f6c0c7cb489e53d48f75bd587, type: 2}
+      propertyPath: pauseTex
+      value: 
+      objectReference: {fileID: 2800000, guid: 1c04a984ec1690a4f9fcaf9aee5572be, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c47b646f6c0c7cb489e53d48f75bd587, type: 2}
   m_RootGameObject: {fileID: 1632448933}
@@ -3462,6 +3466,7 @@ MonoBehaviour:
   curLevel: Level2
   nextLevel: Level3
   win: {fileID: 8300000, guid: a6e1ddf073ce48e42bfacc88e0c3860e, type: 3}
+  clearedTex: {fileID: 2800000, guid: 690dbb6b7190fbb47a08b5e9cc42303b, type: 3}
 --- !u!4 &668199806
 Transform:
   m_ObjectHideFlags: 0
@@ -4402,6 +4407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31f9d6d6eb130f42ae88cf381c54bf3, type: 3}
   m_Name: 
   lose: {fileID: 8300000, guid: 865b71cc1b1db3545bd049ab9e8cb267, type: 3}
+  gameOverTex: {fileID: 2800000, guid: fe87f76b34b276949b341dcfa2639f05, type: 3}
 --- !u!1 &914779201
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,6 +4635,10 @@ Prefab:
       propertyPath: curLevel
       value: Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7eeb4284097f7c345b4a8ac15540a381, type: 2}
+      propertyPath: clearedTex
+      value: 
+      objectReference: {fileID: 2800000, guid: 690dbb6b7190fbb47a08b5e9cc42303b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7eeb4284097f7c345b4a8ac15540a381, type: 2}
   m_RootGameObject: {fileID: 668199804}
@@ -5372,6 +5382,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4076fb433de9f3548994cabf54623c64, type: 2}
+      propertyPath: gameOverTex
+      value: 
+      objectReference: {fileID: 2800000, guid: fe87f76b34b276949b341dcfa2639f05, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4076fb433de9f3548994cabf54623c64, type: 2}
   m_RootGameObject: {fileID: 911200307}
@@ -5958,7 +5972,7 @@ MonoBehaviour:
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  boss: {fileID: 100106, guid: f337e6c87ed3f494fbf3260a5e4671d4, type: 2}
+  boss: {fileID: 100090, guid: 3a492e5e93c831d4499c4d8eabf0884a, type: 2}
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0
   enemiesSpawned: 0
@@ -8395,6 +8409,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ebb97e1933c69145a60572ed90d593b, type: 3}
   m_Name: 
+  pauseTex: {fileID: 2800000, guid: 1c04a984ec1690a4f9fcaf9aee5572be, type: 3}
 --- !u!4 &1632448935
 Transform:
   m_ObjectHideFlags: 0

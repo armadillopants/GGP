@@ -124,9 +124,10 @@ MonoBehaviour:
   explosion: {fileID: 100004, guid: 1ac6d701f8a489549b7ae9cd2b4e7100, type: 2}
   bulletSpeed: 20
   lifeTime: 3
-  damage: 10
+  damage: 5
   target: {fileID: 0}
   isHoming: 0
+  enemyType: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
