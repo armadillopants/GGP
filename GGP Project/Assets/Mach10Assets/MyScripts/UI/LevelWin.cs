@@ -17,6 +17,7 @@ public class LevelWin : MonoBehaviour {
 		levelWon = true;
 		if(playSound){
 			AudioSource.PlayClipAtPoint(win, transform.position, 1f);
+			StatsTracker.setStopper(true);
 			playSound = false;
 		}
 		GameObject player = GameObject.Find("Player");
@@ -44,7 +45,9 @@ public class LevelWin : MonoBehaviour {
 									   size.x / 2.5f,
 									   size.y / 20), 
 							"Next Level")){
-					//Score.ResetScore();
+					StatsTracker.ResetTimer();
+					StatsTracker.setStopper(false);
+					StatsTracker.ResetEnemiesKilled();
 					Application.LoadLevel(nextLevel);
 				}
 			} else {
@@ -54,6 +57,9 @@ public class LevelWin : MonoBehaviour {
 									   size.y / 20), 
 							"Survival")){
 					Score.ResetScore();
+					StatsTracker.ResetTimer();
+					StatsTracker.setStopper(false);
+					StatsTracker.ResetEnemiesKilled();
 					Application.LoadLevel("Survival");
 				}
 			}
@@ -63,6 +69,9 @@ public class LevelWin : MonoBehaviour {
 								   size.y / 20), 
 						"Restart")){
 				Score.ResetScore();
+				StatsTracker.ResetTimer();
+				StatsTracker.setStopper(false);
+				StatsTracker.ResetEnemiesKilled();
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -71,6 +80,9 @@ public class LevelWin : MonoBehaviour {
 								   size.y / 20),
 						"Main Menu")){
 				Score.ResetScore();
+				StatsTracker.ResetTimer();
+				StatsTracker.setStopper(false);
+				StatsTracker.ResetEnemiesKilled();
 				Application.LoadLevel("MainMenu");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -80,6 +92,13 @@ public class LevelWin : MonoBehaviour {
 						"Quit")){
 				Application.Quit();
 			}
+			GUI.Label(new Rect(Screen.width / 2 - size.x / 3.5f,
+								Screen.height / 3 + size.y / 2.4f,
+								size.x,
+								size.y / 2), 
+						"Score: " + Score.getScore() + "\n\n" + 
+						"Enemies Killed: " + StatsTracker.getEnemiesKilled() + "\n\n" +
+						"Time Survived: " + Mathf.Round(StatsTracker.getTimer()*100f)/100f);
 		}
 	}	
 }

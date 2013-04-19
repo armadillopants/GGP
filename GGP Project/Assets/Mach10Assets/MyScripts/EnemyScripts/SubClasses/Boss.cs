@@ -16,7 +16,7 @@ public class Boss : BaseEnemy {
 			health.ModifyHealth(1000f);
 			break;
 		case "Level2":
-			health.ModifyHealth(5f);
+			health.ModifyHealth(2000f);
 			break;
 		case "Level3":
 			health.ModifyHealth(3000f);

@@ -49,6 +49,9 @@ public class PauseMenu : MonoBehaviour {
 								   size.y / 10),
 						"Restart")){
 				Score.ResetScore();
+				StatsTracker.ResetTimer();
+				StatsTracker.setStopper(false);
+				StatsTracker.ResetEnemiesKilled();
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -58,6 +61,9 @@ public class PauseMenu : MonoBehaviour {
 						"Main Menu")){
 				paused = false;
 				Score.ResetScore();
+				StatsTracker.ResetTimer();
+				StatsTracker.setStopper(false);
+				StatsTracker.ResetEnemiesKilled();
 				Application.LoadLevel("MainMenu");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,

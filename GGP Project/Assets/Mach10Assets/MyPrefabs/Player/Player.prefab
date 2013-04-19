@@ -1351,6 +1351,7 @@ MonoBehaviour:
   m_Name: 
   reticule: {fileID: 100000, guid: 4385db744de81ae4bab29e67eb7ee143, type: 2}
   playerSpeed: 20
+  music: {fileID: 8300000, guid: 8f8f37ae88de04a4faae54f16ef386e1, type: 3}
   coolDown: .5
   keyCounter: 1
   curDodgeTime: 0

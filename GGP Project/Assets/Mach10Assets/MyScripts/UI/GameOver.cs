@@ -12,6 +12,7 @@ public class GameOver : MonoBehaviour {
 	
 	public void EndGame(){
 		gameOver = true;
+		StatsTracker.setStopper(true);
 		AudioSource.PlayClipAtPoint(lose, transform.position, 1f);
 	}
 	
@@ -35,6 +36,9 @@ public class GameOver : MonoBehaviour {
 								   size.y / 20), 
 						"Restart")){
 				Score.ResetScore();
+				StatsTracker.ResetTimer();
+				StatsTracker.setStopper(false);
+				StatsTracker.ResetEnemiesKilled();
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -43,6 +47,9 @@ public class GameOver : MonoBehaviour {
 								   size.y / 20),
 						"Main Menu")){
 				Score.ResetScore();
+				StatsTracker.ResetTimer();
+				StatsTracker.setStopper(false);
+				StatsTracker.ResetEnemiesKilled();
 				Application.LoadLevel("MainMenu");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -52,6 +59,13 @@ public class GameOver : MonoBehaviour {
 						"Quit")){
 				Application.Quit();
 			}
+			GUI.Label(new Rect(Screen.width / 2 - size.x / 3.5f,
+								Screen.height / 3 + size.y / 2.4f,
+								size.x,
+								size.y / 2), 
+						"Score: " + Score.getScore() + "\n\n" + 
+						"Enemies Killed: " + StatsTracker.getEnemiesKilled() + "\n\n" +
+						"Time Survived: " + Mathf.Round(StatsTracker.getTimer()*100f)/100f);
 		}
 	}	
 }

@@ -11,27 +11,18 @@ public class Health : MonoBehaviour {
 	private GameObject player;
 	public GameObject playerExplosion;
 	public GameObject enemyExplosion;
-	//PowerUps powerUp;
-	//Boosts boost;
 
 	// Use this for initialization
 	void Start(){
 		player = GameObject.Find("Player");
 		if(gameObject.tag == "Player"){
 			isPlayer = true;
+			lives = player.GetComponent<Lives>();
+			mover = player.GetComponent<PlayerMovement>();
 		}
 		if(gameObject.tag == "Shield"){
 			isShield = true;
 		}
-		lives = player.GetComponent<Lives>();
-		mover = player.GetComponent<PlayerMovement>();
-		/*GameObject[] manager = GameObject.FindGameObjectsWithTag("Manager");
-		foreach(GameObject m in manager){
-			if(m != null){
-				powerUp = m.GetComponentInChildren<PowerUps>();
-				boost = m.GetComponentInChildren<Boosts>();
-			}
-		}*/
 	}
 	
 	void Update(){
@@ -96,12 +87,6 @@ public class Health : MonoBehaviour {
 		if(enemyExplosion){
 			Instantiate(enemyExplosion, transform.position, Quaternion.identity);
 		}
-		/*if(powerUp){
-			powerUp.DropPowerUp();
-		}
-		if(boost){
-			boost.DropPowerUp();
-		}*/
 		Destroy(gameObject);
 	}
 }

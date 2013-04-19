@@ -1557,7 +1557,7 @@ MonoBehaviour:
   m_Name: 
   obj:
   - {fileID: 100000, guid: 93efc3934b829aa43a81aa940fb9a6cd, type: 2}
-  dropRate: .0299999993
+  dropRate: .0149999997
   canDrop: 0
 --- !u!114 &11400012
 MonoBehaviour:
@@ -1573,7 +1573,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 306a501da7072e641bbd9db955f17362, type: 2}
   - {fileID: 100000, guid: 77a228b18ce9ca3468b54070d49136da, type: 2}
   - {fileID: 100000, guid: b5c0593713b9d0b4db6978f860c9acca, type: 2}
-  dropRate: .0500000007
+  dropRate: .0199999996
   canDrop: 0
 --- !u!114 &11400014
 MonoBehaviour:

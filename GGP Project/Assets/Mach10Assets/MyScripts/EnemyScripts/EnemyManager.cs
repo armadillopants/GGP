@@ -40,7 +40,7 @@ public class EnemyManager : MonoBehaviour {
 			enemiesSpawnedPerLevel = 100f;
 			enemiesAllowed = 6f;
 		} else if(levelWin.curLevel == "Level2"){
-			enemiesSpawnedPerLevel = 1f;
+			enemiesSpawnedPerLevel = 150f;
 			enemiesAllowed = 8f;
 		} else if(levelWin.curLevel == "Level3"){
 			enemiesSpawnedPerLevel = 200f;
@@ -81,7 +81,7 @@ public class EnemyManager : MonoBehaviour {
 				SpawnTutorialGroundEnemies();
 			}
 		}
-		if(levelWin.curLevel == "Survival"){
+		if(levelWin.curLevel == "Survival" && canSpawnEnemies){
 			if(secondsPassed[3] > 120f){
 				if(once){
 					SpawnBoss();

@@ -58,6 +58,10 @@ public class PlayerMovement : MonoBehaviour {
 		} else {
 			FlyOnScreen();
 		}
+		
+		if(!StatsTracker.getStopper()){
+			StatsTracker.timer += Time.deltaTime;
+		}
 
 		// Reset the euler angles whenever not rotating
 		if(!isRotating){
@@ -138,6 +142,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	public void ResetPlayerPos(){
 		trans.position = new Vector3(trans.position.x, playerFixedHeight, down-15);
+		manager.DestroyEnemies();
 	}
 	
 	public void LevelComplete(){
@@ -148,11 +153,10 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void FlyOnScreen(){
 		manager.canSpawnEnemies = false;
-		manager.DestroyEnemies();
 		canControl = false;
 		Vector3 startPoint = new Vector3(trans.position.x, playerFixedHeight, trans.position.z);
 		Vector3 endPoint = new Vector3(trans.position.x, playerFixedHeight, down);
-		trans.position = Vector3.MoveTowards(startPoint, endPoint, (playerSpeed/3)*Time.deltaTime);
+		trans.position = Vector3.MoveTowards(startPoint, endPoint, (playerSpeed/2.5f)*Time.deltaTime);
 		if(trans.position.z >= down){
 			clampPosition = true;
 			canControl = true;

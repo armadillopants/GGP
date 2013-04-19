@@ -57,6 +57,7 @@ public class Bullet : MonoBehaviour {
 			powerUp = hit.transform.parent.FindChild("CollisionData").GetComponent<PowerUps>();
 			boost = hit.transform.parent.FindChild("CollisionData").GetComponent<Boosts>();
 			if(health.getHealth() <= 0){
+				StatsTracker.AddEnemyKilled(1);
 				if(powerUp){
 					powerUp.DropPowerUp();
 				}

@@ -59,6 +59,7 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Health.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\RandomSound.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Score.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\Global\StatsTracker.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Tutorial.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\Global\Weapon.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\BoostsManager.cs" />
