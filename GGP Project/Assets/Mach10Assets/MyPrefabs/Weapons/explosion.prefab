@@ -229,9 +229,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec02ed698fe03a348aa5c30bf56a3f20, type: 3}
   m_Name: 
-  explosionRadius: .5
+  explosionRadius: 5
   explosionDamage: 5
-  explosionTimeout: .800000012
+  explosionTimeout: .600000024
 --- !u!1002 &11400001
 EditorExtensionImpl:
   serializedVersion: 6

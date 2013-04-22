@@ -2,13 +2,6 @@ using UnityEngine;
 using System.Collections;
 
 public class Bomb : Weapon {
-
-	// Use this for initialization
-	public override void Start(){
-		ModifyFireRate(2f);
-		ModifyConeAngle(5f);
-		ModifyRoundsPerBurst(3);
-	}
 	
 	public override void Update(){
 		if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl) || Input.GetKeyDown(KeyCode.X)){

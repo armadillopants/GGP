@@ -37,7 +37,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 8f8f37ae88de04a4faae54f16ef386e1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .800000012
+  m_Volume: .150000006
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -46,7 +46,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   rolloffCustomCurve:
     serializedVersion: 2

@@ -138,7 +138,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.427531, y: -.280785561, z: 2.49999952}
+  m_LocalPosition: {x: 1.27964258, y: -.280785561, z: 2.49999952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -149,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.42753136, y: -.280785561, z: 2.49999952}
+  m_LocalPosition: {x: -1.27964306, y: -.280785561, z: 2.49999952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -184,7 +184,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.42753136, y: .152211532, z: 2.49999952}
+  m_LocalPosition: {x: -1.27964306, y: .152211532, z: 2.49999952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -195,7 +195,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.427531, y: .152211532, z: 2.49999952}
+  m_LocalPosition: {x: 1.27964258, y: .152211532, z: 2.49999952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -318,12 +318,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad6f3e77b37dfb42b0f3d47c062949f, type: 3}
   m_Name: 
   projectile:
-  - {fileID: 100000, guid: fef6243a7e4707145a56c01842212172, type: 2}
+  - {fileID: 100002, guid: 30f975440348e994b877b255664737c2, type: 2}
   muzzlePos:
   - {fileID: 400012}
   - {fileID: 400010}
   - {fileID: 400002}
   - {fileID: 400004}
+  fireRate: 0
+  roundsPerBurst: 0
+  coneAngle: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -387,7 +390,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 306a501da7072e641bbd9db955f17362, type: 2}
   - {fileID: 100000, guid: 77a228b18ce9ca3468b54070d49136da, type: 2}
   - {fileID: 100000, guid: b5c0593713b9d0b4db6978f860c9acca, type: 2}
-  dropRate: .25
+  dropRate: .349999994
   canDrop: 0
 --- !u!1001 &100100000
 Prefab:

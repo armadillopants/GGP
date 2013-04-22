@@ -264,9 +264,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad6f3e77b37dfb42b0f3d47c062949f, type: 3}
   m_Name: 
   projectile:
-  - {fileID: 100000, guid: 950969bc269c536499f5a6bf1e45de41, type: 2}
+  - {fileID: 100000, guid: f2c9a27b7cf338044ae40890ea3da5db, type: 2}
   muzzlePos:
   - {fileID: 400000}
+  fireRate: 0
+  roundsPerBurst: 0
+  coneAngle: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,7 +308,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 306a501da7072e641bbd9db955f17362, type: 2}
   - {fileID: 100000, guid: 77a228b18ce9ca3468b54070d49136da, type: 2}
   - {fileID: 100000, guid: b5c0593713b9d0b4db6978f860c9acca, type: 2}
-  dropRate: .0500000007
+  dropRate: .100000001
   canDrop: 0
 --- !u!114 &11400008
 MonoBehaviour:

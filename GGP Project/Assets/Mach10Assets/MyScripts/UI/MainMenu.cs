@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 	public string levelName = "";
@@ -26,6 +25,13 @@ public class MainMenu : MonoBehaviour {
 			mover.target = GameObject.Find("LevelSelectTarget").transform;
 		} else if(text.text == "Back"){
 			mover.target = GameObject.Find("MainMenuTarget").transform;
+			Settings.Reset();
+		} else if(text.text == "Settings"){
+			mover.target = GameObject.Find("SettingsTarget").transform;
+		} else if(text.text == "Resolution"){
+			Settings.SetResolution(true);
+		} else if(text.text == "Quality"){
+			Settings.SetQuality(true);
 		} else {
 			Application.Quit();
 		}

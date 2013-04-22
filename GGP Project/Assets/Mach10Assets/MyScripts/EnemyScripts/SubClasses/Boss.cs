@@ -76,7 +76,6 @@ public class Boss : BaseEnemy {
 				StartCoroutine("Wait");
 			}
 		}
-		//base.EnemyAttack();
 	}
 	
 	void SwitchWeapon(){

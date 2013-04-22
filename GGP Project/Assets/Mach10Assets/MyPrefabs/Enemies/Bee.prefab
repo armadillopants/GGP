@@ -1484,6 +1484,9 @@ MonoBehaviour:
   muzzlePos:
   - {fileID: 400014}
   - {fileID: 400022}
+  fireRate: 0
+  roundsPerBurst: 0
+  coneAngle: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1503,6 +1506,9 @@ MonoBehaviour:
   - {fileID: 400012}
   - {fileID: 400018}
   - {fileID: 400020}
+  fireRate: 0
+  roundsPerBurst: 0
+  coneAngle: 1.5
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1517,6 +1523,9 @@ MonoBehaviour:
   - {fileID: 100002, guid: fe3b1f38425b4b24f9dc49700e03e8e4, type: 2}
   muzzlePos:
   - {fileID: 400016}
+  fireRate: 0
+  roundsPerBurst: 3
+  coneAngle: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1573,7 +1582,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 306a501da7072e641bbd9db955f17362, type: 2}
   - {fileID: 100000, guid: 77a228b18ce9ca3468b54070d49136da, type: 2}
   - {fileID: 100000, guid: b5c0593713b9d0b4db6978f860c9acca, type: 2}
-  dropRate: .0199999996
+  dropRate: .0299999993
   canDrop: 0
 --- !u!114 &11400014
 MonoBehaviour:

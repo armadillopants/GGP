@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec02ed698fe03a348aa5c30bf56a3f20, type: 3}
   m_Name: 
   explosionRadius: 10
-  explosionDamage: 8
+  explosionDamage: 10
   explosionTimeout: .800000012
 --- !u!1001 &100100000
 Prefab:

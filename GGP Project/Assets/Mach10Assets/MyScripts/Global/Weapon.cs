@@ -3,11 +3,11 @@ using UnityEngine;
 public class Weapon : MonoBehaviour {
 	public GameObject[] projectile;
 	public Transform[] muzzlePos;
-	protected float fireRate = 0.0f;
+	public float fireRate = 0.0f;
 	protected float nextFireTime = 0.0f;
-	protected int roundsPerBurst = 0;
-	private float coneAngle = 0.0f;
-	protected float lastFrameShot = -1f;
+	public int roundsPerBurst = 0;
+	public float coneAngle = 0.0f;
+	private float lastFrameShot = -1f;
 	protected Bullet bullet;
 	protected bool canShoot = false;
 
@@ -83,13 +83,5 @@ public class Weapon : MonoBehaviour {
 	
 	public void ModifyFireRate(float amount){
 		fireRate = amount;
-	}
-	
-	public void ModifyConeAngle(float amount){
-		coneAngle = amount;
-	}
-	
-	public void ModifyRoundsPerBurst(int amount){
-		roundsPerBurst = amount;
 	}
 }

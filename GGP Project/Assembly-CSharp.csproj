@@ -68,6 +68,7 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\PlayerSwoop.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\PlayerScripts\ShieldAnim.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\RendererExtensions.cs" />
+     <Compile Include="Assets\Mach10Assets\MyScripts\Settings.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\CameraMover.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\DisplayPlayerUI.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\UI\DrawGizmos.cs" />
@@ -87,10 +88,6 @@
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\BossHoming.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\BossScatter.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\GunbotProjectile.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\HomingBomb.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\HomingMissile.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\MachineGun.cs" />
-     <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\Rocket.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\Shotgun.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\SubClasses\TurretProjectile.cs" />
      <Compile Include="Assets\Mach10Assets\MyScripts\WeaponScripts\WeaponManager.cs" />

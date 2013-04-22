@@ -81,7 +81,7 @@ public class EnemyManager : MonoBehaviour {
 				SpawnTutorialGroundEnemies();
 			}
 		}
-		if(levelWin.curLevel == "Survival" && canSpawnEnemies){
+		if(levelWin.curLevel == "Survival"){
 			if(secondsPassed[3] > 120f){
 				if(once){
 					SpawnBoss();
@@ -89,7 +89,7 @@ public class EnemyManager : MonoBehaviour {
 					canSpawnEnemies = false;
 				}
 			}
-			if(!GameObject.Find("Bee(Clone)")){
+			if(!GameObject.Find("Bee(Clone)") && !canSpawnEnemies){
 				canSpawnEnemies = true;
 				once = true;
 			}

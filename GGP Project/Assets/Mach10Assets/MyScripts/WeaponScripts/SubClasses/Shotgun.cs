@@ -1,13 +1,6 @@
 using UnityEngine;
-using System.Collections;
 
 public class Shotgun : Weapon {
-	// Use this for initialization
-	public override void Start(){
-		ModifyFireRate(0.5f);
-		ModifyConeAngle(6f);
-		ModifyRoundsPerBurst(8);
-	}
 	
 	public override void FireProjectile(){
 		int pellets = 0;
