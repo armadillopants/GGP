@@ -34,7 +34,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: explosion
   m_TagString: Explosion
@@ -231,26 +230,10 @@ MonoBehaviour:
   m_Name: 
   explosionRadius: 5
   explosionDamage: 5
-  explosionTimeout: .600000024
+  explosionTimeout: .5
 --- !u!1002 &11400001
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f378ff3bff664c47916c5b99b488b6a, type: 3}
-  m_Name: 
-  sounds:
-  - {fileID: 8300000, guid: 471aede0f2f1ab74e9f3c0528dca4f00, type: 3}
-  - {fileID: 8300000, guid: 282e5e084e4c2354fbd52556f6f0b602, type: 3}
-  - {fileID: 8300000, guid: cf3abddb5de323643acb07e35f57f34c, type: 3}
-  - {fileID: 8300000, guid: bfda34c22df73594d97ecae1dcdf2d9c, type: 3}
-  - {fileID: 8300000, guid: 313f0b9d3914d654cbe7b0ec4f078cdc, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

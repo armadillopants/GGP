@@ -10,6 +10,7 @@ public class Tutorial : MonoBehaviour {
 	PowerUps powerUp;
 	Boosts boost;
 	GameObject[] enemies;
+	public TextMesh text;
 
 	// Use this for initialization
 	void Start(){
@@ -50,18 +51,21 @@ public class Tutorial : MonoBehaviour {
 			nextClip = true;
 			break;
 		case 1:
+			text.text = "Press WASD or ARROW Keys to Move";
 			if(Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical")){
 				nextClip = true;
 				curClip++;
 			}
 			break;
 		case 2:
+			text.text = "Press SPACE or Z Key to Shoot";
 			if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)){
 				nextClip = true;
 				curClip++;
 			}
 			break;
 		case 3:
+			text.text = "";
 			manager.spawnTutAirEnemies = true;
 			enemies = GameObject.FindGameObjectsWithTag("Enemy");
 			if(enemies != null){
@@ -80,12 +84,14 @@ public class Tutorial : MonoBehaviour {
 			}
 			break;
 		case 4:
+			text.text = "Press either Control Key or the X Key to Drop Bombs";
 			if(Input.GetKeyDown(KeyCode.RightControl) || Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.X)){
 				nextClip = true;
 				curClip++;
 			}
 			break;
 		case 5:
+			text.text = "";
 			manager.spawnTutGroundEnemies = true;
 			if(manager.enemiesSpawned >= manager.enemiesSpawnedPerLevel && manager.maxEnemiesOnScreen.Length <= 0){
 				nextClip = true;
@@ -95,6 +101,7 @@ public class Tutorial : MonoBehaviour {
 			}
 			break;
 		case 6:
+			text.text = "Collect the Power-Up";
 			if(spawnP){
 				Instantiate(p, new Vector3(0, 15, 8), Quaternion.identity);
 				spawnP = false;
@@ -103,6 +110,7 @@ public class Tutorial : MonoBehaviour {
 			curClip++;
 			break;
 		case 7:
+			text.text = "";
 			nextClip = true;
 			curClip++;
 			break;

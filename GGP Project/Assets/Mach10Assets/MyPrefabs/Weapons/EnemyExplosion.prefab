@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec02ed698fe03a348aa5c30bf56a3f20, type: 3}
   m_Name: 
-  explosionRadius: .100000001
+  explosionRadius: .0500000007
   explosionDamage: 5
   explosionTimeout: .200000003
 --- !u!1002 &11400001

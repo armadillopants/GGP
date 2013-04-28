@@ -395,7 +395,8 @@ MonoBehaviour:
   m_Name: 
   type: 1
   scrollSpeed: 6
-  up: 1.59300005
+  orignalSpeed: 0
+  up: 1.59329998
   bottom: -.600000024
 --- !u!1 &75219480
 GameObject:
@@ -1117,12 +1118,8 @@ MonoBehaviour:
   m_Name: 
   reticule: {fileID: 100000, guid: 4385db744de81ae4bab29e67eb7ee143, type: 2}
   playerSpeed: 20
-  coolDown: .5
-  keyCounter: 1
-  curDodgeTime: 0
   isRotating: 0
-  isDodgingLeft: 0
-  isDodgingRight: 0
+  isTut: 0
 --- !u!114 &204386687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2485,6 +2482,7 @@ MonoBehaviour:
   m_Name: 
   type: 0
   scrollSpeed: -.0599999987
+  orignalSpeed: 0
   up: 1.25
   bottom: -.200000003
 --- !u!1 &483314494
@@ -6101,11 +6099,11 @@ MonoBehaviour:
   groundEnemies:
   - {fileID: 100122, guid: 3bbd4f636faad9f45a31bbaa9cef879a, type: 2}
   swarmers:
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   boss: {fileID: 100090, guid: 3a492e5e93c831d4499c4d8eabf0884a, type: 2}
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0
@@ -8030,6 +8028,7 @@ MonoBehaviour:
   m_Name: 
   type: 3
   scrollSpeed: 6
+  orignalSpeed: 0
   up: 1.58599997
   bottom: -.600000024
 --- !u!1 &1526799476
@@ -9394,7 +9393,8 @@ MonoBehaviour:
   m_Name: 
   type: 2
   scrollSpeed: 6
-  up: 1.58500004
+  orignalSpeed: 0
+  up: 1.58599997
   bottom: -.600000024
 --- !u!1001 &1899266833
 Prefab:

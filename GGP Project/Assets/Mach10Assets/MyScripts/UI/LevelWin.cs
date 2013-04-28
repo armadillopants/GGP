@@ -23,6 +23,36 @@ public class LevelWin : MonoBehaviour {
 		GameObject player = GameObject.Find("Player");
 		PlayerMovement move = player.GetComponent<PlayerMovement>();
 		move.LevelComplete();
+		SavePrefs();
+	}
+	
+	private void SavePrefs(){
+		switch(curLevel){
+		case "Level1":
+			if(PlayerPrefs.GetInt("Score1") <= 0){
+				PlayerPrefs.SetInt("Score1", Score.getScore());
+			}
+			if(Score.getScore() > PlayerPrefs.GetInt("Score1")){
+				PlayerPrefs.SetInt("Score1", Score.getScore());
+			}
+			break;
+		case "Level2":
+			if(PlayerPrefs.GetInt("Score2") <= 0){
+				PlayerPrefs.SetInt("Score2", Score.getScore());
+			}
+			if(Score.getScore() > PlayerPrefs.GetInt("Score2")){
+				PlayerPrefs.SetInt("Score2", Score.getScore());
+			}
+			break;
+		case "Level3":
+			if(PlayerPrefs.GetInt("Score3") <= 0){
+				PlayerPrefs.SetInt("Score3", Score.getScore());
+			}
+			if(Score.getScore() > PlayerPrefs.GetInt("Score3")){
+				PlayerPrefs.SetInt("Score3", Score.getScore());
+			}
+			break;
+		}
 	}
 	
 	public bool getLevelWon(){
@@ -45,9 +75,8 @@ public class LevelWin : MonoBehaviour {
 									   size.x / 2.5f,
 									   size.y / 20), 
 							"Next Level")){
-					StatsTracker.ResetTimer();
-					StatsTracker.setStopper(false);
-					StatsTracker.ResetEnemiesKilled();
+					StatsTracker.Reset();
+					Score.ResetScore();
 					Application.LoadLevel(nextLevel);
 				}
 			} else {
@@ -57,9 +86,7 @@ public class LevelWin : MonoBehaviour {
 									   size.y / 20), 
 							"Survival")){
 					Score.ResetScore();
-					StatsTracker.ResetTimer();
-					StatsTracker.setStopper(false);
-					StatsTracker.ResetEnemiesKilled();
+					StatsTracker.Reset();
 					Application.LoadLevel("Survival");
 				}
 			}
@@ -69,9 +96,7 @@ public class LevelWin : MonoBehaviour {
 								   size.y / 20), 
 						"Restart")){
 				Score.ResetScore();
-				StatsTracker.ResetTimer();
-				StatsTracker.setStopper(false);
-				StatsTracker.ResetEnemiesKilled();
+				StatsTracker.Reset();
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -80,9 +105,7 @@ public class LevelWin : MonoBehaviour {
 								   size.y / 20),
 						"Main Menu")){
 				Score.ResetScore();
-				StatsTracker.ResetTimer();
-				StatsTracker.setStopper(false);
-				StatsTracker.ResetEnemiesKilled();
+				StatsTracker.Reset();
 				Application.LoadLevel("MainMenu");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -98,7 +121,7 @@ public class LevelWin : MonoBehaviour {
 								size.y / 2), 
 						"Score: " + Score.getScore() + "\n\n" + 
 						"Enemies Killed: " + StatsTracker.getEnemiesKilled() + "\n\n" +
-						"Time Survived: " + Mathf.Round(StatsTracker.getTimer()*100f)/100f);
+						"Time Survived: " + StatsTracker.GuiTime((int)StatsTracker.getTimer()));
 		}
 	}	
 }

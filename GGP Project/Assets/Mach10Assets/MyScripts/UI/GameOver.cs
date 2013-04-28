@@ -14,6 +14,26 @@ public class GameOver : MonoBehaviour {
 		gameOver = true;
 		StatsTracker.setStopper(true);
 		AudioSource.PlayClipAtPoint(lose, transform.position, 1f);
+		SavePrefs();
+	}
+	
+	private void SavePrefs(){
+		if(levelWin.curLevel == "Survival"){
+			if(PlayerPrefs.GetInt("Score4") <= 0){
+				PlayerPrefs.SetInt("Score4", Score.getScore());
+			}
+			if(Score.getScore() > PlayerPrefs.GetInt("Score4")){
+				PlayerPrefs.SetInt("Score4", Score.getScore());
+			}
+			if(PlayerPrefs.GetFloat("Time") <= 0){
+				PlayerPrefs.SetFloat("Time", Mathf.Round(StatsTracker.getTimer()*100f)/100f);
+				PlayerPrefs.SetString("Time", StatsTracker.GuiTime((int)StatsTracker.getTimer()));
+			}
+			if(StatsTracker.getTimer() > PlayerPrefs.GetFloat("Time")){
+				PlayerPrefs.SetFloat("Time", Mathf.Round(StatsTracker.getTimer()*100f)/100f);
+				PlayerPrefs.SetString("Time", StatsTracker.GuiTime((int)StatsTracker.getTimer()));
+			}	
+		}
 	}
 	
 	public bool getGameOver(){
@@ -36,9 +56,7 @@ public class GameOver : MonoBehaviour {
 								   size.y / 20), 
 						"Restart")){
 				Score.ResetScore();
-				StatsTracker.ResetTimer();
-				StatsTracker.setStopper(false);
-				StatsTracker.ResetEnemiesKilled();
+				StatsTracker.Reset();
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -47,9 +65,7 @@ public class GameOver : MonoBehaviour {
 								   size.y / 20),
 						"Main Menu")){
 				Score.ResetScore();
-				StatsTracker.ResetTimer();
-				StatsTracker.setStopper(false);
-				StatsTracker.ResetEnemiesKilled();
+				StatsTracker.Reset();
 				Application.LoadLevel("MainMenu");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -65,7 +81,7 @@ public class GameOver : MonoBehaviour {
 								size.y / 2), 
 						"Score: " + Score.getScore() + "\n\n" + 
 						"Enemies Killed: " + StatsTracker.getEnemiesKilled() + "\n\n" +
-						"Time Survived: " + Mathf.Round(StatsTracker.getTimer()*100f)/100f);
+						"Time Survived: " + StatsTracker.GuiTime((int)StatsTracker.getTimer()));
 		}
 	}	
 }

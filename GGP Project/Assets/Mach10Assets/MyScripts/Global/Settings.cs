@@ -37,10 +37,14 @@ public class Settings : MonoBehaviour {
 		if(displayResolution){
 			Resolution[] resolutions = Screen.resolutions;
 			int j = 0;
-			scrollPos = GUI.BeginScrollView(new Rect(Screen.width/2+140, Screen.height/3, 100, 100), scrollPos, new Rect(0, 0, 64, 500));
+			scrollPos = GUI.BeginScrollView(new Rect(Screen.width/2+150, Screen.height/3, 100, 100), scrollPos, new Rect(0, 0, 64, 500));
 	        while(j < resolutions.Length){
 				if(GUILayout.Button(resolutions[j].width + "x" + resolutions[j].height)){
-					Screen.SetResolution(resolutions[j].width, resolutions[j].height, true);
+					if(Screen.fullScreen){
+						Screen.SetResolution(resolutions[j].width, resolutions[j].height, true);
+					} else {
+						Screen.SetResolution(resolutions[j].width, resolutions[j].height, false);
+					}
 				}
 				j++;
 	        }

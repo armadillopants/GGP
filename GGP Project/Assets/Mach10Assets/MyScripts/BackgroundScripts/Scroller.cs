@@ -9,6 +9,7 @@ public class Scroller : MonoBehaviour {
 	}
 	public ScrollType type;
 	public float scrollSpeed;
+	public float orignalSpeed;
 	private float offset;
 	private bool wrapAround;
 	private GameObject[] scrolls;
@@ -20,6 +21,7 @@ public class Scroller : MonoBehaviour {
 	float down;
 	public float up = 1.25f;
 	public float bottom = -0.2f;
+	private PlayerMovement move;
 
 	// Use this for initialization
 	void Start(){
@@ -44,13 +46,35 @@ public class Scroller : MonoBehaviour {
 			scrolls = GameObject.FindGameObjectsWithTag("Volcano");
 			break;
 		}
+		move = GameObject.Find("Player").GetComponent<PlayerMovement>();
+		orignalSpeed = scrollSpeed;
 	}
 	
 	void Update(){
-		if(background){
-			ScrollBackGround();
+		if(!move.isTut){
+			if(background){
+				if(scrollSpeed < orignalSpeed){
+					scrollSpeed -= orignalSpeed*0.01f*Time.deltaTime;
+				}
+				if(scrollSpeed >= orignalSpeed){
+					scrollSpeed = orignalSpeed;
+				}
+				ScrollBackGround();
+			} else {
+				if(scrollSpeed < orignalSpeed){
+					scrollSpeed += orignalSpeed*0.5f*Time.deltaTime;
+				}
+				if(scrollSpeed >= orignalSpeed){
+					scrollSpeed = orignalSpeed;
+				}
+				ScrollItems();
+			}
 		} else {
-			ScrollItems();
+			if(background){
+				scrollSpeed = 0f;
+			} else {
+				scrollSpeed = 0f;
+			}
 		}
 	}
 	
@@ -73,6 +97,7 @@ public class Scroller : MonoBehaviour {
 			if(wrapAround){
 				if(items.renderer != null){
 					items.renderer.enabled = true;
+					items.collider.enabled = true;
 					items.transform.FindChild("Stump").gameObject.SetActive(false);
 				}
 				items.transform.position = currentPos;

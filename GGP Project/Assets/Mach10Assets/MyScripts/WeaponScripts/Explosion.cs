@@ -34,6 +34,7 @@ public class Explosion : MonoBehaviour {
 			}
 			if(hit.tag == "Item"){
 				hit.collider.renderer.enabled = false;
+				hit.collider.enabled = false;
 				hit.collider.transform.FindChild("Stump").gameObject.SetActive(true);
 			}
 		}
@@ -50,13 +51,5 @@ public class Explosion : MonoBehaviour {
 	IEnumerator TurnOffParticles(){
 		yield return new WaitForSeconds(0.5f);
 		particleEmitter.emit = false;
-	}
-	
-	public void ModifyExplosionRadius(float amount){
-		explosionRadius = amount;
-	}
-	
-	public void ModifyExplosionDamage(float amount){
-		explosionDamage = amount;
 	}
 }

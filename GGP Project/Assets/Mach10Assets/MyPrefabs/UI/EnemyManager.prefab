@@ -49,11 +49,11 @@ MonoBehaviour:
   groundEnemies:
   - {fileID: 100122, guid: 3bbd4f636faad9f45a31bbaa9cef879a, type: 2}
   swarmers:
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   boss: {fileID: 100090, guid: 3a492e5e93c831d4499c4d8eabf0884a, type: 2}
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0

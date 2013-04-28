@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour {
 	
 	void OnGUI(){
 		if(paused){
+			StatsTracker.setStopper(true);
 			GUIStyle style = new GUIStyle();
 			style.fontSize = 24;
 			GUIContent content = new GUIContent(pauseTex);
@@ -36,12 +37,26 @@ public class PauseMenu : MonoBehaviour {
 								Screen.height / 3,
 							   	size.x, size.y),
 					 			content, style);
-			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
-								   Screen.height / 3 + size.y / 2.5f,
-								   size.x / 2.5f,
-								   size.y / 10), 
-						"Resume")){
-				paused = false;
+			if(levelWon.curLevel != "Tutorial"){
+				if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
+									   Screen.height / 3 + size.y / 2.5f,
+									   size.x / 2.5f,
+									   size.y / 10), 
+							"Resume")){
+					StatsTracker.setStopper(false);
+					paused = false;
+				}
+			} else {
+				if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
+									   Screen.height / 3 + size.y / 2.5f,
+									   size.x / 2.5f,
+									   size.y / 10), 
+							"Skip Tutorial")){
+					Score.ResetScore();
+					StatsTracker.Reset();
+					paused = false;
+					Application.LoadLevel(levelWon.nextLevel);
+				}
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
 								   Screen.height / 3 + size.y / 1.95f,
@@ -49,9 +64,7 @@ public class PauseMenu : MonoBehaviour {
 								   size.y / 10),
 						"Restart")){
 				Score.ResetScore();
-				StatsTracker.ResetTimer();
-				StatsTracker.setStopper(false);
-				StatsTracker.ResetEnemiesKilled();
+				StatsTracker.Reset();
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,
@@ -61,9 +74,7 @@ public class PauseMenu : MonoBehaviour {
 						"Main Menu")){
 				paused = false;
 				Score.ResetScore();
-				StatsTracker.ResetTimer();
-				StatsTracker.setStopper(false);
-				StatsTracker.ResetEnemiesKilled();
+				StatsTracker.Reset();
 				Application.LoadLevel("MainMenu");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - size.x / 5f,

@@ -82,7 +82,7 @@ public class EnemyManager : MonoBehaviour {
 			}
 		}
 		if(levelWin.curLevel == "Survival"){
-			if(secondsPassed[3] > 120f){
+			if(secondsPassed[3] > 120f && canSpawnEnemies){
 				if(once){
 					SpawnBoss();
 					once = false;

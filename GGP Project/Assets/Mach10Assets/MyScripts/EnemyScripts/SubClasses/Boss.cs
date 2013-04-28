@@ -7,6 +7,8 @@ public class Boss : BaseEnemy {
 	private float pickOne;
 	private bool once = true;
 	LevelWin levelWin;
+	Rect healthBox;
+	private Texture2D healthBar;
 	
 	// Use this for initialization
 	public override void Start(){
@@ -28,6 +30,10 @@ public class Boss : BaseEnemy {
 		weapon = weapons[0];
 		ModifyHeight(15f);
 		ModifySpeed(30f);
+		healthBox = new Rect(Screen.width/2-150, Screen.height-(Screen.height+5), 300, 10);
+		healthBar = new Texture2D(1, 1, TextureFormat.RGB24, false);
+		healthBar.SetPixel(0, 0, Color.red);
+		healthBar.Apply();
 		base.Start();
 	}
 	
@@ -104,5 +110,16 @@ public class Boss : BaseEnemy {
 	private IEnumerator Wait(){
 		yield return new WaitForSeconds(1f);
 		curLookTime = 3f;
+	}
+	
+	void OnGUI(){
+		if(GameObject.Find("Bee(Clone)")){
+			GUI.BeginGroup(healthBox);
+			{
+				GUI.DrawTexture(new Rect(0, 0, 
+					healthBox.width*health.getHealth()/health.getMaxHealth(), healthBox.height), healthBar, ScaleMode.StretchToFill);
+			}
+			GUI.EndGroup();
+		}
 	}
 }

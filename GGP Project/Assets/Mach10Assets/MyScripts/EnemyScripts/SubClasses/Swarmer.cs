@@ -21,7 +21,7 @@ public class Swarmer : BaseEnemy {
 			}
 			if(curLookTime <= 0){
 				trans.position = new Vector3(trans.position.x, getFixedHeight(), 
-					Mathf.Lerp(trans.position.z, top+(top-Random.Range(top, top-2f)), Random.Range(1f, 2f)*Time.deltaTime));
+					Mathf.Lerp(trans.position.z, top-(top-Random.Range(top-0.5f, top-1f)), Random.Range(1f, 2f)*Time.deltaTime));
 			}
 		}
 		base.EnemyAttack();
