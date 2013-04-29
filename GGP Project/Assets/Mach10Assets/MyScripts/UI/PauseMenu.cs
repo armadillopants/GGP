@@ -5,6 +5,7 @@ public class PauseMenu : MonoBehaviour {
 	private GameOver gameOver;
 	private LevelWin levelWon;
 	public Texture2D pauseTex;
+	public AudioClip pauseSound;
 	
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,7 @@ public class PauseMenu : MonoBehaviour {
 		if(!gameOver.getGameOver() && !levelWon.getLevelWon()){
 			if(Input.GetKeyDown(KeyCode.Escape)){
 				paused = !paused;
+				AudioSource.PlayClipAtPoint(pauseSound, transform.position, 1f);
 			}
 			if(paused){
 				Time.timeScale = 0;

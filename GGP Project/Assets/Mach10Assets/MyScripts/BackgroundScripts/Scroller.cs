@@ -54,7 +54,7 @@ public class Scroller : MonoBehaviour {
 		if(!move.isTut){
 			if(background){
 				if(scrollSpeed < orignalSpeed){
-					scrollSpeed -= orignalSpeed*0.01f*Time.deltaTime;
+					scrollSpeed -= orignalSpeed*0.001f*Time.deltaTime;
 				}
 				if(scrollSpeed >= orignalSpeed){
 					scrollSpeed = orignalSpeed;
@@ -62,7 +62,7 @@ public class Scroller : MonoBehaviour {
 				ScrollBackGround();
 			} else {
 				if(scrollSpeed < orignalSpeed){
-					scrollSpeed += orignalSpeed*0.5f*Time.deltaTime;
+					scrollSpeed += orignalSpeed*0.1f*Time.deltaTime;
 				}
 				if(scrollSpeed >= orignalSpeed){
 					scrollSpeed = orignalSpeed;
@@ -70,11 +70,7 @@ public class Scroller : MonoBehaviour {
 				ScrollItems();
 			}
 		} else {
-			if(background){
-				scrollSpeed = 0f;
-			} else {
-				scrollSpeed = 0f;
-			}
+			scrollSpeed = 0;
 		}
 	}
 	

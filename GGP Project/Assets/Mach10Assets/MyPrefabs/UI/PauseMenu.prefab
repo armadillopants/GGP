@@ -37,6 +37,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ebb97e1933c69145a60572ed90d593b, type: 3}
   m_Name: 
+  pauseTex: {fileID: 2800000, guid: 1c04a984ec1690a4f9fcaf9aee5572be, type: 3}
+  pauseSound: {fileID: 8300000, guid: 55de213e122984a43ab2fd6dee61d409, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

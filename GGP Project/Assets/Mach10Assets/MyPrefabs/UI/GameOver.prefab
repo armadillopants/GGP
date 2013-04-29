@@ -38,6 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31f9d6d6eb130f42ae88cf381c54bf3, type: 3}
   m_Name: 
   lose: {fileID: 8300000, guid: 865b71cc1b1db3545bd049ab9e8cb267, type: 3}
+  gameOverTex: {fileID: 2800000, guid: fe87f76b34b276949b341dcfa2639f05, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
