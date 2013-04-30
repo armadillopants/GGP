@@ -2,17 +2,23 @@ using UnityEngine;
 
 public class StatsTracker {
 	private static int enemiesKilled;
+	private static float enemiesSpawned;
 	public static float timer;
 	private static bool stopTimer;
 	
 	void Start(){
 		enemiesKilled = 0;
+		enemiesSpawned = 0;
 		timer = 0;
 		stopTimer = false;
 	}
 	
 	public static int getEnemiesKilled(){
 		return enemiesKilled;
+	}
+	
+	public static float getEnemiesSpawned(){
+		return enemiesSpawned;
 	}
 	
 	public static float getTimer(){
@@ -37,11 +43,15 @@ public class StatsTracker {
 		enemiesKilled += amount;
 	}
 	
-	public static string GuiTime(int time){
-		int guiTime = time;
-		int minutes = guiTime / 60; // Creates 00 for minutes
-		int seconds = guiTime % 60; // Creates 00 for seconds
-		int fraction = time * 100; // Creates 000 for fractions
+	public static void AddEnemySpawn(float amount){
+		enemiesSpawned = amount;
+	}
+	
+	public static string GuiTime(float time){
+		float guiTime = time;
+		float minutes = guiTime / 60; // Creates 00 for minutes
+		float seconds = guiTime % 60; // Creates 00 for seconds
+		float fraction = time * 100; // Creates 000 for fractions
 		fraction = fraction % 100;
 		string text = ""; // For displaying the the timer in min, sec, frac
 	    text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, fraction);

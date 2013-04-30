@@ -71,13 +71,13 @@ ParticleAnimator:
     rgba: 4278190080
   colorAnimation[1]:
     serializedVersion: 2
-    rgba: 2235333240
+    rgba: 2246885748
   colorAnimation[2]:
     serializedVersion: 2
-    rgba: 2734726892
+    rgba: 2748420096
   colorAnimation[3]:
     serializedVersion: 2
-    rgba: 3860816007
+    rgba: 3866509595
   colorAnimation[4]:
     serializedVersion: 2
     rgba: 4278190080

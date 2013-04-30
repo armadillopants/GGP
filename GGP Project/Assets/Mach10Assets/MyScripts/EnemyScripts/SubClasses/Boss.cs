@@ -4,11 +4,14 @@ using System.Collections.Generic;
 
 public class Boss : BaseEnemy {
 	public Weapon[] weapons;
+	public AudioClip rush;
 	private float pickOne;
 	private bool once = true;
+	private bool charging = true;
 	LevelWin levelWin;
 	Rect healthBox;
 	private Texture2D healthBar;
+	private Texture2D greyBar;
 	
 	// Use this for initialization
 	public override void Start(){
@@ -30,10 +33,13 @@ public class Boss : BaseEnemy {
 		weapon = weapons[0];
 		ModifyHeight(15f);
 		ModifySpeed(30f);
-		healthBox = new Rect(Screen.width/2-150, Screen.height-(Screen.height+5), 300, 10);
+		healthBox = new Rect(Screen.width/2-150, Screen.height-(Screen.height-5), 300, 20);
 		healthBar = new Texture2D(1, 1, TextureFormat.RGB24, false);
 		healthBar.SetPixel(0, 0, Color.red);
 		healthBar.Apply();
+		greyBar = new Texture2D(1, 1, TextureFormat.RGB24, false);
+		greyBar.SetPixel(0, 0, Color.grey);
+		greyBar.Apply();
 		base.Start();
 	}
 	
@@ -55,7 +61,7 @@ public class Boss : BaseEnemy {
 			if(curLookTime <= 0){
 				once = true;
 				// Move towards player if too close
-				if(Vector3.Distance(trans.position, target.position) < 15f){
+				if(Vector3.Distance(trans.position, target.position) < 20f){
 					trans.position += trans.forward*getSpeed()*Time.deltaTime;
 					Quaternion rotate = Quaternion.LookRotation(target.transform.position - trans.position);
 					trans.rotation = Quaternion.Slerp(trans.rotation, rotate, Time.deltaTime * 0.5f);
@@ -65,6 +71,10 @@ public class Boss : BaseEnemy {
 					trans.position += trans.forward*getSpeed()*Time.deltaTime;
 				} else {
 					ModifySpeed(30f);
+				}
+				if(charging){
+					AudioSource.PlayClipAtPoint(rush, trans.position, 1f);
+					charging = false;
 				}
 				// Move left or right randomly
 				if(pickOne <= 0.45f){
@@ -110,12 +120,15 @@ public class Boss : BaseEnemy {
 	private IEnumerator Wait(){
 		yield return new WaitForSeconds(1f);
 		curLookTime = 3f;
+		charging = true;
 	}
 	
 	void OnGUI(){
 		if(GameObject.Find("Bee(Clone)")){
 			GUI.BeginGroup(healthBox);
 			{
+				GUI.DrawTexture(new Rect(0, 0, 
+					healthBox.width*health.getMaxHealth(), healthBox.height), greyBar, ScaleMode.StretchToFill);
 				GUI.DrawTexture(new Rect(0, 0, 
 					healthBox.width*health.getHealth()/health.getMaxHealth(), healthBox.height), healthBar, ScaleMode.StretchToFill);
 			}

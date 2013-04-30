@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Bullet : MonoBehaviour {
 	private Transform trans;
@@ -19,6 +21,9 @@ public class Bullet : MonoBehaviour {
 	
 	PowerUps powerUp;
 	Boosts boost;
+	
+	private List<GameObject> children = new List<GameObject>();
+	private Animation anim;
 
 	// Use this for initialization
 	void Start(){
@@ -28,6 +33,13 @@ public class Bullet : MonoBehaviour {
 		distance = Vector3.Dot(cam.transform.forward, trans.position - cam.transform.position);
 		top = cam.ViewportToWorldPoint(new Vector3(0, 0.9f, distance)).z;
 		down = cam.ViewportToWorldPoint(new Vector3(0, -0.3f, distance)).z;
+		foreach(Transform child in trans){
+			children.Add(child.gameObject);
+		}
+		anim = GetComponentInChildren<Animation>();
+		if(anim){
+			anim["Take 001"].speed = 1.5f;
+		}
 	}
 	
 	// Update is called once per frame
@@ -84,34 +96,26 @@ public class Bullet : MonoBehaviour {
 					boost.DropPowerUp();
 				}
 			}
-			if(trans.childCount > 0){
-				GameObject col = trans.FindChild("Collision").gameObject;
-				if(col){
-					Destroy(col.gameObject);
-				}
-			}
+			children.ForEach(child => Destroy(child));
 			Explode();
 			Kill();
 		}
 		if(hit.tag == "Player"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
-			if(trans.childCount > 0){
-				GameObject col = trans.FindChild("Collision").gameObject;
-				if(col){
-					Destroy(col.gameObject);
-				}
-			}
 			Explode();
 			Kill();
+			children.ForEach(child => Destroy(child));
 		}
 		if(hit.tag == "Ground"){
 			Explode();
 			Kill();
+			children.ForEach(child => Destroy(child, 0.5f));
 		}
 		if(hit.tag == "GroundEnemy"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
+			children.ForEach(child => Destroy(child, 0.5f));
 			Explode();
 			Kill();
 		}
@@ -121,12 +125,7 @@ public class Bullet : MonoBehaviour {
 			if(health.getHealth() > 0){
 				hit.renderer.enabled = true;
 			}
-			if(trans.childCount > 0){
-				GameObject col = trans.FindChild("Collision").gameObject;
-				if(col){
-					Destroy(col.gameObject);
-				}
-			}
+			children.ForEach(child => Destroy(child));
 			Explode();
 			Kill();
 		}

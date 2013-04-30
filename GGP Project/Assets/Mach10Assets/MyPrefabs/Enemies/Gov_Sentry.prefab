@@ -75,7 +75,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 6c6505dcb83605a4f832f55a2beac72f, type: 2}
+  - {fileID: 2100000, guid: 21aae7e1dffe4cc46808681548659a96, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   obj:
   - {fileID: 100000, guid: 93efc3934b829aa43a81aa940fb9a6cd, type: 2}
-  dropRate: .100000001
+  dropRate: .0500000007
   canDrop: 0
 --- !u!114 &11400008
 MonoBehaviour:
@@ -196,7 +196,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 306a501da7072e641bbd9db955f17362, type: 2}
   - {fileID: 100000, guid: 77a228b18ce9ca3468b54070d49136da, type: 2}
   - {fileID: 100000, guid: b5c0593713b9d0b4db6978f860c9acca, type: 2}
-  dropRate: .150000006
+  dropRate: .100000001
   canDrop: 0
 --- !u!1001 &100100000
 Prefab:

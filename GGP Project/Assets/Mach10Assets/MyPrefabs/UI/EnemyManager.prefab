@@ -38,14 +38,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba09af97c2217c7429f43b79da4cbd33, type: 3}
   m_Name: 
   tutorialAirEnemies:
-  - {fileID: 100006, guid: 26865c51b93da4b4db76a3d92f55e553, type: 2}
+  - {fileID: 100010, guid: 9a515ab62697b6548977d89116cd4e75, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
   tutorialGroundEnemies:
   - {fileID: 100012, guid: 546d8afc116ddb4429a4f1847943a82f, type: 2}
   airEnemies:
   - {fileID: 100106, guid: 04292bda7c165284782afb2a491d7067, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
-  - {fileID: 100006, guid: 26865c51b93da4b4db76a3d92f55e553, type: 2}
+  - {fileID: 100010, guid: 9a515ab62697b6548977d89116cd4e75, type: 2}
   groundEnemies:
   - {fileID: 100122, guid: 3bbd4f636faad9f45a31bbaa9cef879a, type: 2}
   swarmers:

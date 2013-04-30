@@ -6,7 +6,7 @@ public class Tutorial : MonoBehaviour {
 	private bool nextClip = false;
 	public GameObject p;
 	private bool spawnP = true;
-	EnemyManager manager;
+	private EnemyManager manager;
 	PowerUps powerUp;
 	Boosts boost;
 	GameObject[] enemies;

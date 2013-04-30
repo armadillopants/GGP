@@ -134,6 +134,8 @@ public class EnemyManager : MonoBehaviour {
 			}
 			break;
 		}
+		
+		StatsTracker.AddEnemySpawn(enemiesSpawned);
 	}
 	
 	void SpawnAirEnemies(){

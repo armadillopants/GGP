@@ -22,15 +22,16 @@ public class PauseMenu : MonoBehaviour {
 			}
 			if(paused){
 				Time.timeScale = 0;
+				StatsTracker.setStopper(true);
 			} else {
 				Time.timeScale = 1;
+				StatsTracker.setStopper(false);
 			}
 		}
 	}
 	
 	void OnGUI(){
 		if(paused){
-			StatsTracker.setStopper(true);
 			GUIStyle style = new GUIStyle();
 			style.fontSize = 24;
 			GUIContent content = new GUIContent(pauseTex);
@@ -45,7 +46,6 @@ public class PauseMenu : MonoBehaviour {
 									   size.x / 2.5f,
 									   size.y / 10), 
 							"Resume")){
-					StatsTracker.setStopper(false);
 					paused = false;
 				}
 			} else {

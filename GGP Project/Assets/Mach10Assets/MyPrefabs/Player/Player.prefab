@@ -1351,12 +1351,8 @@ MonoBehaviour:
   m_Name: 
   reticule: {fileID: 100000, guid: 4385db744de81ae4bab29e67eb7ee143, type: 2}
   playerSpeed: 20
-  coolDown: .5
-  keyCounter: 1
-  curDodgeTime: 0
   isRotating: 0
-  isDodgingLeft: 0
-  isDodgingRight: 0
+  isTut: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1368,7 +1364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d307bb4596e0d14697ab4abd74e72e4, type: 3}
   m_Name: 
   projectile:
-  - {fileID: 100000, guid: fdfec171423a08049838d17bd5a5f0e6, type: 2}
+  - {fileID: 100074, guid: 0f7e1cf5f405c854693e8671899bcbf6, type: 2}
   muzzlePos:
   - {fileID: 400008}
   fireRate: 2

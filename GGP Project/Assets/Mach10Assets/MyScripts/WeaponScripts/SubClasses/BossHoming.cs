@@ -5,7 +5,7 @@ public class BossHoming : Weapon {
 
 	// Use this for initialization
 	public override void Start(){
-		ModifyFireRate(Random.Range(3f, 5f));
+		ModifyFireRate(Random.Range(2.5f, 3.5f));
 	}
 	
 	// Update is called once per frame

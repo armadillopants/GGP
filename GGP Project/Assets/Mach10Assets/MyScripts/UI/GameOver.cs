@@ -27,11 +27,11 @@ public class GameOver : MonoBehaviour {
 			}
 			if(PlayerPrefs.GetFloat("Time") <= 0){
 				PlayerPrefs.SetFloat("Time", Mathf.Round(StatsTracker.getTimer()*100f)/100f);
-				PlayerPrefs.SetString("Time", StatsTracker.GuiTime((int)StatsTracker.getTimer()));
+				PlayerPrefs.SetString("Time", StatsTracker.GuiTime(StatsTracker.getTimer()));
 			}
 			if(StatsTracker.getTimer() > PlayerPrefs.GetFloat("Time")){
 				PlayerPrefs.SetFloat("Time", Mathf.Round(StatsTracker.getTimer()*100f)/100f);
-				PlayerPrefs.SetString("Time", StatsTracker.GuiTime((int)StatsTracker.getTimer()));
+				PlayerPrefs.SetString("Time", StatsTracker.GuiTime(StatsTracker.getTimer()));
 			}	
 		}
 	}
@@ -41,6 +41,9 @@ public class GameOver : MonoBehaviour {
 	}
 	
 	void OnGUI(){
+		if(levelWin.curLevel == "Survival"){
+			GUILayout.Label("Time: " + StatsTracker.GuiTime(StatsTracker.getTimer()));
+		}
 		if(gameOver && !levelWin.getLevelWon()){
 			GUIStyle style = new GUIStyle();
 			style.fontSize = 24;
@@ -80,8 +83,8 @@ public class GameOver : MonoBehaviour {
 								size.x,
 								size.y / 2), 
 						"Score: " + Score.getScore() + "\n\n" + 
-						"Enemies Killed: " + StatsTracker.getEnemiesKilled() + "\n\n" +
-						"Time Survived: " + StatsTracker.GuiTime((int)StatsTracker.getTimer()));
+						"Enemies Killed: " + StatsTracker.getEnemiesKilled() + "/" + StatsTracker.getEnemiesSpawned() + "\n\n" +
+						"Time Survived: " + StatsTracker.GuiTime(StatsTracker.getTimer()));
 		}
 	}	
 }

@@ -40,6 +40,8 @@ MonoBehaviour:
   curLevel: Level3
   nextLevel: 
   win: {fileID: 8300000, guid: a6e1ddf073ce48e42bfacc88e0c3860e, type: 3}
+  clearedTex: {fileID: 0}
+  creditsScreen: {fileID: 2800000, guid: 18aa9e70bf811614c9980adf642b690f, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

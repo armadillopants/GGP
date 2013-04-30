@@ -6,11 +6,16 @@ public class LevelWin : MonoBehaviour {
 	public string nextLevel = "";
 	public AudioClip win;
 	public Texture2D clearedTex;
+	public Texture2D creditsScreen;
 	private bool playSound = true;
+	private bool showCredits = false;
 	private GameOver gameOver;
 	
 	void Start(){
 		gameOver = GameObject.Find("GameOver").GetComponent<GameOver>();
+		if(curLevel == "Level3"){
+			showCredits = true;
+		}
 	}
 	
 	public void LevelWon(){
@@ -24,6 +29,9 @@ public class LevelWin : MonoBehaviour {
 		PlayerMovement move = player.GetComponent<PlayerMovement>();
 		move.LevelComplete();
 		SavePrefs();
+		if(Input.GetKeyDown(KeyCode.Return) && curLevel == "Level3" && levelWon){
+			showCredits = false;
+		}
 	}
 	
 	private void SavePrefs(){
@@ -120,8 +128,11 @@ public class LevelWin : MonoBehaviour {
 								size.x,
 								size.y / 2), 
 						"Score: " + Score.getScore() + "\n\n" + 
-						"Enemies Killed: " + StatsTracker.getEnemiesKilled() + "\n\n" +
-						"Time Survived: " + StatsTracker.GuiTime((int)StatsTracker.getTimer()));
+						"Enemies Killed: " + StatsTracker.getEnemiesKilled() + "/" + StatsTracker.getEnemiesSpawned() + "\n\n" +
+						"Time Survived: " + StatsTracker.GuiTime(StatsTracker.getTimer()));
+			if(showCredits){
+				GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height), creditsScreen);
+			}
 		}
 	}	
 }

@@ -380,32 +380,32 @@ Transform:
   m_LocalPosition: {x: 0, y: .200000003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1855183105}
-  - {fileID: 129760874}
-  - {fileID: 2038717304}
-  - {fileID: 1801164979}
-  - {fileID: 555010562}
-  - {fileID: 13688744}
-  - {fileID: 1718533680}
-  - {fileID: 402708787}
-  - {fileID: 184110147}
-  - {fileID: 959322808}
   - {fileID: 1146625936}
-  - {fileID: 119874757}
-  - {fileID: 1032239010}
+  - {fileID: 1801164979}
   - {fileID: 848862819}
-  - {fileID: 1936526941}
-  - {fileID: 1124361668}
+  - {fileID: 1718533680}
+  - {fileID: 129760874}
+  - {fileID: 13688744}
+  - {fileID: 1032239010}
   - {fileID: 240752279}
+  - {fileID: 555010562}
+  - {fileID: 1936526941}
+  - {fileID: 184110147}
+  - {fileID: 2038717304}
+  - {fileID: 1855183105}
+  - {fileID: 119874757}
+  - {fileID: 402708787}
+  - {fileID: 959322808}
+  - {fileID: 1124361668}
   - {fileID: 1017717545}
-  - {fileID: 689717991}
   - {fileID: 843318785}
-  - {fileID: 486442506}
+  - {fileID: 689717991}
   - {fileID: 1986854896}
-  - {fileID: 1387185432}
+  - {fileID: 486442506}
   - {fileID: 1908650435}
-  - {fileID: 396748672}
+  - {fileID: 1387185432}
   - {fileID: 147238204}
+  - {fileID: 396748672}
   m_Father: {fileID: 0}
 --- !u!114 &68705322
 MonoBehaviour:
@@ -420,7 +420,7 @@ MonoBehaviour:
   type: 1
   scrollSpeed: 6
   orignalSpeed: 0
-  up: 1.59350002
+  up: 1.5934
   bottom: -.600000024
 --- !u!1 &86817831
 GameObject:
@@ -520,6 +520,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 104545959}
+  - 114: {fileID: 104545961}
   - 82: {fileID: 104545960}
   m_Layer: 0
   m_Name: Music
@@ -596,6 +597,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &104545961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: c217f149bc1c8af439055df5568e0ec8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1467669030}
+  m_GameObject: {fileID: 104545958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3ba7ce9c8e72648aef852055d40ba6, type: 3}
+  m_Name: 
+  music: {fileID: 8300000, guid: 8f8f37ae88de04a4faae54f16ef386e1, type: 3}
 --- !u!1 &116733323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1312,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -26.4241638
+      value: -26.5748692
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67956c5c38efc6c4a901582c3cc2b24c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4131,7 +4144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d307bb4596e0d14697ab4abd74e72e4, type: 3}
   m_Name: 
   projectile:
-  - {fileID: 100000, guid: fdfec171423a08049838d17bd5a5f0e6, type: 2}
+  - {fileID: 100074, guid: 0f7e1cf5f405c854693e8671899bcbf6, type: 2}
   muzzlePos:
   - {fileID: 594282867}
   fireRate: 2
@@ -5697,7 +5710,7 @@ Transform:
   m_PrefabInternal: {fileID: 204386207}
   m_GameObject: {fileID: 1087621041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.2347813, y: .5, z: -26.4241638}
+  m_LocalPosition: {x: -11.2347813, y: .5, z: -26.5748692}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1895533734}
@@ -6497,14 +6510,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba09af97c2217c7429f43b79da4cbd33, type: 3}
   m_Name: 
   tutorialAirEnemies:
-  - {fileID: 100006, guid: 26865c51b93da4b4db76a3d92f55e553, type: 2}
+  - {fileID: 100010, guid: e76d550a649aa9d4d85931fcc47adcc9, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
   tutorialGroundEnemies:
   - {fileID: 100012, guid: 546d8afc116ddb4429a4f1847943a82f, type: 2}
   airEnemies:
   - {fileID: 100106, guid: 04292bda7c165284782afb2a491d7067, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
-  - {fileID: 100006, guid: 26865c51b93da4b4db76a3d92f55e553, type: 2}
+  - {fileID: 100010, guid: e76d550a649aa9d4d85931fcc47adcc9, type: 2}
   groundEnemies:
   - {fileID: 100122, guid: 3bbd4f636faad9f45a31bbaa9cef879a, type: 2}
   swarmers:
@@ -9356,6 +9369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebb97e1933c69145a60572ed90d593b, type: 3}
   m_Name: 
   pauseTex: {fileID: 2800000, guid: 1c04a984ec1690a4f9fcaf9aee5572be, type: 3}
+  pauseSound: {fileID: 8300000, guid: 55de213e122984a43ab2fd6dee61d409, type: 3}
 --- !u!4 &1632448935
 Transform:
   m_ObjectHideFlags: 0

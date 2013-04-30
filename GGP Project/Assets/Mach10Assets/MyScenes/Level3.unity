@@ -614,12 +614,8 @@ MonoBehaviour:
   m_Name: 
   reticule: {fileID: 100000, guid: 4385db744de81ae4bab29e67eb7ee143, type: 2}
   playerSpeed: 20
-  coolDown: .5
-  keyCounter: 1
-  curDodgeTime: 0
   isRotating: 0
-  isDodgingLeft: 0
-  isDodgingRight: 0
+  isTut: 0
 --- !u!114 &204386687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,6 +827,7 @@ MonoBehaviour:
   m_Name: 
   type: 0
   scrollSpeed: -.0500000007
+  orignalSpeed: 0
   up: 1.25
   bottom: -.200000003
 --- !u!33 &462305802
@@ -1064,6 +1061,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 591637587}
+  - 114: {fileID: 591637588}
   - 82: {fileID: 591637586}
   m_Layer: 0
   m_Name: Music
@@ -1140,6 +1138,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &591637588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: c217f149bc1c8af439055df5568e0ec8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1475915582}
+  m_GameObject: {fileID: 591637585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3ba7ce9c8e72648aef852055d40ba6, type: 3}
+  m_Name: 
+  music: {fileID: 8300000, guid: 8f8f37ae88de04a4faae54f16ef386e1, type: 3}
 --- !u!1 &593391565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1473,7 @@ MonoBehaviour:
   nextLevel: Survival
   win: {fileID: 8300000, guid: a6e1ddf073ce48e42bfacc88e0c3860e, type: 3}
   clearedTex: {fileID: 2800000, guid: 690dbb6b7190fbb47a08b5e9cc42303b, type: 3}
+  creditsScreen: {fileID: 2800000, guid: 18aa9e70bf811614c9980adf642b690f, type: 3}
 --- !u!4 &668199806
 Transform:
   m_ObjectHideFlags: 0
@@ -1613,7 +1624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d307bb4596e0d14697ab4abd74e72e4, type: 3}
   m_Name: 
   projectile:
-  - {fileID: 100000, guid: fdfec171423a08049838d17bd5a5f0e6, type: 2}
+  - {fileID: 100074, guid: 0f7e1cf5f405c854693e8671899bcbf6, type: 2}
   muzzlePos:
   - {fileID: 594282867}
   fireRate: 2
@@ -1872,6 +1883,7 @@ GameObject:
   - 33: {fileID: 909909293}
   - 23: {fileID: 909909291}
   - 65: {fileID: 909909292}
+  - 54: {fileID: 909909295}
   m_Layer: 0
   m_Name: Asteroid3
   m_TagString: Item
@@ -1931,6 +1943,22 @@ Transform:
   m_Children:
   - {fileID: 1681297870}
   m_Father: {fileID: 2052288796}
+--- !u!54 &909909295
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: fd72774e4dbece140b51a9fa2b2d2afc,
+    type: 2}
+  m_PrefabInternal: {fileID: 101193575}
+  m_GameObject: {fileID: 909909290}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &911200307
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,6 +2187,7 @@ MonoBehaviour:
   m_Name: 
   type: 0
   scrollSpeed: -.150000006
+  orignalSpeed: 0
   up: 1.25
   bottom: -.200000003
 --- !u!33 &938754378
@@ -2364,6 +2393,7 @@ GameObject:
   - 33: {fileID: 1102824730}
   - 23: {fileID: 1102824728}
   - 65: {fileID: 1102824729}
+  - 54: {fileID: 1102824732}
   m_Layer: 0
   m_Name: Asteroid1
   m_TagString: Item
@@ -2423,6 +2453,22 @@ Transform:
   m_Children:
   - {fileID: 2109712511}
   m_Father: {fileID: 2052288796}
+--- !u!54 &1102824732
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 4d1e0449864ed7749876960b60d9e53c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1855287018}
+  m_GameObject: {fileID: 1102824727}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1181055356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,22 +2637,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba09af97c2217c7429f43b79da4cbd33, type: 3}
   m_Name: 
   tutorialAirEnemies:
-  - {fileID: 100006, guid: 26865c51b93da4b4db76a3d92f55e553, type: 2}
+  - {fileID: 100010, guid: 9a515ab62697b6548977d89116cd4e75, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
   tutorialGroundEnemies:
   - {fileID: 100012, guid: 546d8afc116ddb4429a4f1847943a82f, type: 2}
   airEnemies:
   - {fileID: 100106, guid: 04292bda7c165284782afb2a491d7067, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
-  - {fileID: 100006, guid: 26865c51b93da4b4db76a3d92f55e553, type: 2}
+  - {fileID: 100010, guid: 9a515ab62697b6548977d89116cd4e75, type: 2}
   groundEnemies:
   - {fileID: 100122, guid: 3bbd4f636faad9f45a31bbaa9cef879a, type: 2}
   swarmers:
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
-  - {fileID: 100002, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
+  - {fileID: 100072, guid: 658f3d10a6a46554a8fcad8ff879062f, type: 2}
   boss: {fileID: 100090, guid: 3a492e5e93c831d4499c4d8eabf0884a, type: 2}
   maxEnemiesOnScreen: []
   enemiesSpawnedPerLevel: 0
@@ -2841,6 +2887,7 @@ GameObject:
   - 33: {fileID: 1365859254}
   - 23: {fileID: 1365859252}
   - 65: {fileID: 1365859253}
+  - 54: {fileID: 1365859256}
   m_Layer: 0
   m_Name: Asteroid2
   m_TagString: Item
@@ -2900,6 +2947,22 @@ Transform:
   m_Children:
   - {fileID: 803118731}
   m_Father: {fileID: 2052288796}
+--- !u!54 &1365859256
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 7c8334bf8ad753545a4c56ee6533486e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1896790831}
+  m_GameObject: {fileID: 1365859251}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1382510853
 Prefab:
   m_ObjectHideFlags: 0
@@ -3588,6 +3651,7 @@ MonoBehaviour:
   m_Name: 
   type: 0
   scrollSpeed: -.100000001
+  orignalSpeed: 0
   up: 1.25
   bottom: -.200000003
 --- !u!33 &1624094792
@@ -3636,6 +3700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebb97e1933c69145a60572ed90d593b, type: 3}
   m_Name: 
   pauseTex: {fileID: 2800000, guid: 1c04a984ec1690a4f9fcaf9aee5572be, type: 3}
+  pauseSound: {fileID: 8300000, guid: 55de213e122984a43ab2fd6dee61d409, type: 3}
 --- !u!4 &1632448935
 Transform:
   m_ObjectHideFlags: 0
@@ -3658,6 +3723,7 @@ GameObject:
   - 33: {fileID: 1666543824}
   - 23: {fileID: 1666543822}
   - 65: {fileID: 1666543823}
+  - 54: {fileID: 1666543825}
   m_Layer: 0
   m_Name: Asteroid2
   m_TagString: Item
@@ -3717,6 +3783,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1852698051}
   m_GameObject: {fileID: 1666543820}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1666543825
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 7c8334bf8ad753545a4c56ee6533486e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1852698051}
+  m_GameObject: {fileID: 1666543820}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1681297866
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,6 +4070,7 @@ GameObject:
   - 33: {fileID: 1894815244}
   - 23: {fileID: 1894815242}
   - 65: {fileID: 1894815243}
+  - 54: {fileID: 1894815245}
   m_Layer: 0
   m_Name: Asteroid1
   m_TagString: Item
@@ -4047,6 +4130,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2049459326}
   m_GameObject: {fileID: 1894815240}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1894815245
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 4d1e0449864ed7749876960b60d9e53c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2049459326}
+  m_GameObject: {fileID: 1894815240}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1895533733
 GameObject:
   m_ObjectHideFlags: 0
@@ -4092,6 +4191,7 @@ MonoBehaviour:
   m_Name: 
   type: 2
   scrollSpeed: 6
+  orignalSpeed: 0
   up: 1.245
   bottom: -.200000003
 --- !u!1001 &1896790831
@@ -4260,6 +4360,7 @@ GameObject:
   - 33: {fileID: 2033376005}
   - 23: {fileID: 2033376003}
   - 65: {fileID: 2033376004}
+  - 54: {fileID: 2033376006}
   m_Layer: 0
   m_Name: Asteroid3
   m_TagString: Item
@@ -4319,6 +4420,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1810772605}
   m_GameObject: {fileID: 2033376001}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2033376006
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: fd72774e4dbece140b51a9fa2b2d2afc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1810772605}
+  m_GameObject: {fileID: 2033376001}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2049459326
 Prefab:
   m_ObjectHideFlags: 0
@@ -4404,6 +4521,7 @@ MonoBehaviour:
   m_Name: 
   type: 1
   scrollSpeed: 6
+  orignalSpeed: 0
   up: 1.25
   bottom: -.200000003
 --- !u!1 &2109712507
