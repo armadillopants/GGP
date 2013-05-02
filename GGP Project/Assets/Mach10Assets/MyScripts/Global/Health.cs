@@ -11,6 +11,8 @@ public class Health : MonoBehaviour {
 	private GameObject player;
 	public GameObject playerExplosion;
 	public GameObject enemyExplosion;
+	private PowerUps powerUp;
+	private Boosts boost;
 
 	// Use this for initialization
 	void Start(){
@@ -88,5 +90,13 @@ public class Health : MonoBehaviour {
 			Instantiate(enemyExplosion, transform.position, Quaternion.identity);
 		}
 		Destroy(gameObject);
+		powerUp = gameObject.GetComponentInChildren<PowerUps>();
+		boost = gameObject.GetComponentInChildren<Boosts>();
+		if(powerUp){
+			powerUp.DropPowerUp();
+		}
+		if(boost){
+			boost.DropPowerUp();
+		}
 	}
 }

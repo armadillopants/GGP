@@ -53,10 +53,10 @@ public class Scroller : MonoBehaviour {
 	void Update(){
 		if(!move.isTut){
 			if(background){
-				if(scrollSpeed < orignalSpeed){
-					scrollSpeed -= orignalSpeed*0.001f*Time.deltaTime;
+				if(scrollSpeed > orignalSpeed){
+					scrollSpeed += orignalSpeed*0.1f*Time.deltaTime;
 				}
-				if(scrollSpeed >= orignalSpeed){
+				if(scrollSpeed <= orignalSpeed){
 					scrollSpeed = orignalSpeed;
 				}
 				ScrollBackGround();

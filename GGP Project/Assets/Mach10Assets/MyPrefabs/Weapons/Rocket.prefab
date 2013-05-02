@@ -245,7 +245,7 @@ MonoBehaviour:
   explosion: {fileID: 100004, guid: 169b10ce10f4327cb9f40f6b117ed8d7, type: 2}
   bulletSpeed: 50
   lifeTime: .5
-  damage: 20
+  damage: 25
   target: {fileID: 0}
   isHoming: 0
   enemyType: 

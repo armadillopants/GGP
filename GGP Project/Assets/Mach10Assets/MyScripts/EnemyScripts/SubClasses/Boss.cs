@@ -47,6 +47,15 @@ public class Boss : BaseEnemy {
 		ClampLookTime();
 		SwitchWeapon();
 		if(target){
+			if(target.position.z < down){
+				if(weapon){
+					weapon.CanShoot(false);
+				}
+			} else {
+				if(weapon){
+					weapon.CanShoot(true);
+				}
+			}
 			// Rotate to look at the player
 	   		trans.rotation = Quaternion.Slerp(trans.rotation,
 	    		Quaternion.LookRotation(target.position-trans.position), 1);

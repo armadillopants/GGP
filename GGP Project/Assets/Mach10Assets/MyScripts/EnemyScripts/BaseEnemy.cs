@@ -42,6 +42,10 @@ public class BaseEnemy : MonoBehaviour {
 		RenderEnemy();
 		if(target != null){
 			EnemyAttack();
+		} else {
+			if(weapon){
+				weapon.CanShoot(false);
+			}
 		}
 	}
 	

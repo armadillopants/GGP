@@ -25,12 +25,17 @@ public class Explosion : MonoBehaviour {
 			// Apply damage
 			if(hit.tag == "Enemy"){
 				health = hit.transform.parent.GetComponent<Health>();
-				health.TakeDamage((float)damage);
+				if(health.getHealth() > 0){
+					health.TakeDamage((float)damage);
+				}
 			}
 			if(hit.tag == "GroundEnemy"){
 				health = hit.transform.parent.GetComponent<Health>();
-				health.TakeDamage((float)damage);
-				Score.AddScore(150);
+				if(health.getHealth() > 0){
+					health.TakeDamage((float)damage);
+				} else {
+					Score.AddScore(150);
+				}
 			}
 			if(hit.tag == "Item"){
 				hit.collider.renderer.enabled = false;

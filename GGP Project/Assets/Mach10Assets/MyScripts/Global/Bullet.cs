@@ -66,16 +66,14 @@ public class Bullet : MonoBehaviour {
 		if(hit.tag == "Enemy"){
 			health = hit.transform.parent.GetComponent<Health>();
 			health.TakeDamage(damage);
-			powerUp = hit.transform.parent.FindChild("CollisionData").GetComponent<PowerUps>();
-			boost = hit.transform.parent.FindChild("CollisionData").GetComponent<Boosts>();
 			if(health.getHealth() <= 0){
 				StatsTracker.AddEnemyKilled(1);
-				if(powerUp){
+				/*if(powerUp){
 					powerUp.DropPowerUp();
 				}
 				if(boost){
 					boost.DropPowerUp();
-				}
+				}*/
 				if(hit.transform.parent.name == "Kamikaze(Clone)"){
 					Score.AddScore(50);
 				} else if(hit.transform.parent.name == "Gov_GunBot(Clone)"){
@@ -89,6 +87,8 @@ public class Bullet : MonoBehaviour {
 				}
 			}
 			if(hit.transform.parent.name == "Bee(Clone)"){
+				powerUp = hit.transform.parent.FindChild("CollisionData").GetComponent<PowerUps>();
+				boost = hit.transform.parent.FindChild("CollisionData").GetComponent<Boosts>();
 				if(powerUp){
 					powerUp.DropPowerUp();
 				}

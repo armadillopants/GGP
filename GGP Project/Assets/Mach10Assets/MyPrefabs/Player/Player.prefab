@@ -1401,7 +1401,7 @@ MonoBehaviour:
   - {fileID: 100004, guid: 8bf1d50ea3202254ab83d4f38906deb4, type: 2}
   muzzlePos:
   - {fileID: 400048}
-  fireRate: .5
+  fireRate: .300000012
   roundsPerBurst: 0
   coneAngle: 2
 --- !u!114 &11400012

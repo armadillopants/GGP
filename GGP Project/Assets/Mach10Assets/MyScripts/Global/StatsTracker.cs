@@ -49,9 +49,9 @@ public class StatsTracker {
 	
 	public static string GuiTime(float time){
 		float guiTime = time;
-		float minutes = guiTime / 60; // Creates 00 for minutes
-		float seconds = guiTime % 60; // Creates 00 for seconds
-		float fraction = time * 100; // Creates 000 for fractions
+		int minutes = (int)(guiTime / 60); // Creates 00 for minutes
+		int seconds = (int)(guiTime % 60); // Creates 00 for seconds
+		int fraction = (int)(time * 100); // Creates 000 for fractions
 		fraction = fraction % 100;
 		string text = ""; // For displaying the the timer in min, sec, frac
 	    text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, fraction);

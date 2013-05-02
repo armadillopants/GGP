@@ -10,7 +10,7 @@ public class Mover : MonoBehaviour {
 	void Start(){
 		cam = Camera.main;
 		distance = Vector3.Dot(cam.transform.forward, transform.position - cam.transform.position);
-		down = cam.ViewportToWorldPoint(new Vector3(0, 0.1f, distance)).z;
+		down = cam.ViewportToWorldPoint(new Vector3(0, 0f, distance)).z;
 		randMove = new Vector3(Random.Range(-0.1f, 0.1f), 0, 0);
 	}
 	
