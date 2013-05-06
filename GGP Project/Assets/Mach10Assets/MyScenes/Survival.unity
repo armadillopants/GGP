@@ -3675,6 +3675,7 @@ MonoBehaviour:
   nextLevel: 
   win: {fileID: 8300000, guid: a6e1ddf073ce48e42bfacc88e0c3860e, type: 3}
   clearedTex: {fileID: 2800000, guid: 690dbb6b7190fbb47a08b5e9cc42303b, type: 3}
+  creditsScreen: {fileID: 2800000, guid: 18aa9e70bf811614c9980adf642b690f, type: 3}
 --- !u!4 &668199806
 Transform:
   m_ObjectHideFlags: 0
@@ -6411,7 +6412,7 @@ MonoBehaviour:
   - {fileID: 100004, guid: 8bf1d50ea3202254ab83d4f38906deb4, type: 2}
   muzzlePos:
   - {fileID: 1607562834}
-  fireRate: .5
+  fireRate: .300000012
   roundsPerBurst: 0
   coneAngle: 2
 --- !u!82 &1197666053
@@ -6510,14 +6511,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba09af97c2217c7429f43b79da4cbd33, type: 3}
   m_Name: 
   tutorialAirEnemies:
-  - {fileID: 100010, guid: e76d550a649aa9d4d85931fcc47adcc9, type: 2}
+  - {fileID: 100010, guid: 9a515ab62697b6548977d89116cd4e75, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
   tutorialGroundEnemies:
   - {fileID: 100012, guid: 546d8afc116ddb4429a4f1847943a82f, type: 2}
   airEnemies:
   - {fileID: 100106, guid: 04292bda7c165284782afb2a491d7067, type: 2}
   - {fileID: 100000, guid: da2acbd376406a6408c0d3ec33f6fb91, type: 2}
-  - {fileID: 100010, guid: e76d550a649aa9d4d85931fcc47adcc9, type: 2}
+  - {fileID: 100010, guid: 9a515ab62697b6548977d89116cd4e75, type: 2}
   groundEnemies:
   - {fileID: 100122, guid: 3bbd4f636faad9f45a31bbaa9cef879a, type: 2}
   swarmers:

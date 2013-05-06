@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   explosionRadius: .00999999978
   explosionDamage: 5
-  explosionTimeout: .200000003
+  explosionTimeout: .5
 --- !u!1002 &11400001
 EditorExtensionImpl:
   serializedVersion: 6

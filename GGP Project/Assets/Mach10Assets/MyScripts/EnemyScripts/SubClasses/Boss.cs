@@ -6,6 +6,7 @@ public class Boss : BaseEnemy {
 	public Weapon[] weapons;
 	public AudioClip rush;
 	private float pickOne;
+	private float dist = 0f;
 	private bool once = true;
 	private bool charging = true;
 	LevelWin levelWin;
@@ -19,15 +20,19 @@ public class Boss : BaseEnemy {
 		switch(levelWin.curLevel){
 		case "Level1":
 			health.ModifyHealth(1000f);
+			dist = 15f;
 			break;
 		case "Level2":
 			health.ModifyHealth(2000f);
+			dist = 17.5f;
 			break;
 		case "Level3":
 			health.ModifyHealth(3000f);
+			dist = 20f;
 			break;
 		case "Survival":
 			health.ModifyHealth(4000f);
+			dist = 20f;
 			break;
 		}
 		weapon = weapons[0];
@@ -70,7 +75,7 @@ public class Boss : BaseEnemy {
 			if(curLookTime <= 0){
 				once = true;
 				// Move towards player if too close
-				if(Vector3.Distance(trans.position, target.position) < 20f){
+				if(Vector3.Distance(trans.position, target.position) < dist){
 					trans.position += trans.forward*getSpeed()*Time.deltaTime;
 					Quaternion rotate = Quaternion.LookRotation(target.transform.position - trans.position);
 					trans.rotation = Quaternion.Slerp(trans.rotation, rotate, Time.deltaTime * 0.5f);
