@@ -16376,7 +16376,7 @@ MonoBehaviour:
   type: 2
   scrollSpeed: 6
   orignalSpeed: 0
-  up: 1.245
+  up: 1.24600005
   bottom: -.200000003
 --- !u!1 &1922724180
 GameObject:

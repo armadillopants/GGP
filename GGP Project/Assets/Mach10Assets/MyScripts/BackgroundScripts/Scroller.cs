@@ -82,7 +82,7 @@ public class Scroller : MonoBehaviour {
 	void ScrollItems(){
 		foreach(GameObject items in scrolls){
 			offset = Time.time * scrollSpeed;
-			transform.position = new Vector3(0, 0, -offset);
+			transform.position = new Vector3(0, transform.position.y, -offset);
 			
 			Vector3 currentPos = items.transform.position;
 			
